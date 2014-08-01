@@ -15,6 +15,7 @@
 #import "RadioView.h"
 #import "GalleryView.h"
 #import "AudioView.h"
+#import "PhotoView.h"
 #import "VideoView.h"
 #import "AlbumView.h"
 #import "ArtistAlbum.h"
@@ -27,6 +28,7 @@
     TableView *mMenuTableView;
     NewsView *mNewsView;
     AgendaView *mAgendaView;
+    PhotoView *mPhotoView;
     RadioView *mRadioView;
     GalleryView *mGalleryView;
     AudioView *mAudioView;

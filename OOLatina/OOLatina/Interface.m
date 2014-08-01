@@ -36,6 +36,7 @@
     [arrayMenu addObject:@"Audio"];
     [arrayMenu addObject:@"Video"];
     [arrayMenu addObject:@"Radio"];
+    [arrayMenu addObject:@"Photo"];
     
     mWebView = nil;
     
@@ -333,9 +334,20 @@
         }
     }
     
-    if(rownumber == 5)
-    {
-        NSLog(@"radio");
+    if(rownumber == 5) {
+        if(mAgendaView != nil)
+        {
+            searchButton.hidden = YES;
+            [mPhotoView loadPhoto];
+            [pageView bringSubviewToFront:mPhotoView];
+        }
+        else
+        {
+            searchButton.hidden = YES;
+            mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
+            mPhotoView.backgroundColor = [UIColor blueColor];
+            [pageView addSubview:mPhotoView];
+        }
     }
     
     [self showMenu];

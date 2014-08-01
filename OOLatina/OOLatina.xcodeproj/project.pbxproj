@@ -163,6 +163,13 @@
 		51FD5FEE18D3AAAC0040369B /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FEC18D3AAAC0040369B /* LBYouTubePlayerViewController.m */; };
 		51FD5FF118D3AECA0040369B /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF018D3AECA0040369B /* Video.m */; };
 		51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */; };
+		D0478134198A3785004ACEE5 /* photo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478132198A3785004ACEE5 /* photo_icon.png */; };
+		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
+		D047813D198A60B8004ACEE5 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D047813C198A60B8004ACEE5 /* PhotoView.xib */; };
+		D0963F67198B2DEA00A22769 /* PhotoView.h in Resources */ = {isa = PBXBuildFile; fileRef = D0963F66198B2DEA00A22769 /* PhotoView.h */; };
+		D0963F69198B2E4000A22769 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F68198B2E4000A22769 /* PhotoView.m */; };
+		D0963F6B198B399F00A22769 /* PhotoCell.h in Resources */ = {isa = PBXBuildFile; fileRef = D0963F6A198B399F00A22769 /* PhotoCell.h */; };
+		D0963F6D198B39CA00A22769 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F6C198B39CA00A22769 /* PhotoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -389,6 +396,13 @@
 		51FD5FF018D3AECA0040369B /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		51FD5FF218D3B98B0040369B /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
 		51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
+		D0478132198A3785004ACEE5 /* photo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon.png; sourceTree = "<group>"; };
+		D0478133198A3785004ACEE5 /* photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_icon@2x.png"; sourceTree = "<group>"; };
+		D047813C198A60B8004ACEE5 /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
+		D0963F66198B2DEA00A22769 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
+		D0963F68198B2E4000A22769 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
+		D0963F6A198B399F00A22769 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		D0963F6C198B39CA00A22769 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -583,7 +597,9 @@
 				51F6135718DA32A200919995 /* AgendaViewController.m */,
 				51F6135818DA32A200919995 /* AgendaViewController.xib */,
 				51FD5FAD18D1E9DB0040369B /* AgendaView.h */,
+				D0963F66198B2DEA00A22769 /* PhotoView.h */,
 				51FD5FAE18D1E9DB0040369B /* AgendaView.m */,
+				D0963F68198B2E4000A22769 /* PhotoView.m */,
 				514D098918DBB78300872793 /* ArrayDropDown.h */,
 				514D098A18DBB78300872793 /* ArrayDropDown.m */,
 				514D095918DA5C1D00872793 /* AgendaScroll.h */,
@@ -593,7 +609,9 @@
 				514D095F18DA67B100872793 /* CellAgenda.h */,
 				514D096018DA67B100872793 /* CellAgenda.m */,
 				51C73F1F18D8E23400EECBA5 /* AgendaCell.h */,
+				D0963F6A198B399F00A22769 /* PhotoCell.h */,
 				51C73F2018D8E23400EECBA5 /* AgendaCell.m */,
+				D0963F6C198B39CA00A22769 /* PhotoCell.m */,
 				51C73F1C18D8DEB200EECBA5 /* Event.h */,
 				51C73F1D18D8DEB200EECBA5 /* Event.m */,
 				51C73F1918D8BE2400EECBA5 /* WebView.h */,
@@ -638,6 +656,7 @@
 				51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */,
 				51FD5F6918CFCC260040369B /* Images.xcassets */,
 				51FD5F5818CFCC250040369B /* Supporting Files */,
+				D047813C198A60B8004ACEE5 /* PhotoView.xib */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -689,6 +708,8 @@
 		51FD5F8A18CFD1F70040369B /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				D0478132198A3785004ACEE5 /* photo_icon.png */,
+				D0478133198A3785004ACEE5 /* photo_icon@2x.png */,
 				514D098518DB93FF00872793 /* genre_icon.png */,
 				514D098718DB969700872793 /* music_icon.png */,
 				514D096E18DB5F0100872793 /* calendar_icon.png */,
@@ -849,8 +870,10 @@
 				51A63A5F18D4B8A4005DCD55 /* Icon-Small-50.png in Resources */,
 				51FD5FCF18D33E610040369B /* button_play.png in Resources */,
 				51A63B4518D65E51005DCD55 /* bachataCat.jpg in Resources */,
+				D0478134198A3785004ACEE5 /* photo_icon.png in Resources */,
 				514D096A18DB5BC000872793 /* left_arrow.png in Resources */,
 				515FB73518DF437D00089750 /* icon_40pt_80x80.png in Resources */,
+				D0963F6B198B399F00A22769 /* PhotoCell.h in Resources */,
 				514D099318DCA56600872793 /* close_icon@2x.png in Resources */,
 				51A63B2818D5EBC8005DCD55 /* reduce_button@2x.png in Resources */,
 				51FD5FA918CFEA490040369B /* logo_oolatina.png in Resources */,
@@ -885,6 +908,7 @@
 				514D098218DB8E0700872793 /* drop_down@2x.png in Resources */,
 				51A63A6718D4B8A4005DCD55 /* iTunesArtwork@2x in Resources */,
 				51F6135A18DA32A200919995 /* AgendaViewController.xib in Resources */,
+				D047813D198A60B8004ACEE5 /* PhotoView.xib in Resources */,
 				51FD5FDF18D37F620040369B /* background.png in Resources */,
 				51A63B2118D5DD20005DCD55 /* kizomba.jpg in Resources */,
 				514D097318DB64E500872793 /* ville_icon.png in Resources */,
@@ -909,6 +933,8 @@
 				514D098118DB8E0700872793 /* done@2x.png in Resources */,
 				51A63A4218D48FA9005DCD55 /* buttonpauseradio@2x.png in Resources */,
 				51A63B1E18D5DD20005DCD55 /* bachata.jpg in Resources */,
+				D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */,
+				D0963F67198B2DEA00A22769 /* PhotoView.h in Resources */,
 				51A63B4A18D65E51005DCD55 /* merengueCat.jpg in Resources */,
 				51FD5F9718CFD22E0040369B /* news_icon.png in Resources */,
 				514D098F18DC3E9E00872793 /* default-portrait@2x.png in Resources */,
@@ -944,6 +970,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0963F6D198B39CA00A22769 /* PhotoCell.m in Sources */,
 				51F6135918DA32A200919995 /* AgendaViewController.m in Sources */,
 				514D098418DB8E0700872793 /* DropDownViewCell.m in Sources */,
 				51A63AF418D4BD13005DCD55 /* AFHTTPRequestOperation.m in Sources */,
@@ -986,6 +1013,7 @@
 				51A63B1118D5CCC2005DCD55 /* Radio.m in Sources */,
 				51FD5FB518D1E9F10040369B /* GalleryView.m in Sources */,
 				514D098B18DBB78300872793 /* ArrayDropDown.m in Sources */,
+				D0963F69198B2E4000A22769 /* PhotoView.m in Sources */,
 				51FD5FA018CFD5F60040369B /* TableViewElement.m in Sources */,
 				515FB72B18DF31E200089750 /* Interface.m in Sources */,
 				514D098318DB8E0700872793 /* DropDownListView.m in Sources */,
