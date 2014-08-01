@@ -21,6 +21,7 @@
 #import "ArtistAlbum.h"
 #import "VideoCategoryView.h"
 #import "WebView.h"
+#import "PhotoCustomCell.h"
 
 @interface Interface : UIViewController <TableViewSCDelegate, AudioViewDelegate, ArtistAlbumDelegate, VideoViewDelegate,NewsViewDelegate>
 {

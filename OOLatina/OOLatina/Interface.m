@@ -338,14 +338,15 @@
         if(mAgendaView != nil)
         {
             searchButton.hidden = YES;
-            [mPhotoView loadPhoto];
+//            [mPhotoView loadPhoto];
             [pageView bringSubviewToFront:mPhotoView];
         }
         else
         {
             searchButton.hidden = YES;
-            mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
-            mPhotoView.backgroundColor = [UIColor blueColor];
+            mPhotoView = [[PhotoView alloc] init];
+            [mPhotoView setup];
+            
             [pageView addSubview:mPhotoView];
         }
     }

@@ -165,11 +165,12 @@
 		51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */; };
 		D0478134198A3785004ACEE5 /* photo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478132198A3785004ACEE5 /* photo_icon.png */; };
 		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
-		D047813D198A60B8004ACEE5 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D047813C198A60B8004ACEE5 /* PhotoView.xib */; };
-		D0963F67198B2DEA00A22769 /* PhotoView.h in Resources */ = {isa = PBXBuildFile; fileRef = D0963F66198B2DEA00A22769 /* PhotoView.h */; };
-		D0963F69198B2E4000A22769 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F68198B2E4000A22769 /* PhotoView.m */; };
 		D0963F6B198B399F00A22769 /* PhotoCell.h in Resources */ = {isa = PBXBuildFile; fileRef = D0963F6A198B399F00A22769 /* PhotoCell.h */; };
 		D0963F6D198B39CA00A22769 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F6C198B39CA00A22769 /* PhotoCell.m */; };
+		D0963F6F198B4EAB00A22769 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F6E198B4EAB00A22769 /* PhotoView.xib */; };
+		D0963F77198B583B00A22769 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F76198B583B00A22769 /* PhotoView.m */; };
+		D0963F7B198B803500A22769 /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7A198B803500A22769 /* PhotoCustomCell.xib */; };
+		D0963F7E198B806200A22769 /* PhotoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F7D198B806200A22769 /* PhotoCustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -398,11 +399,14 @@
 		51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
 		D0478132198A3785004ACEE5 /* photo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon.png; sourceTree = "<group>"; };
 		D0478133198A3785004ACEE5 /* photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_icon@2x.png"; sourceTree = "<group>"; };
-		D047813C198A60B8004ACEE5 /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
-		D0963F66198B2DEA00A22769 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
-		D0963F68198B2E4000A22769 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
 		D0963F6A198B399F00A22769 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		D0963F6C198B39CA00A22769 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		D0963F6E198B4EAB00A22769 /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
+		D0963F75198B583B00A22769 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
+		D0963F76198B583B00A22769 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
+		D0963F7A198B803500A22769 /* PhotoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCustomCell.xib; sourceTree = "<group>"; };
+		D0963F7C198B806100A22769 /* PhotoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCustomCell.h; sourceTree = "<group>"; };
+		D0963F7D198B806200A22769 /* PhotoCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,9 +601,7 @@
 				51F6135718DA32A200919995 /* AgendaViewController.m */,
 				51F6135818DA32A200919995 /* AgendaViewController.xib */,
 				51FD5FAD18D1E9DB0040369B /* AgendaView.h */,
-				D0963F66198B2DEA00A22769 /* PhotoView.h */,
 				51FD5FAE18D1E9DB0040369B /* AgendaView.m */,
-				D0963F68198B2E4000A22769 /* PhotoView.m */,
 				514D098918DBB78300872793 /* ArrayDropDown.h */,
 				514D098A18DBB78300872793 /* ArrayDropDown.m */,
 				514D095918DA5C1D00872793 /* AgendaScroll.h */,
@@ -654,9 +656,14 @@
 				51FD5FF018D3AECA0040369B /* Video.m */,
 				51FD5FF218D3B98B0040369B /* VideoTableViewCell.h */,
 				51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */,
+				D0963F6E198B4EAB00A22769 /* PhotoView.xib */,
+				D0963F75198B583B00A22769 /* PhotoView.h */,
+				D0963F76198B583B00A22769 /* PhotoView.m */,
 				51FD5F6918CFCC260040369B /* Images.xcassets */,
 				51FD5F5818CFCC250040369B /* Supporting Files */,
-				D047813C198A60B8004ACEE5 /* PhotoView.xib */,
+				D0963F7A198B803500A22769 /* PhotoCustomCell.xib */,
+				D0963F7C198B806100A22769 /* PhotoCustomCell.h */,
+				D0963F7D198B806200A22769 /* PhotoCustomCell.m */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -893,6 +900,7 @@
 				51A63A6518D4B8A4005DCD55 /* Icon@2x.png in Resources */,
 				51A63B2218D5DD20005DCD55 /* merengue.jpg in Resources */,
 				51FD5F5C18CFCC250040369B /* InfoPlist.strings in Resources */,
+				D0963F6F198B4EAB00A22769 /* PhotoView.xib in Resources */,
 				51A63A4118D48FA9005DCD55 /* buttonpauseradio.png in Resources */,
 				51A63B2F18D5F549005DCD55 /* agenda_icon@2x.png in Resources */,
 				51A63B3018D5F549005DCD55 /* audio_icon@2x.png in Resources */,
@@ -907,8 +915,8 @@
 				51A63B2518D5DD20005DCD55 /* reggaeton.jpg in Resources */,
 				514D098218DB8E0700872793 /* drop_down@2x.png in Resources */,
 				51A63A6718D4B8A4005DCD55 /* iTunesArtwork@2x in Resources */,
+				D0963F7B198B803500A22769 /* PhotoCustomCell.xib in Resources */,
 				51F6135A18DA32A200919995 /* AgendaViewController.xib in Resources */,
-				D047813D198A60B8004ACEE5 /* PhotoView.xib in Resources */,
 				51FD5FDF18D37F620040369B /* background.png in Resources */,
 				51A63B2118D5DD20005DCD55 /* kizomba.jpg in Resources */,
 				514D097318DB64E500872793 /* ville_icon.png in Resources */,
@@ -934,7 +942,6 @@
 				51A63A4218D48FA9005DCD55 /* buttonpauseradio@2x.png in Resources */,
 				51A63B1E18D5DD20005DCD55 /* bachata.jpg in Resources */,
 				D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */,
-				D0963F67198B2DEA00A22769 /* PhotoView.h in Resources */,
 				51A63B4A18D65E51005DCD55 /* merengueCat.jpg in Resources */,
 				51FD5F9718CFD22E0040369B /* news_icon.png in Resources */,
 				514D098F18DC3E9E00872793 /* default-portrait@2x.png in Resources */,
@@ -997,6 +1004,7 @@
 				51FD5FE318D3A46F0040369B /* VideoCategory.m in Sources */,
 				51A63AF918D4BD14005DCD55 /* AFURLConnectionOperation.m in Sources */,
 				51A63AFA18D4BD14005DCD55 /* AFURLRequestSerialization.m in Sources */,
+				D0963F7E198B806200A22769 /* PhotoCustomCell.m in Sources */,
 				51A63B0418D5AF4E005DCD55 /* iCarousel.m in Sources */,
 				51FD5FD918D35D900040369B /* Albums.m in Sources */,
 				51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */,
@@ -1005,6 +1013,7 @@
 				514D096518DB5BB300872793 /* CKCalendarView.m in Sources */,
 				51FD5FDC18D368340040369B /* Artist.m in Sources */,
 				51FD5FC118D3378E0040369B /* MusicObject.m in Sources */,
+				D0963F77198B583B00A22769 /* PhotoView.m in Sources */,
 				51A63AF718D4BD14005DCD55 /* AFNetworkReachabilityManager.m in Sources */,
 				51C73F2418D8F20000EECBA5 /* SCUtils.m in Sources */,
 				51FD5FF118D3AECA0040369B /* Video.m in Sources */,
@@ -1013,7 +1022,6 @@
 				51A63B1118D5CCC2005DCD55 /* Radio.m in Sources */,
 				51FD5FB518D1E9F10040369B /* GalleryView.m in Sources */,
 				514D098B18DBB78300872793 /* ArrayDropDown.m in Sources */,
-				D0963F69198B2E4000A22769 /* PhotoView.m in Sources */,
 				51FD5FA018CFD5F60040369B /* TableViewElement.m in Sources */,
 				515FB72B18DF31E200089750 /* Interface.m in Sources */,
 				514D098318DB8E0700872793 /* DropDownListView.m in Sources */,

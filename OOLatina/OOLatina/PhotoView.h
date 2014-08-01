@@ -1,22 +1,18 @@
 //
-//  AgendaView.h
+//  PhotoView.h
 //  OOLatina
 //
-//  Created by Jérôme Laurent on 13/03/2014.
+//  Created by Macbook air on 8/1/14.
 //  Copyright (c) 2014 Jérôme Laurent. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "Event.h"
-#import "PhotoCell.h"
+#import "PhotoCustomCell.h"
 
-@interface PhotoView : UIView <UITextFieldDelegate>
-{
-    UIImageView *background;
-    UITableView *mTableView;
-    UIActivityIndicatorView *mLoading;
-}
+@interface PhotoView : UIView
 
-- (void)loadPhoto;
+@property (nonatomic, strong) IBOutlet UITableView *view;
+
+- (void)setup;
 
 @end
