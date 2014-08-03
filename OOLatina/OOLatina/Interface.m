@@ -8,6 +8,8 @@
 
 #import "Interface.h"
 #import "FirstGuideView.h"
+#import "AgendaWholeView.h"
+#import "PhotoPreviewView.h"
 
 @interface Interface ()
 
@@ -279,9 +281,11 @@
         else
         {
             searchButton.hidden = NO;
-            mAgendaView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
-            mAgendaView.backgroundColor = [UIColor blueColor];
-            [pageView addSubview:mAgendaView];
+            AgendaWholeView *aviews = [[AgendaWholeView alloc] initWithNibName:@"AgendaWholeView" bundle:nil];
+//            mAgendaView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
+//            mAgendaView.backgroundColor = [UIColor blueColor];
+//            [pageView addSubview:mAgendaView];
+              [pageView addSubview:aviews];
         }
     }
     
@@ -349,7 +353,7 @@
     }
     
     if(rownumber == 5) {
-        if(mAgendaView != nil)
+        if(mPhotoView != nil)
         {
             searchButton.hidden = YES;
 //            [mPhotoView loadPhoto];
@@ -358,10 +362,11 @@
         else
         {
             searchButton.hidden = YES;
-            mPhotoView = [[PhotoView alloc] init];
-            [mPhotoView setup];
-            
-            [pageView addSubview:mPhotoView];
+//            mPhotoView = [[PhotoView alloc] init];
+//            [mPhotoView setup];
+            PhotoPreviewView *vie = [[PhotoPreviewView alloc] init];
+            [vie setup];
+            [pageView addSubview:vie];
         }
     }
     

@@ -107,8 +107,6 @@
 		51C73F1E18D8DEB200EECBA5 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C73F1D18D8DEB200EECBA5 /* Event.m */; };
 		51C73F2118D8E23400EECBA5 /* AgendaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C73F2018D8E23400EECBA5 /* AgendaCell.m */; };
 		51C73F2418D8F20000EECBA5 /* SCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C73F2318D8F20000EECBA5 /* SCUtils.m */; };
-		51F6135918DA32A200919995 /* AgendaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F6135718DA32A200919995 /* AgendaViewController.m */; };
-		51F6135A18DA32A200919995 /* AgendaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F6135818DA32A200919995 /* AgendaViewController.xib */; };
 		51FD5F5218CFCC250040369B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FD5F5118CFCC250040369B /* Foundation.framework */; };
 		51FD5F5418CFCC250040369B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FD5F5318CFCC250040369B /* CoreGraphics.framework */; };
 		51FD5F5618CFCC250040369B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FD5F5518CFCC250040369B /* UIKit.framework */; };
@@ -163,6 +161,18 @@
 		51FD5FEE18D3AAAC0040369B /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FEC18D3AAAC0040369B /* LBYouTubePlayerViewController.m */; };
 		51FD5FF118D3AECA0040369B /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF018D3AECA0040369B /* Video.m */; };
 		51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */; };
+		D011231E198E0CE30099D124 /* AgendaWholeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D011231D198E0CE30099D124 /* AgendaWholeView.xib */; };
+		D0112321198E0CFB0099D124 /* AgendaWholeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112320198E0CFB0099D124 /* AgendaWholeView.m */; };
+		D0112324198E0D190099D124 /* PhotoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112323198E0D190099D124 /* PhotoPreviewView.m */; };
+		D011233B198E2A600099D124 /* FSBasicImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112327198E2A600099D124 /* FSBasicImage.m */; };
+		D011233C198E2A600099D124 /* FSBasicImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112329198E2A600099D124 /* FSBasicImageSource.m */; };
+		D011233D198E2A600099D124 /* FSImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D011232C198E2A600099D124 /* FSImageLoader.m */; };
+		D011233E198E2A600099D124 /* FSImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D011232E198E2A600099D124 /* FSImageScrollView.m */; };
+		D011233F198E2A600099D124 /* FSImageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112331198E2A600099D124 /* FSImageTitleView.m */; };
+		D0112340198E2A600099D124 /* FSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112333198E2A600099D124 /* FSImageView.m */; };
+		D0112341198E2A600099D124 /* FSImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112337198E2A600099D124 /* FSImageViewerViewController.m */; };
+		D0112342198E2A600099D124 /* FSPlaceholderImages.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112339198E2A600099D124 /* FSPlaceholderImages.m */; };
+		D0112346198E3FED0099D124 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112345198E3FED0099D124 /* EGOCache.m */; };
 		D0478134198A3785004ACEE5 /* photo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478132198A3785004ACEE5 /* photo_icon.png */; };
 		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
 		D0926296198CD4550055D7A6 /* PhotoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926295198CD4550055D7A6 /* PhotoEvent.m */; };
@@ -326,9 +336,6 @@
 		51C73F2018D8E23400EECBA5 /* AgendaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaCell.m; sourceTree = "<group>"; };
 		51C73F2218D8F20000EECBA5 /* SCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCUtils.h; sourceTree = "<group>"; };
 		51C73F2318D8F20000EECBA5 /* SCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCUtils.m; sourceTree = "<group>"; };
-		51F6135618DA32A200919995 /* AgendaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaViewController.h; sourceTree = "<group>"; };
-		51F6135718DA32A200919995 /* AgendaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaViewController.m; sourceTree = "<group>"; };
-		51F6135818DA32A200919995 /* AgendaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgendaViewController.xib; sourceTree = "<group>"; };
 		51FD5F4E18CFCC250040369B /* OOLatina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOLatina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FD5F5118CFCC250040369B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51FD5F5318CFCC250040369B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -411,6 +418,34 @@
 		51FD5FF018D3AECA0040369B /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		51FD5FF218D3B98B0040369B /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
 		51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
+		D011231D198E0CE30099D124 /* AgendaWholeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgendaWholeView.xib; sourceTree = "<group>"; };
+		D011231F198E0CFB0099D124 /* AgendaWholeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaWholeView.h; sourceTree = "<group>"; };
+		D0112320198E0CFB0099D124 /* AgendaWholeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaWholeView.m; sourceTree = "<group>"; };
+		D0112322198E0D190099D124 /* PhotoPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPreviewView.h; sourceTree = "<group>"; };
+		D0112323198E0D190099D124 /* PhotoPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPreviewView.m; sourceTree = "<group>"; };
+		D0112326198E2A600099D124 /* FSBasicImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBasicImage.h; sourceTree = "<group>"; };
+		D0112327198E2A600099D124 /* FSBasicImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBasicImage.m; sourceTree = "<group>"; };
+		D0112328198E2A600099D124 /* FSBasicImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBasicImageSource.h; sourceTree = "<group>"; };
+		D0112329198E2A600099D124 /* FSBasicImageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBasicImageSource.m; sourceTree = "<group>"; };
+		D011232A198E2A600099D124 /* FSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImage.h; sourceTree = "<group>"; };
+		D011232B198E2A600099D124 /* FSImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageLoader.h; sourceTree = "<group>"; };
+		D011232C198E2A600099D124 /* FSImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImageLoader.m; sourceTree = "<group>"; };
+		D011232D198E2A600099D124 /* FSImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageScrollView.h; sourceTree = "<group>"; };
+		D011232E198E2A600099D124 /* FSImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImageScrollView.m; sourceTree = "<group>"; };
+		D011232F198E2A600099D124 /* FSImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageSource.h; sourceTree = "<group>"; };
+		D0112330198E2A600099D124 /* FSImageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageTitleView.h; sourceTree = "<group>"; };
+		D0112331198E2A600099D124 /* FSImageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImageTitleView.m; sourceTree = "<group>"; };
+		D0112332198E2A600099D124 /* FSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageView.h; sourceTree = "<group>"; };
+		D0112333198E2A600099D124 /* FSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImageView.m; sourceTree = "<group>"; };
+		D0112334198E2A600099D124 /* FSImageViewer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSImageViewer-Prefix.pch"; sourceTree = "<group>"; };
+		D0112335198E2A600099D124 /* FSImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageViewer.h; sourceTree = "<group>"; };
+		D0112336198E2A600099D124 /* FSImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageViewerViewController.h; sourceTree = "<group>"; };
+		D0112337198E2A600099D124 /* FSImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImageViewerViewController.m; sourceTree = "<group>"; };
+		D0112338198E2A600099D124 /* FSPlaceholderImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPlaceholderImages.h; sourceTree = "<group>"; };
+		D0112339198E2A600099D124 /* FSPlaceholderImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPlaceholderImages.m; sourceTree = "<group>"; };
+		D011233A198E2A600099D124 /* FSTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTitleView.h; sourceTree = "<group>"; };
+		D0112344198E3FED0099D124 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		D0112345198E3FED0099D124 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		D0478132198A3785004ACEE5 /* photo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon.png; sourceTree = "<group>"; };
 		D0478133198A3785004ACEE5 /* photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_icon@2x.png"; sourceTree = "<group>"; };
 		D0926294198CD4550055D7A6 /* PhotoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoEvent.h; sourceTree = "<group>"; };
@@ -610,6 +645,8 @@
 		51FD5F5718CFCC250040369B /* OOLatina */ = {
 			isa = PBXGroup;
 			children = (
+				D0112343198E3FED0099D124 /* EGOCache */,
+				D0112325198E2A600099D124 /* FSImageViewer */,
 				514D097818DB8E0600872793 /* kDropDown */,
 				514D096218DB5BA100872793 /* CKCalendarView */,
 				51A63B0118D5AF41005DCD55 /* iCarousel */,
@@ -629,9 +666,6 @@
 				515FB72D18DF320D00089750 /* Interface_iPhone.xib */,
 				51FD5FAA18D1E86C0040369B /* NewsView.h */,
 				51FD5FAB18D1E86C0040369B /* NewsView.m */,
-				51F6135618DA32A200919995 /* AgendaViewController.h */,
-				51F6135718DA32A200919995 /* AgendaViewController.m */,
-				51F6135818DA32A200919995 /* AgendaViewController.xib */,
 				51FD5FAD18D1E9DB0040369B /* AgendaView.h */,
 				51FD5FAE18D1E9DB0040369B /* AgendaView.m */,
 				514D098918DBB78300872793 /* ArrayDropDown.h */,
@@ -704,9 +738,14 @@
 				D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */,
 				D09262A1198D44AB0055D7A6 /* PhotoCollectionCell.h */,
 				D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */,
+				D09262A4198D4B130055D7A6 /* PhotoPreviewView.xib */,
+				D0112322198E0D190099D124 /* PhotoPreviewView.h */,
+				D0112323198E0D190099D124 /* PhotoPreviewView.m */,
+				D011231D198E0CE30099D124 /* AgendaWholeView.xib */,
+				D011231F198E0CFB0099D124 /* AgendaWholeView.h */,
+				D0112320198E0CFB0099D124 /* AgendaWholeView.m */,
 				51FD5F6918CFCC260040369B /* Images.xcassets */,
 				51FD5F5818CFCC250040369B /* Supporting Files */,
-				D09262A4198D4B130055D7A6 /* PhotoPreviewView.xib */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -834,6 +873,43 @@
 				51FD5FEC18D3AAAC0040369B /* LBYouTubePlayerViewController.m */,
 			);
 			name = LBYoutube;
+			sourceTree = "<group>";
+		};
+		D0112325198E2A600099D124 /* FSImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				D0112326198E2A600099D124 /* FSBasicImage.h */,
+				D0112327198E2A600099D124 /* FSBasicImage.m */,
+				D0112328198E2A600099D124 /* FSBasicImageSource.h */,
+				D0112329198E2A600099D124 /* FSBasicImageSource.m */,
+				D011232A198E2A600099D124 /* FSImage.h */,
+				D011232B198E2A600099D124 /* FSImageLoader.h */,
+				D011232C198E2A600099D124 /* FSImageLoader.m */,
+				D011232D198E2A600099D124 /* FSImageScrollView.h */,
+				D011232E198E2A600099D124 /* FSImageScrollView.m */,
+				D011232F198E2A600099D124 /* FSImageSource.h */,
+				D0112330198E2A600099D124 /* FSImageTitleView.h */,
+				D0112331198E2A600099D124 /* FSImageTitleView.m */,
+				D0112332198E2A600099D124 /* FSImageView.h */,
+				D0112333198E2A600099D124 /* FSImageView.m */,
+				D0112334198E2A600099D124 /* FSImageViewer-Prefix.pch */,
+				D0112335198E2A600099D124 /* FSImageViewer.h */,
+				D0112336198E2A600099D124 /* FSImageViewerViewController.h */,
+				D0112337198E2A600099D124 /* FSImageViewerViewController.m */,
+				D0112338198E2A600099D124 /* FSPlaceholderImages.h */,
+				D0112339198E2A600099D124 /* FSPlaceholderImages.m */,
+				D011233A198E2A600099D124 /* FSTitleView.h */,
+			);
+			path = FSImageViewer;
+			sourceTree = "<group>";
+		};
+		D0112343198E3FED0099D124 /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				D0112344198E3FED0099D124 /* EGOCache.h */,
+				D0112345198E3FED0099D124 /* EGOCache.m */,
+			);
+			path = EGOCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -974,7 +1050,6 @@
 				514D098218DB8E0700872793 /* drop_down@2x.png in Resources */,
 				51A63A6718D4B8A4005DCD55 /* iTunesArtwork@2x in Resources */,
 				D0963F7B198B803500A22769 /* PhotoCustomCell.xib in Resources */,
-				51F6135A18DA32A200919995 /* AgendaViewController.xib in Resources */,
 				51FD5FDF18D37F620040369B /* background.png in Resources */,
 				51A63B2118D5DD20005DCD55 /* kizomba.jpg in Resources */,
 				514D097318DB64E500872793 /* ville_icon.png in Resources */,
@@ -1005,6 +1080,7 @@
 				51A63B4A18D65E51005DCD55 /* merengueCat.jpg in Resources */,
 				51FD5F9718CFD22E0040369B /* news_icon.png in Resources */,
 				514D098F18DC3E9E00872793 /* default-portrait@2x.png in Resources */,
+				D011231E198E0CE30099D124 /* AgendaWholeView.xib in Resources */,
 				D0937864198C803600626197 /* button_share.png in Resources */,
 				51FD5F9818CFD22E0040369B /* radio_icon.png in Resources */,
 				51FD5F9618CFD22E0040369B /* navigation_bar.png in Resources */,
@@ -1056,10 +1132,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0963F6D198B39CA00A22769 /* PhotoCell.m in Sources */,
-				51F6135918DA32A200919995 /* AgendaViewController.m in Sources */,
+				D0112340198E2A600099D124 /* FSImageView.m in Sources */,
+				D0112346198E3FED0099D124 /* EGOCache.m in Sources */,
 				514D098418DB8E0700872793 /* DropDownViewCell.m in Sources */,
 				D0926296198CD4550055D7A6 /* PhotoEvent.m in Sources */,
 				51A63AF418D4BD13005DCD55 /* AFHTTPRequestOperation.m in Sources */,
+				D011233F198E2A600099D124 /* FSImageTitleView.m in Sources */,
 				51FD5FBE18D333CE0040369B /* AlbumView.m in Sources */,
 				51FD5F6818CFCC260040369B /* ViewController.m in Sources */,
 				51FD5FAF18D1E9DB0040369B /* AgendaView.m in Sources */,
@@ -1070,11 +1148,13 @@
 				514D095B18DA5C1D00872793 /* AgendaScroll.m in Sources */,
 				51FD5FB818D1EAFF0040369B /* AudioView.m in Sources */,
 				D093786C198C8BBB00626197 /* FirstGuideView.m in Sources */,
+				D0112321198E0CFB0099D124 /* AgendaWholeView.m in Sources */,
 				51FD5FD618D3495F0040369B /* ArtistAlbum.m in Sources */,
 				51FD5F6218CFCC250040369B /* AppDelegate.m in Sources */,
 				D0926299198CDF5C0055D7A6 /* Photo.m in Sources */,
 				514D096118DA67B100872793 /* CellAgenda.m in Sources */,
 				51A63AFC18D4BD14005DCD55 /* AFURLSessionManager.m in Sources */,
+				D0112324198E0D190099D124 /* PhotoPreviewView.m in Sources */,
 				51FD5FBB18D1EB090040369B /* VideoView.m in Sources */,
 				51A63AF818D4BD14005DCD55 /* AFSecurityPolicy.m in Sources */,
 				51A63AFB18D4BD14005DCD55 /* AFURLResponseSerialization.m in Sources */,
@@ -1082,6 +1162,7 @@
 				51FD5F5E18CFCC250040369B /* main.m in Sources */,
 				514D095E18DA639900872793 /* AgendaDayCell.m in Sources */,
 				51FD5F9D18CFD5810040369B /* TableView.m in Sources */,
+				D0112342198E2A600099D124 /* FSPlaceholderImages.m in Sources */,
 				51A63B1418D5D4BF005DCD55 /* UIScrollLinear.m in Sources */,
 				51FD5FE318D3A46F0040369B /* VideoCategory.m in Sources */,
 				51A63AF918D4BD14005DCD55 /* AFURLConnectionOperation.m in Sources */,
@@ -1090,6 +1171,7 @@
 				51A63B0418D5AF4E005DCD55 /* iCarousel.m in Sources */,
 				51FD5FD918D35D900040369B /* Albums.m in Sources */,
 				51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */,
+				D011233B198E2A600099D124 /* FSBasicImage.m in Sources */,
 				51FD5FAC18D1E86C0040369B /* NewsView.m in Sources */,
 				51A63AF518D4BD14005DCD55 /* AFHTTPRequestOperationManager.m in Sources */,
 				514D096518DB5BB300872793 /* CKCalendarView.m in Sources */,
@@ -1101,15 +1183,19 @@
 				51FD5FF118D3AECA0040369B /* Video.m in Sources */,
 				51FD5FED18D3AAAC0040369B /* LBYouTubeExtractor.m in Sources */,
 				51C73F1E18D8DEB200EECBA5 /* Event.m in Sources */,
+				D011233C198E2A600099D124 /* FSBasicImageSource.m in Sources */,
 				51A63B1118D5CCC2005DCD55 /* Radio.m in Sources */,
 				51FD5FB518D1E9F10040369B /* GalleryView.m in Sources */,
 				514D098B18DBB78300872793 /* ArrayDropDown.m in Sources */,
+				D011233E198E2A600099D124 /* FSImageScrollView.m in Sources */,
 				51FD5FA018CFD5F60040369B /* TableViewElement.m in Sources */,
 				515FB72B18DF31E200089750 /* Interface.m in Sources */,
+				D0112341198E2A600099D124 /* FSImageViewerViewController.m in Sources */,
 				514D098318DB8E0700872793 /* DropDownListView.m in Sources */,
 				51A63B3718D65BC9005DCD55 /* UIDoubleScroll.m in Sources */,
 				51FD5FC418D338D70040369B /* CustomTableViewCell.m in Sources */,
 				51C73F2118D8E23400EECBA5 /* AgendaCell.m in Sources */,
+				D011233D198E2A600099D124 /* FSImageLoader.m in Sources */,
 				51FD5FE618D3A7E30040369B /* VideoCategoryView.m in Sources */,
 				51C73F1B18D8BE2400EECBA5 /* WebView.m in Sources */,
 				51A63B3A18D65C3A005DCD55 /* ImageElement.m in Sources */,
