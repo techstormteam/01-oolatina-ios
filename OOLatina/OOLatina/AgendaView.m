@@ -65,7 +65,7 @@
         searchField.returnKeyType = UIReturnKeyDone;
         searchField.font = [UIFont fontWithName:@"Helvetica" size:15.0];
         searchField.textColor = pinkColor;
-        searchField.placeholder = @"Recherche";
+        searchField.placeholder = NSLocalizedString(@"research", nil);
         [popupView addSubview:searchField];
         
         UIImageView *searchIcon = [[UIImageView alloc] initWithFrame:CGRectMake(220-30, 0, 30, 30)];
@@ -75,7 +75,7 @@
         calendarField = [[UITextField alloc] initWithFrame:CGRectMake(22, 210+50, 220, 30)];
         calendarField.borderStyle = UITextBorderStyleRoundedRect;
         calendarField.textColor = pinkColor;
-        calendarField.placeholder = @"Calendrier";
+        calendarField.placeholder = NSLocalizedString(@"calendar", nil);
         //calendarField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Calendrier" attributes:@{NSForegroundColorAttributeName: pinkColor}];
         calendarField.font = [UIFont fontWithName:@"Helvetica" size:15.0];
         calendarField.delegate = self;
@@ -91,7 +91,7 @@
         villeField.font = [UIFont fontWithName:@"Helvetica" size:15.0];
         villeField.returnKeyType = UIReturnKeyDone;
         villeField.textColor = pinkColor;
-        villeField.placeholder = @"Ville";
+        villeField.placeholder = NSLocalizedString(@"city", nil);
         villeField.delegate = self;
         [popupView addSubview:villeField];
         
@@ -103,13 +103,13 @@
         dateandVille.backgroundColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:0.85];
         dateandVille.textAlignment = NSTextAlignmentCenter;
         dateandVille.font = [UIFont fontWithName:@"Helvetica-Bold" size:21.0];
-        dateandVille.text = @"Date & Ville";
+        dateandVille.text = NSLocalizedString(@"date_and_city", nil);
         dateandVille.textColor = [UIColor blackColor];
         [popupView addSubview:dateandVille];
         
         UIButton *eventSearchButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         eventSearchButton.frame = CGRectMake(22, 260+50+50, 220, 30);
-        [eventSearchButton setTitle:@"TROUVER DES EVENEMENTS" forState:UIControlStateNormal];
+        [eventSearchButton setTitle:NSLocalizedString(@"find_events", nil) forState:UIControlStateNormal];
         [eventSearchButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         eventSearchButton.backgroundColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
         eventSearchButton.layer.cornerRadius = 5.0;
@@ -122,7 +122,7 @@
         genreTitle.backgroundColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:0.85];
         genreTitle.textAlignment = NSTextAlignmentCenter;
         genreTitle.font = [UIFont fontWithName:@"Helvetica-Bold" size:21.0];
-        genreTitle.text = @"Genre";
+        genreTitle.text = NSLocalizedString(@"kind", nil);
         genreTitle.textColor = [UIColor blackColor];
         [popupView addSubview:genreTitle];
         
@@ -131,7 +131,7 @@
         genreField.enabled = NO;
         genreField.delegate = self;
         genreField.font = [UIFont fontWithName:@"Helvetica" size:15.0];
-        genreField.placeholder = @"State, Soirée, Cours, ...";
+        genreField.placeholder = NSLocalizedString(@"hint_kind", nil);
         genreField.textColor = pinkColor;
         [popupView addSubview:genreField];
         
@@ -145,7 +145,7 @@
         dropdownGenre.frame = CGRectMake(22, 45, 220, 30);
         dropdownGenre.tag = 0;
         [dropdownGenre setTitleColor:pinkColor forState:UIControlStateNormal];
-        [dropdownGenre setTitle:@"Sélectionner" forState:UIControlStateNormal];
+        [dropdownGenre setTitle:NSLocalizedString(@"select", nil) forState:UIControlStateNormal];
         [dropdownGenre addTarget:self action:@selector(showDropDown:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:dropdownGenre];
         
@@ -153,7 +153,7 @@
         musicTitle.backgroundColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:0.85];
         musicTitle.textAlignment = NSTextAlignmentCenter;
         musicTitle.font = [UIFont fontWithName:@"Helvetica-Bold" size:21.0];
-        musicTitle.text = @"Musique";
+        musicTitle.text = NSLocalizedString(@"music", nil);
         musicTitle.textColor = [UIColor blackColor];
         [popupView addSubview:musicTitle];
         
@@ -161,7 +161,7 @@
         musicField.borderStyle = UITextBorderStyleRoundedRect;
         musicField.enabled = NO;
         musicField.font = [UIFont fontWithName:@"Helvetica" size:15.0];
-        musicField.placeholder = @"Bachata, Salsa, Kizomba, ...";
+        musicField.placeholder = NSLocalizedString(@"hint_music", nil);
         musicField.delegate = self;
         musicField.textColor = pinkColor;
         [popupView addSubview:musicField];
@@ -176,7 +176,7 @@
         dropdownMusic.frame = CGRectMake(22, 125, 220, 30);
         dropdownMusic.tag = 1;
         [dropdownMusic setTitleColor:pinkColor forState:UIControlStateNormal];
-        [dropdownMusic setTitle:@"Sélectionner" forState:UIControlStateNormal];
+        [dropdownMusic setTitle:NSLocalizedString(@"select", nil) forState:UIControlStateNormal];
         [dropdownMusic addTarget:self action:@selector(showDropDown:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:dropdownMusic];
         

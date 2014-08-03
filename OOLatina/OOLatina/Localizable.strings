@@ -18,3 +18,14 @@
 "kizomba" = "Kizomba";
 "reggaeton" = "Reggaeton";
 "merengue" = "Merengue";
+
+"research" = "Research";
+"calendar" = "Calendar";
+"city" = "Ville";
+"date_and_city" = "Date & City";
+"find_events" = "FIND EVENTS";
+"kind" = "Kind";
+"hint_kind" = "State, Party, Course, ...";
+"select" = "Select";
+"music" = "Music";
+"hint_music" = "Bachata, Salsa, Kizomba, ...";
