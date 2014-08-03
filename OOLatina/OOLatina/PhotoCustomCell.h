@@ -10,8 +10,8 @@
 
 @interface PhotoCustomCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *lblTitle;
-@property (nonatomic, strong) IBOutlet UIView *cotAlbum;
+@property (nonatomic, weak) IBOutlet UILabel *lblTitle;
+@property (nonatomic, weak) IBOutlet UIView *covAlbum;
 
 - (void)setup;
 

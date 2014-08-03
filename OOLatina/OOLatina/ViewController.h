@@ -13,6 +13,7 @@
 @interface ViewController : UIViewController
 {
     Interface *mInterface;
+    
 }
 
 @end

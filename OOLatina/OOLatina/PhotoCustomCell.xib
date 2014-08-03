@@ -4,60 +4,42 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoCustomCell">
-            <connections>
-                <outlet property="cotAlbum" destination="vdD-gp-gkv" id="UIK-Po-KHv"/>
-                <outlet property="lblTitle" destination="XjX-r4-52Z" id="jCL-4b-yqZ"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="mqW-2o-JAM">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Photo" rowHeight="149" id="P5b-dW-1rE" userLabel="tvcPhotoAlbum" customClass="PhotoCustomCell">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="149"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODG-vs-wwp" userLabel="topLayout">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[No Title]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjX-r4-52Z" userLabel="lblTitle">
-                            <rect key="frame" x="20" y="13" width="77" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="320" id="jPt-Yt-XLl"/>
-                    </constraints>
-                </view>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vdD-gp-gkv">
-                    <rect key="frame" x="0.0" y="47" width="320" height="521"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="521" id="5wl-e3-K5w"/>
-                        <constraint firstAttribute="width" id="pen-ay-aGx"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AQE-XW-W4z">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                    <cells/>
-                </collectionView>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="ODG-vs-wwp" secondAttribute="bottom" constant="521" id="FYa-FQ-6Mv"/>
-                <constraint firstItem="ODG-vs-wwp" firstAttribute="leading" secondItem="vdD-gp-gkv" secondAttribute="leading" id="ego-JD-5MH"/>
-                <constraint firstItem="ODG-vs-wwp" firstAttribute="top" secondItem="mqW-2o-JAM" secondAttribute="top" id="nlP-CS-QCB"/>
-                <constraint firstItem="ODG-vs-wwp" firstAttribute="leading" secondItem="mqW-2o-JAM" secondAttribute="leading" id="tvd-7z-Hmo"/>
-                <constraint firstItem="vdD-gp-gkv" firstAttribute="top" secondItem="ODG-vs-wwp" secondAttribute="bottom" id="w2m-9u-O5g"/>
-            </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-        </view>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P5b-dW-1rE" id="1bL-qf-IdO">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="148"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaO-aF-tfs" userLabel="lblTitle">
+                        <rect key="frame" x="20" y="11" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pmh-F7-GCY" userLabel="covAlbum">
+                        <rect key="frame" x="0.0" y="40" width="340" height="108"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GRE-EQ-GVd">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="dew-o2-ua3"/>
+                            <outlet property="delegate" destination="-1" id="AWQ-rw-5Cz"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblTitle" destination="KaO-aF-tfs" id="uQq-et-bhz"/>
+            </connections>
+        </tableViewCell>
     </objects>
 </document>

@@ -38,15 +38,15 @@
         mDoubleScroll.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
         [self addSubview:mDoubleScroll];
         
-        [mDoubleScroll addElement:@"dance-shows.jpg" andTitle:@"Dance Shows" andId:@"10"];
-        [mDoubleScroll addElement:@"dance-workshops.jpg" andTitle:@"Dance workshops" andId:@"45"];
-        [mDoubleScroll addElement:@"dance-party.jpg" andTitle:@"Dance party" andId:@"46"];
-        [mDoubleScroll addElement:@"salsa-cubaine.jpg" andTitle:@"Salsa Cubaine" andId:@"22"];
-        [mDoubleScroll addElement:@"salsa-portoricaine.jpg" andTitle:@"Salsa Portoricaine" andId:@"47"];
-        [mDoubleScroll addElement:@"bachataCat.jpg" andTitle:@"Bachata" andId:@"20"];
-        [mDoubleScroll addElement:@"kizombaCat.jpg" andTitle:@"Kizomba" andId:@"21"];
-        [mDoubleScroll addElement:@"reggaetonCat.jpg" andTitle:@"Reggaeton" andId:@"23"];
-        [mDoubleScroll addElement:@"merengueCat.jpg" andTitle:@"Merengue" andId:@"26"];
+        [mDoubleScroll addElement:@"dance-shows.jpg" andTitle:NSLocalizedString(@"dance _shows", nil) andId:@"10"];
+        [mDoubleScroll addElement:@"dance-workshops.jpg" andTitle:NSLocalizedString(@"dance_workshops", nil) andId:@"45"];
+        [mDoubleScroll addElement:@"dance-party.jpg" andTitle:NSLocalizedString(@"dance_party", nil) andId:@"46"];
+        [mDoubleScroll addElement:@"salsa-cubaine.jpg" andTitle:NSLocalizedString(@"salsa_cubaine", nil) andId:@"22"];
+        [mDoubleScroll addElement:@"salsa-portoricaine.jpg" andTitle:NSLocalizedString(@"salsa_portoricaine", nil) andId:@"47"];
+        [mDoubleScroll addElement:@"bachataCat.jpg" andTitle:NSLocalizedString(@"bachata", nil) andId:@"20"];
+        [mDoubleScroll addElement:@"kizombaCat.jpg" andTitle:NSLocalizedString(@"kizomba", nil) andId:@"21"];
+        [mDoubleScroll addElement:@"reggaetonCat.jpg" andTitle:NSLocalizedString(@"reggaeton", nil) andId:@"23"];
+        [mDoubleScroll addElement:@"merengueCat.jpg" andTitle:NSLocalizedString(@"merengue", nil) andId:@"26"];
     }
     return self;
 }

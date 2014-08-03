@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PhotoCustomCell.h"
+#import "SCUtils.h"
+#import "PhotoEvent.h"
 
-@interface PhotoView : UIView
+@interface PhotoView : UIView  {
+    NSMutableArray *photoEvents;
+}
 
 @property (nonatomic, strong) IBOutlet UITableView *view;
 

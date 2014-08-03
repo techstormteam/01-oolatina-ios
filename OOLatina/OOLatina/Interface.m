@@ -7,6 +7,7 @@
 //
 
 #import "Interface.h"
+#import "FirstGuideView.h"
 
 @interface Interface ()
 
@@ -27,23 +28,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self start];
+    if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
+                                objectForKey:@"aValue"]]) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"aValue"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        //Action here
+        FirstGuideView *mFirstGuideView = [[FirstGuideView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [mFirstGuideView setup];
+        [self.view addSubview:mFirstGuideView.view];
+    }
+}
+
+- (void)start
+{
     MenuNavActive = NO;
     arrayMenu = [[NSMutableArray alloc] init];
-    [arrayMenu addObject:@"News"];
-    [arrayMenu addObject:@"Agenda"];
+    [arrayMenu addObject:NSLocalizedString(@"news", nil)];
+    [arrayMenu addObject:NSLocalizedString(@"agenda", nil)];
     //[arrayMenu addObject:@"Gallery"];
-    [arrayMenu addObject:@"Audio"];
-    [arrayMenu addObject:@"Video"];
-    [arrayMenu addObject:@"Radio"];
-    [arrayMenu addObject:@"Photo"];
+    [arrayMenu addObject:NSLocalizedString(@"audio", nil)];
+    [arrayMenu addObject:NSLocalizedString(@"video", nil)];
+    [arrayMenu addObject:NSLocalizedString(@"radio", nil)];
+    [arrayMenu addObject:NSLocalizedString(@"photo", nil)];
     
     mWebView = nil;
     
     self.view.backgroundColor = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:1.0];
     
     currentRowCloseMenu = -1;
-	
+    
     mNavigationBar = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60+20)];
     [mNavigationBar SetBackgroundImage:@"navigation_bar.png"];
     [self.view addSubview:mNavigationBar];
@@ -119,7 +134,6 @@
     mNewsView.delegate = self;
     mNewsView.backgroundColor = [UIColor redColor];
     [pageView addSubview:mNewsView];
-
 }
 
 - (void)showSearch

@@ -11,7 +11,7 @@
 @implementation PhotoCustomCell
 
 @synthesize lblTitle = mTitle;
-@synthesize cotAlbum = mAlbum;
+@synthesize covAlbum = mAlbum;
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -37,5 +37,7 @@
                                   owner:self options:nil];
 //    [self addSubview:self.view];
 }
+
+
 
 @end

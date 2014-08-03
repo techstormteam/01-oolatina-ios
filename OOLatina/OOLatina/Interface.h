@@ -23,8 +23,11 @@
 #import "WebView.h"
 #import "PhotoCustomCell.h"
 
+#import "SCUtils.h"
+
 @interface Interface : UIViewController <TableViewSCDelegate, AudioViewDelegate, ArtistAlbumDelegate, VideoViewDelegate,NewsViewDelegate>
 {
+    
     NavigationBar *mNavigationBar;
     TableView *mMenuTableView;
     NewsView *mNewsView;
@@ -47,5 +50,7 @@
     int currentRowCloseMenu;
     BOOL MenuNavActive;
 }
+
+- (void)start;
 
 @end

@@ -165,12 +165,26 @@
 		51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */; };
 		D0478134198A3785004ACEE5 /* photo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478132198A3785004ACEE5 /* photo_icon.png */; };
 		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
+		D0926296198CD4550055D7A6 /* PhotoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926295198CD4550055D7A6 /* PhotoEvent.m */; };
+		D0926299198CDF5C0055D7A6 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926298198CDF5C0055D7A6 /* Photo.m */; };
+		D09262A0198D44430055D7A6 /* PhotoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */; };
+		D09262A3198D44AB0055D7A6 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */; };
+		D09262A5198D4B130055D7A6 /* PhotoPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09262A4198D4B130055D7A6 /* PhotoPreviewView.xib */; };
+		D093784E198C5E4400626197 /* FirstGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D093784D198C5E4400626197 /* FirstGuideView.xib */; };
+		D0937862198C803600626197 /* button_download.png in Resources */ = {isa = PBXBuildFile; fileRef = D093785E198C803600626197 /* button_download.png */; };
+		D0937863198C803600626197 /* button_download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D093785F198C803600626197 /* button_download@2x.png */; };
+		D0937864198C803600626197 /* button_share.png in Resources */ = {isa = PBXBuildFile; fileRef = D0937860198C803600626197 /* button_share.png */; };
+		D0937865198C803600626197 /* button_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0937861198C803600626197 /* button_share@2x.png */; };
+		D0937868198C806A00626197 /* guide_image.png in Resources */ = {isa = PBXBuildFile; fileRef = D0937866198C806A00626197 /* guide_image.png */; };
+		D0937869198C806A00626197 /* no_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0937867198C806A00626197 /* no_image.gif */; };
+		D093786C198C8BBB00626197 /* FirstGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093786B198C8BBB00626197 /* FirstGuideView.m */; };
 		D0963F6B198B399F00A22769 /* PhotoCell.h in Resources */ = {isa = PBXBuildFile; fileRef = D0963F6A198B399F00A22769 /* PhotoCell.h */; };
 		D0963F6D198B39CA00A22769 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F6C198B39CA00A22769 /* PhotoCell.m */; };
 		D0963F6F198B4EAB00A22769 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F6E198B4EAB00A22769 /* PhotoView.xib */; };
 		D0963F77198B583B00A22769 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F76198B583B00A22769 /* PhotoView.m */; };
 		D0963F7B198B803500A22769 /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7A198B803500A22769 /* PhotoCustomCell.xib */; };
 		D0963F7E198B806200A22769 /* PhotoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F7D198B806200A22769 /* PhotoCustomCell.m */; };
+		D0963F80198C075700A22769 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7F198C075700A22769 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,6 +413,23 @@
 		51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
 		D0478132198A3785004ACEE5 /* photo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon.png; sourceTree = "<group>"; };
 		D0478133198A3785004ACEE5 /* photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_icon@2x.png"; sourceTree = "<group>"; };
+		D0926294198CD4550055D7A6 /* PhotoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoEvent.h; sourceTree = "<group>"; };
+		D0926295198CD4550055D7A6 /* PhotoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEvent.m; sourceTree = "<group>"; };
+		D0926297198CDF5C0055D7A6 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		D0926298198CDF5C0055D7A6 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionCell.xib; sourceTree = "<group>"; };
+		D09262A1198D44AB0055D7A6 /* PhotoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionCell.h; sourceTree = "<group>"; };
+		D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
+		D09262A4198D4B130055D7A6 /* PhotoPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPreviewView.xib; sourceTree = "<group>"; };
+		D093784D198C5E4400626197 /* FirstGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstGuideView.xib; sourceTree = "<group>"; };
+		D093785E198C803600626197 /* button_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_download.png; sourceTree = "<group>"; };
+		D093785F198C803600626197 /* button_download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_download@2x.png"; sourceTree = "<group>"; };
+		D0937860198C803600626197 /* button_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_share.png; sourceTree = "<group>"; };
+		D0937861198C803600626197 /* button_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_share@2x.png"; sourceTree = "<group>"; };
+		D0937866198C806A00626197 /* guide_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_image.png; sourceTree = "<group>"; };
+		D0937867198C806A00626197 /* no_image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = no_image.gif; sourceTree = "<group>"; };
+		D093786A198C8BBB00626197 /* FirstGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstGuideView.h; sourceTree = "<group>"; };
+		D093786B198C8BBB00626197 /* FirstGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstGuideView.m; sourceTree = "<group>"; };
 		D0963F6A198B399F00A22769 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		D0963F6C198B39CA00A22769 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		D0963F6E198B4EAB00A22769 /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
@@ -407,6 +438,7 @@
 		D0963F7A198B803500A22769 /* PhotoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCustomCell.xib; sourceTree = "<group>"; };
 		D0963F7C198B806100A22769 /* PhotoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCustomCell.h; sourceTree = "<group>"; };
 		D0963F7D198B806200A22769 /* PhotoCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCustomCell.m; sourceTree = "<group>"; };
+		D0963F7F198C075700A22769 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -659,11 +691,22 @@
 				D0963F6E198B4EAB00A22769 /* PhotoView.xib */,
 				D0963F75198B583B00A22769 /* PhotoView.h */,
 				D0963F76198B583B00A22769 /* PhotoView.m */,
-				51FD5F6918CFCC260040369B /* Images.xcassets */,
-				51FD5F5818CFCC250040369B /* Supporting Files */,
 				D0963F7A198B803500A22769 /* PhotoCustomCell.xib */,
 				D0963F7C198B806100A22769 /* PhotoCustomCell.h */,
 				D0963F7D198B806200A22769 /* PhotoCustomCell.m */,
+				D093784D198C5E4400626197 /* FirstGuideView.xib */,
+				D093786A198C8BBB00626197 /* FirstGuideView.h */,
+				D093786B198C8BBB00626197 /* FirstGuideView.m */,
+				D0926294198CD4550055D7A6 /* PhotoEvent.h */,
+				D0926295198CD4550055D7A6 /* PhotoEvent.m */,
+				D0926297198CDF5C0055D7A6 /* Photo.h */,
+				D0926298198CDF5C0055D7A6 /* Photo.m */,
+				D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */,
+				D09262A1198D44AB0055D7A6 /* PhotoCollectionCell.h */,
+				D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */,
+				51FD5F6918CFCC260040369B /* Images.xcassets */,
+				51FD5F5818CFCC250040369B /* Supporting Files */,
+				D09262A4198D4B130055D7A6 /* PhotoPreviewView.xib */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -675,6 +718,7 @@
 				51FD5F5A18CFCC250040369B /* InfoPlist.strings */,
 				51FD5F5D18CFCC250040369B /* main.m */,
 				51FD5F5F18CFCC250040369B /* OOLatina-Prefix.pch */,
+				D0963F7F198C075700A22769 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -715,6 +759,12 @@
 		51FD5F8A18CFD1F70040369B /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				D0937866198C806A00626197 /* guide_image.png */,
+				D0937867198C806A00626197 /* no_image.gif */,
+				D093785E198C803600626197 /* button_download.png */,
+				D093785F198C803600626197 /* button_download@2x.png */,
+				D0937860198C803600626197 /* button_share.png */,
+				D0937861198C803600626197 /* button_share@2x.png */,
 				D0478132198A3785004ACEE5 /* photo_icon.png */,
 				D0478133198A3785004ACEE5 /* photo_icon@2x.png */,
 				514D098518DB93FF00872793 /* genre_icon.png */,
@@ -796,6 +846,7 @@
 				51FD5F4A18CFCC250040369B /* Sources */,
 				51FD5F4B18CFCC250040369B /* Frameworks */,
 				51FD5F4C18CFCC250040369B /* Resources */,
+				50524F424C454D533F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -867,6 +918,7 @@
 				51A63B0C18D5C87A005DCD55 /* ituneslink@2x.png in Resources */,
 				514D096C18DB5BC000872793 /* right_arrow.png in Resources */,
 				51A63B4818D65E51005DCD55 /* dance-workshops.jpg in Resources */,
+				D0937862198C803600626197 /* button_download.png in Resources */,
 				51A63B4D18D65E51005DCD55 /* salsa-portoricaine.jpg in Resources */,
 				514D099218DCA56600872793 /* close_icon.png in Resources */,
 				51A63A6318D4B8A4005DCD55 /* Icon-Spotlight-iOS7@2x.png in Resources */,
@@ -876,9 +928,11 @@
 				51FD5F9918CFD22E0040369B /* reduce_button.png in Resources */,
 				51A63A5F18D4B8A4005DCD55 /* Icon-Small-50.png in Resources */,
 				51FD5FCF18D33E610040369B /* button_play.png in Resources */,
+				D0937869198C806A00626197 /* no_image.gif in Resources */,
 				51A63B4518D65E51005DCD55 /* bachataCat.jpg in Resources */,
 				D0478134198A3785004ACEE5 /* photo_icon.png in Resources */,
 				514D096A18DB5BC000872793 /* left_arrow.png in Resources */,
+				D093784E198C5E4400626197 /* FirstGuideView.xib in Resources */,
 				515FB73518DF437D00089750 /* icon_40pt_80x80.png in Resources */,
 				D0963F6B198B399F00A22769 /* PhotoCell.h in Resources */,
 				514D099318DCA56600872793 /* close_icon@2x.png in Resources */,
@@ -887,6 +941,7 @@
 				51A63B2018D5DD20005DCD55 /* dj.jpg in Resources */,
 				51A63A4718D48FB1005DCD55 /* backplay.png in Resources */,
 				514D097118DB600500872793 /* search_icon.png in Resources */,
+				D09262A0198D44430055D7A6 /* PhotoCollectionCell.xib in Resources */,
 				51FD5FCE18D33E610040369B /* button_pause@2x.png in Resources */,
 				51A63A4818D48FB1005DCD55 /* backplay@2x.png in Resources */,
 				51A63A5C18D4B8A4005DCD55 /* Icon-76@2x.png in Resources */,
@@ -894,9 +949,11 @@
 				51A63A6218D4B8A4005DCD55 /* Icon-Spotlight-iOS7.png in Resources */,
 				514D096D18DB5BC000872793 /* right_arrow@2x.png in Resources */,
 				515FB73418DF437D00089750 /* icon_29pt_58x58.png in Resources */,
+				D0937868198C806A00626197 /* guide_image.png in Resources */,
 				51A63B2418D5DD20005DCD55 /* portoricaine.jpg in Resources */,
 				515FB73618DF437D00089750 /* icon_60pt_120x120.png in Resources */,
 				51A63B2318D5DD20005DCD55 /* oolatina.jpg in Resources */,
+				D0937865198C803600626197 /* button_share@2x.png in Resources */,
 				51A63A6518D4B8A4005DCD55 /* Icon@2x.png in Resources */,
 				51A63B2218D5DD20005DCD55 /* merengue.jpg in Resources */,
 				51FD5F5C18CFCC250040369B /* InfoPlist.strings in Resources */,
@@ -905,6 +962,7 @@
 				51A63B2F18D5F549005DCD55 /* agenda_icon@2x.png in Resources */,
 				51A63B3018D5F549005DCD55 /* audio_icon@2x.png in Resources */,
 				51A63A4318D48FA9005DCD55 /* buttonplayradio.png in Resources */,
+				D0937863198C803600626197 /* button_download@2x.png in Resources */,
 				51A63B4C18D65E51005DCD55 /* salsa-cubaine.jpg in Resources */,
 				514D098618DB93FF00872793 /* genre_icon.png in Resources */,
 				51A63B3418D5F549005DCD55 /* video_icon@2x.png in Resources */,
@@ -921,6 +979,8 @@
 				51A63B2118D5DD20005DCD55 /* kizomba.jpg in Resources */,
 				514D097318DB64E500872793 /* ville_icon.png in Resources */,
 				51A63B3118D5F549005DCD55 /* gallery_icon@2x.png in Resources */,
+				D09262A5198D4B130055D7A6 /* PhotoPreviewView.xib in Resources */,
+				D0963F80198C075700A22769 /* Localizable.strings in Resources */,
 				514D096F18DB5F0100872793 /* calendar_icon.png in Resources */,
 				51FD5F9418CFD22E0040369B /* audio_icon.png in Resources */,
 				51A63B4918D65E51005DCD55 /* kizombaCat.jpg in Resources */,
@@ -945,6 +1005,7 @@
 				51A63B4A18D65E51005DCD55 /* merengueCat.jpg in Resources */,
 				51FD5F9718CFD22E0040369B /* news_icon.png in Resources */,
 				514D098F18DC3E9E00872793 /* default-portrait@2x.png in Resources */,
+				D0937864198C803600626197 /* button_share.png in Resources */,
 				51FD5F9818CFD22E0040369B /* radio_icon.png in Resources */,
 				51FD5F9618CFD22E0040369B /* navigation_bar.png in Resources */,
 				51A63B1F18D5DD20005DCD55 /* cubaine.jpg in Resources */,
@@ -972,6 +1033,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50524F424C454D533F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51FD5F4A18CFCC250040369B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -980,17 +1058,21 @@
 				D0963F6D198B39CA00A22769 /* PhotoCell.m in Sources */,
 				51F6135918DA32A200919995 /* AgendaViewController.m in Sources */,
 				514D098418DB8E0700872793 /* DropDownViewCell.m in Sources */,
+				D0926296198CD4550055D7A6 /* PhotoEvent.m in Sources */,
 				51A63AF418D4BD13005DCD55 /* AFHTTPRequestOperation.m in Sources */,
 				51FD5FBE18D333CE0040369B /* AlbumView.m in Sources */,
 				51FD5F6818CFCC260040369B /* ViewController.m in Sources */,
 				51FD5FAF18D1E9DB0040369B /* AgendaView.m in Sources */,
 				51FD5FB218D1E9E70040369B /* RadioView.m in Sources */,
+				D09262A3198D44AB0055D7A6 /* PhotoCollectionCell.m in Sources */,
 				51FD5FD318D3450D0040369B /* ArtistTableViewCell.m in Sources */,
 				51A63AF618D4BD14005DCD55 /* AFHTTPSessionManager.m in Sources */,
 				514D095B18DA5C1D00872793 /* AgendaScroll.m in Sources */,
 				51FD5FB818D1EAFF0040369B /* AudioView.m in Sources */,
+				D093786C198C8BBB00626197 /* FirstGuideView.m in Sources */,
 				51FD5FD618D3495F0040369B /* ArtistAlbum.m in Sources */,
 				51FD5F6218CFCC250040369B /* AppDelegate.m in Sources */,
+				D0926299198CDF5C0055D7A6 /* Photo.m in Sources */,
 				514D096118DA67B100872793 /* CellAgenda.m in Sources */,
 				51A63AFC18D4BD14005DCD55 /* AFURLSessionManager.m in Sources */,
 				51FD5FBB18D1EB090040369B /* VideoView.m in Sources */,
@@ -1098,8 +1180,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rubino Fabrice (3TAQ39V6A7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rubino Fabrice (3TAQ39V6A7)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1138,8 +1220,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rubino Fabrice (3TAQ39V6A7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rubino Fabrice (3TAQ39V6A7)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1160,12 +1242,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rubino Fabrice (3TAQ39V6A7)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OOLatina/OOLatina-Prefix.pch";
 				INFOPLIST_FILE = "OOLatina/OOLatina-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BD9417FC-F3FE-4D03-9F69-4BC81B27FA8E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1175,12 +1258,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rubino Fabrice (3TAQ39V6A7)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OOLatina/OOLatina-Prefix.pch";
 				INFOPLIST_FILE = "OOLatina/OOLatina-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BD9417FC-F3FE-4D03-9F69-4BC81B27FA8E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

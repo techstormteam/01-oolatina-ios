@@ -19,7 +19,9 @@
     [super viewDidLoad];
     
     mInterface = [[Interface alloc] initWithNibName:[SCUtils loadXibModel:@"Interface"] bundle:nil];
+        
     [self.view addSubview:mInterface.view];
+    
 }
 
 - (void)didReceiveMemoryWarning
