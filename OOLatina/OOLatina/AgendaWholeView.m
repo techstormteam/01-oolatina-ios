@@ -137,11 +137,11 @@
     
     [UIView commitAnimations];
 }
-//表视图委托
+
 #pragma mark -
 #pragma mark table view data source methods
 
-//返回某个表视图有多少行数据
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == couponTableView) {
@@ -152,7 +152,7 @@
     }
 }
 
-//表视图显示表视图项时调用：第一次显示（根据视图大小显示多少个视图项就调用多少次）以及拖动时调用
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -164,7 +164,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier: CellIdentifier];
     }else{
-        //cell中本来就有一个subview，如果是重用cell，则把cell中自己添加的subview清除掉，避免出现重叠问题
+
         //         [[cell.subviews objectAtIndex:1] removeFromSuperview];
         for (UIView *subView in cell.contentView.subviews)
         {
@@ -173,46 +173,40 @@
     }
     
     if (tableView == couponTableView) {
-        //进入优惠券列表
         cell.textLabel.text = [NSString stringWithFormat:@"%@", [couponArry objectAtIndex:indexPath.row]];
     }
     else{
-        //进入团购列表
         cell.textLabel.text = [NSString stringWithFormat:@"%@", [groupbuyArry objectAtIndex:indexPath.row]];
     }
     
     return cell;
 }
 
-//数据源委托
+
 #pragma mark -
 #pragma mark table delegate methods
 
-//在某行被选中前调用，返回nil表示该行不能被选中；另外也可返回重定向的indexPath，使选择某行时会跳到另一行
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     return indexPath;
 }
 
-//某行已经被选中时调用
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];//在弹出警告后自动取消选中表视图单元
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (tableView == couponTableView) {
-        //进入优惠券详情 -- 估计需要再添加一个判断语句用来不请求列表操作
     }
     else{
-        //进入团购详情 -- 估计需要再添加一个判断语句用来不请求列表操作
     }
     
 }
-//设置每行缩进级别
 - (NSInteger) tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 0;
 }
 
-//设置行高度
+
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 80;

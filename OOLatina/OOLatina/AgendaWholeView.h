@@ -22,8 +22,6 @@
     BOOL pageControlUsed;
 }
 
-@property (strong, nonatomic) IBOutlet UIView *view;
-
 @property (retain, nonatomic) IBOutlet UIButton *couponButton;
 @property (retain, nonatomic) IBOutlet UIButton *groupbuyButton;
 @property (retain, nonatomic) IBOutlet UILabel *slidLabel;

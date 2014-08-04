@@ -21,13 +21,13 @@
 #import "ArtistAlbum.h"
 #import "VideoCategoryView.h"
 #import "WebView.h"
-#import "PhotoCustomCell.h"
+#import "AgendaWholeView.h"
 
 #import "SCUtils.h"
 
 @interface Interface : UIViewController <TableViewSCDelegate, AudioViewDelegate, ArtistAlbumDelegate, VideoViewDelegate,NewsViewDelegate>
 {
-    
+    AgendaWholeView *mAgendaWholeView;
     NavigationBar *mNavigationBar;
     TableView *mMenuTableView;
     NewsView *mNewsView;

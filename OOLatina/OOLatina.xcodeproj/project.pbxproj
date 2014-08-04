@@ -196,6 +196,8 @@
 		D0963F7B198B803500A22769 /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7A198B803500A22769 /* PhotoCustomCell.xib */; };
 		D0963F7E198B806200A22769 /* PhotoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F7D198B806200A22769 /* PhotoCustomCell.m */; };
 		D0963F80198C075700A22769 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7F198C075700A22769 /* Localizable.strings */; };
+		D0B54BD9198FE845005F65FE /* PhotoShareConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */; };
+		D0B54BDA198FE845005F65FE /* PhotoShareConfirm.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -477,6 +479,9 @@
 		D0963F7C198B806100A22769 /* PhotoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCustomCell.h; sourceTree = "<group>"; };
 		D0963F7D198B806200A22769 /* PhotoCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCustomCell.m; sourceTree = "<group>"; };
 		D0963F7F198C075700A22769 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D0B54BD6198FE845005F65FE /* PhotoShareConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoShareConfirm.h; sourceTree = "<group>"; };
+		D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShareConfirm.m; sourceTree = "<group>"; };
+		D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoShareConfirm.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -747,10 +752,13 @@
 				D011231D198E0CE30099D124 /* AgendaWholeView.xib */,
 				D011231F198E0CFB0099D124 /* AgendaWholeView.h */,
 				D0112320198E0CFB0099D124 /* AgendaWholeView.m */,
-				51FD5F6918CFCC260040369B /* Images.xcassets */,
-				51FD5F5818CFCC250040369B /* Supporting Files */,
+				D0B54BD6198FE845005F65FE /* PhotoShareConfirm.h */,
+				D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */,
+				D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */,
 				D03DD0D3198F532500603ACC /* Utility.h */,
 				D03DD0D4198F532500603ACC /* Utility.m */,
+				51FD5F6918CFCC260040369B /* Images.xcassets */,
+				51FD5F5818CFCC250040369B /* Supporting Files */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -1023,6 +1031,7 @@
 				51A63A4718D48FB1005DCD55 /* backplay.png in Resources */,
 				514D097118DB600500872793 /* search_icon.png in Resources */,
 				D09262A0198D44430055D7A6 /* PhotoCollectionCell.xib in Resources */,
+				D0B54BDA198FE845005F65FE /* PhotoShareConfirm.xib in Resources */,
 				51FD5FCE18D33E610040369B /* button_pause@2x.png in Resources */,
 				51A63A4818D48FB1005DCD55 /* backplay@2x.png in Resources */,
 				51A63A5C18D4B8A4005DCD55 /* Icon-76@2x.png in Resources */,
@@ -1157,6 +1166,7 @@
 				51FD5FD618D3495F0040369B /* ArtistAlbum.m in Sources */,
 				51FD5F6218CFCC250040369B /* AppDelegate.m in Sources */,
 				D0926299198CDF5C0055D7A6 /* Photo.m in Sources */,
+				D0B54BD9198FE845005F65FE /* PhotoShareConfirm.m in Sources */,
 				514D096118DA67B100872793 /* CellAgenda.m in Sources */,
 				51A63AFC18D4BD14005DCD55 /* AFURLSessionManager.m in Sources */,
 				D0112324198E0D190099D124 /* PhotoPreviewView.m in Sources */,
