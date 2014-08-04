@@ -11,24 +11,28 @@
 @implementation FirstGuideView
 
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        NSLog(@"Nib load: %@",nibNameOrNil);
     }
     return self;
 }
 
-- (IBAction)btnNextTapped:(id)sender {
-}
-
-- (void)setup
+- (void)viewDidLoad
 {
-    [[NSBundle mainBundle] loadNibNamed:@"FirstGuideView"
-                                  owner:self options:nil];
-    self.view.frame = [UIScreen mainScreen].bounds;
-    [self addSubview:self.view];
+    [super viewDidLoad];
 }
 
+- (void)setParent:(ViewController*)parentView
+{
+    self.parent = parentView;
+}
+
+
+- (IBAction)btnNextTapped:(id)sender {
+    NSLog(@"Go to main page.");
+}
 @end

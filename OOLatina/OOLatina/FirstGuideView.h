@@ -8,16 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "Interface.h"
+#import "ViewController.h"
 
-@interface FirstGuideView : UIView {
-    
+@interface FirstGuideView : UIViewController {
+    UIViewController *parent;
 }
 
-@property (nonatomic, strong) IBOutlet UIView *view;
+@property (nonatomic, strong) IBOutlet UIView *viewInside;
+@property (strong, nonatomic) IBOutlet UIButton *btnNext;
+
 - (IBAction)btnNextTapped:(id)sender;
 
-
-- (void)setup;
-
+- (void)setParent:(ViewController*)parentView;
 
 @end

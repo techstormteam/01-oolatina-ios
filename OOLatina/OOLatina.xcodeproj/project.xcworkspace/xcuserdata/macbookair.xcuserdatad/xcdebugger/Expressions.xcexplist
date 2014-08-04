@@ -11,14 +11,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "GLOBAL">
-         <PersistentStrings>
-            <PersistentString
-               value = "[UIScreen mainScreen].bounds">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[ViewController viewDidLoad]:ViewController.m">
          <PersistentStrings>
             <PersistentString

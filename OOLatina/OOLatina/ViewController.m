@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -17,11 +18,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //Action here
+    mFirstGuideView = [[FirstGuideView alloc] initWithNibName:@"FirstGuideView" bundle:nil];
+    [mFirstGuideView setParent:self];
+    [self.view addSubview:mFirstGuideView.view];
     
-    mInterface = [[Interface alloc] initWithNibName:[SCUtils loadXibModel:@"Interface"] bundle:nil];
+}
+
+- (void)gotoMainView
+{
+    if(mInterface != nil)
+    {
+        [self.view bringSubviewToFront:mInterface.view];
+    }
+    else
+    {
+        mInterface = [[Interface alloc] initWithNibName:[SCUtils loadXibModel:@"Interface"] bundle:nil];
         
-    [self.view addSubview:mInterface.view];
-    
+        [self.view addSubview:mInterface.view];
+    }
 }
 
 - (void)didReceiveMemoryWarning

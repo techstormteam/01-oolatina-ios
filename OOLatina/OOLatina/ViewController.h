@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Interface.h"
 #import "SCUtils.h"
+#import "FirstGuideView.h"
 
 @interface ViewController : UIViewController
 {
+    FirstGuideView *mFirstGuideView;
     Interface *mInterface;
     
 }

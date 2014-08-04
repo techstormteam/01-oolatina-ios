@@ -30,16 +30,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self start];
-    if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
+//    [self start];
+    if ([@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
                                 objectForKey:@"aValue"]]) {
         [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"aValue"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        //Action here
-        FirstGuideView *mFirstGuideView = [[FirstGuideView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        [mFirstGuideView setup];
-        [self.view addSubview:mFirstGuideView.view];
+//        //Action here
+//        FirstGuideView *mFirstGuideView = [[FirstGuideView alloc] initWithNibName:[SCUtils loadXibModel:@"FirstGuideView"] bundle:nil];
+//        
+//        //        [self.view addSubview:mInterface.view];
+//        [self.view addSubview:mFirstGuideView.view];
     }
 }
 
