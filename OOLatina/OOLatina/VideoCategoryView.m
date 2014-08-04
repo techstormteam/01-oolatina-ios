@@ -26,6 +26,8 @@
         videoArray = [[NSMutableArray alloc] init];
         mWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 160)];
         mWebView.backgroundColor = [UIColor blackColor];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(youTubeStarted:) name:@"UIMoviePlayerControllerDidEnterFullscreenNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(youTubeFinished:) name:@"UIMoviePlayerControllerDidExitFullscreenNotification" object:nil];
         [self addSubview:mWebView];
         
         UIView *separator = [[UIView alloc] initWithFrame:CGRectMake(0, 160, frame.size.width, 2)];
@@ -48,6 +50,25 @@
         [self addSubview:mTableView];
     }
     return self;
+}
+
+-(void)youTubeStarted:(NSNotification *)notification{
+    // Entered Fullscreen code goes here..
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.fullScreenVideoIsPlaying = YES;
+}
+
+-(void)youTubeFinished:(NSNotification *)notification{
+    // Left fullscreen code goes here...
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.fullScreenVideoIsPlaying = NO;
+    
+    //CODE BELOW FORCES APP BACK TO PORTRAIT ORIENTATION ONCE YOU LEAVE VIDEO.
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:NO];
+    //present/dismiss viewcontroller in order to activate rotating.
+    UIViewController *mVC = [[UIViewController alloc] init];
+//    [self presentModalViewController:mVC animated:NO];
+//    [self dismissModalViewControllerAnimated:NO];
 }
 
 - (void)loadCategory:(NSString *)idcategory
@@ -92,7 +113,7 @@
     </body>\
     </html>";
     NSString *html = [NSString stringWithFormat:youTubeVideoHTML, mWebView.frame.size.width, mWebView.frame.size.height, videoId];
-    
+
     [mWebView loadHTMLString:html baseURL:nil];
 }
 

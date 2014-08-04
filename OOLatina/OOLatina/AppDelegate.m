@@ -18,7 +18,24 @@
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     return YES;
 }
-							
+
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    NSUInteger orientations = UIInterfaceOrientationMaskPortrait;
+    if (self.fullScreenVideoIsPlaying == YES) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }
+    else {
+//        if(self.window.rootViewController){
+//            UIViewController *presentedViewController = (UINavigationController  *)self.window.rootViewController;
+//            if (presentedViewController) {
+//                orientations = [presentedViewController supportedInterfaceOrientations];
+//            }
+//        }
+        orientations = UIInterfaceOrientationMaskPortrait;
+        return orientations;
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

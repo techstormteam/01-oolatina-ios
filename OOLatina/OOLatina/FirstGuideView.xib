@@ -16,25 +16,25 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-08-5GI">
-                    <rect key="frame" x="0.0" y="14" width="312" height="317"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="guide_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-08-5GI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="317"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Browser application menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnQ-Tl-Nvo">
-                    <rect key="frame" x="13" y="330" width="294" height="28"/>
+                    <rect key="frame" x="0.0" y="325" width="320" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To navigate simply swipe your hand from left to right to bring up the application's menu, navigate the different headings" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="oFO-0g-uI2">
-                    <rect key="frame" x="13" y="366" width="320" height="77"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="To navigate simply swipe your hand from left to right to bring up the application's menu, navigate the different headings" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="oFO-0g-uI2">
+                    <rect key="frame" x="0.0" y="361" width="320" height="88"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSo-kA-gX9">
-                    <rect key="frame" x="0.0" y="451" width="320" height="40"/>
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.9882352941176471" green="0.011764705882352941" blue="0.50980392156862742" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Next">
@@ -47,6 +47,13 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jb0-08-5GI" secondAttribute="trailing" constant="10" id="3L5-JC-L3o"/>
+                <constraint firstItem="Jb0-08-5GI" firstAttribute="leading" secondItem="uLy-h2-9Ug" secondAttribute="leading" constant="10" id="Is1-G6-AJu"/>
+                <constraint firstItem="oFO-0g-uI2" firstAttribute="leading" secondItem="uLy-h2-9Ug" secondAttribute="leading" constant="10" id="Jqn-61-c3p"/>
+                <constraint firstAttribute="trailing" secondItem="oFO-0g-uI2" secondAttribute="trailing" constant="10" id="d1b-Ic-gwH"/>
+                <constraint firstItem="Jb0-08-5GI" firstAttribute="top" secondItem="uLy-h2-9Ug" secondAttribute="top" constant="30" id="nbI-9w-Npo"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

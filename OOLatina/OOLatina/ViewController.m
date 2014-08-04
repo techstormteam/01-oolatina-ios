@@ -18,11 +18,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //Action here
-    mFirstGuideView = [[FirstGuideView alloc] initWithNibName:@"FirstGuideView" bundle:nil];
-    [mFirstGuideView setParent:self];
-    [self.view addSubview:mFirstGuideView.view];
+
+    if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
+                               objectForKey:@"aValue"]]) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"aValue"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        mFirstGuideView = [[FirstGuideView alloc] initWithNibName:@"FirstGuideView" bundle:nil];
+        mFirstGuideView.delegate = self;
+        [self.view addSubview:mFirstGuideView.view];
+    } else {
+        [self gotoMainView];
+    }
     
+    
+}
+
+- (void)tappedNext
+{
+    [self gotoMainView];
 }
 
 - (void)gotoMainView

@@ -12,6 +12,8 @@
 
 @implementation PhotoPreviewView
 
+
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -32,29 +34,6 @@
 - (IBAction)btnShareTapped:(id)sender {
 }
 
--(UIImage *) getImageFromURL:(NSString *)fileURL {
-    UIImage * result;
-    
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
-    result = [UIImage imageWithData:data];
-    
-    return result;
-}
-
--(void) saveImage:(UIImage *)image
-{
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-}
-
-- (void)downloadImage
-{
-    //Get Image From URL
-    UIImage * imageFromURL = [self getImageFromURL:url];
-    
-    //Save Image to Directory
-    [self saveImage:imageFromURL];
-}
-
 - (void)setup
 {
     [[NSBundle mainBundle] loadNibNamed:@"PhotoPreviewView"
@@ -62,7 +41,7 @@
     url = @"http://www.saudimac.com/ar/wp-content/uploads/2010/10/etkalem-app-icon.jpg";
     name = @"moi";
     description = @"hehe";
-    [self downloadImage];
+    [Utility downloadImage:url];
     
     
 //    FSBasicImage *firstPhoto = [[FSBasicImage alloc] initWithImageURL:[NSURL URLWithString:@"http://example.com/1.jpg"] name:@"Photo 1"];

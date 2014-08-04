@@ -30,17 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self start];
-    if ([@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
-                                objectForKey:@"aValue"]]) {
-        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"aValue"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-//        //Action here
-//        FirstGuideView *mFirstGuideView = [[FirstGuideView alloc] initWithNibName:[SCUtils loadXibModel:@"FirstGuideView"] bundle:nil];
-//        
-//        //        [self.view addSubview:mInterface.view];
-//        [self.view addSubview:mFirstGuideView.view];
-    }
+    [self start];
 }
 
 - (void)start
@@ -362,11 +352,11 @@
         else
         {
             searchButton.hidden = YES;
-//            mPhotoView = [[PhotoView alloc] init];
-//            [mPhotoView setup];
-            PhotoPreviewView *vie = [[PhotoPreviewView alloc] init];
-            [vie setup];
-            [pageView addSubview:vie];
+            mPhotoView = [[PhotoView alloc] init];
+            [mPhotoView setup];
+//            PhotoPreviewView *vie = [[PhotoPreviewView alloc] init];
+//            [vie setup];
+            [pageView addSubview:mPhotoView];
         }
     }
     

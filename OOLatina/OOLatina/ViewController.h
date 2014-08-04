@@ -11,11 +11,20 @@
 #import "SCUtils.h"
 #import "FirstGuideView.h"
 
-@interface ViewController : UIViewController
+//@protocol ViewController <NSObject>
+//
+//- (void);
+//
+//@end
+
+@interface ViewController : UIViewController<FirstGuideViewDelegate>
 {
     FirstGuideView *mFirstGuideView;
     Interface *mInterface;
     
 }
+
+//@property (nonatomic, weak) id<FirstGuideViewDelegate> delegate;
+- (void)gotoMainView;
 
 @end

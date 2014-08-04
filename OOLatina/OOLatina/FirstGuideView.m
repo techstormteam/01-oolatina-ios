@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Jérôme Laurent. All rights reserved.
 //
 
-#import "FirstGuideView.h"
+#import "ViewController.h"
 
 @implementation FirstGuideView
 
@@ -26,13 +26,8 @@
     [super viewDidLoad];
 }
 
-- (void)setParent:(ViewController*)parentView
-{
-    self.parent = parentView;
-}
-
-
 - (IBAction)btnNextTapped:(id)sender {
     NSLog(@"Go to main page.");
+    [self.delegate tappedNext];
 }
 @end

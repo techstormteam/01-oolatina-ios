@@ -7,18 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Interface.h"
-#import "ViewController.h"
+#import "FirstGuideView.h"
+
+@class FirstGuideView;
+
+@protocol FirstGuideViewDelegate <NSObject>
+
+- (void)tappedNext;
+
+@end
 
 @interface FirstGuideView : UIViewController {
     UIViewController *parent;
 }
 
+@property (nonatomic, weak) id<FirstGuideViewDelegate> delegate;
 @property (nonatomic, strong) IBOutlet UIView *viewInside;
 @property (strong, nonatomic) IBOutlet UIButton *btnNext;
 
 - (IBAction)btnNextTapped:(id)sender;
 
-- (void)setParent:(ViewController*)parentView;
+
+
 
 @end

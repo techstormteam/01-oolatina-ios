@@ -10,4 +10,8 @@
 
 @interface PhotoCollectionCell : UICollectionViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
+
+- (void)setup;
+
 @end

@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoCollectionCell">
             <connections>
-                <outlet property="imgPhoto" destination="r3x-tJ-RaI" id="0sh-F0-Kr6"/>
+                <outlet property="imgPhoto" destination="r3x-tJ-RaI" id="uyp-N4-lAM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -38,6 +38,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="covAlbum" destination="Pmh-F7-GCY" id="UcP-Qa-yiH"/>
                 <outlet property="lblTitle" destination="KaO-aF-tfs" id="uQq-et-bhz"/>
             </connections>
         </tableViewCell>

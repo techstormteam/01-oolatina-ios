@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoCollectionCell.h"
+#import "Utility.h"
 
 @interface PhotoCustomCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *lblTitle;
-@property (nonatomic, weak) IBOutlet UIView *covAlbum;
+@property (nonatomic, strong) IBOutlet UICollectionView *covAlbum;
 
 - (void)setup;
 
