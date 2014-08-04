@@ -275,7 +275,7 @@
 //            mAgendaView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
 //            mAgendaView.backgroundColor = [UIColor blueColor];
 //            [pageView addSubview:mAgendaView];
-            [pageView addSubview:mAgendaWholeView];
+            [pageView addSubview:mAgendaWholeView.view];
         }
     }
     
