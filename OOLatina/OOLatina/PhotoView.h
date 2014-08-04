@@ -13,6 +13,8 @@
 
 @interface PhotoView : UIView  {
     NSMutableArray *photoEvents;
+    NSMutableArray *photos;
+    UICollectionView *covAlbum;
 }
 
 @property (nonatomic, strong) IBOutlet UITableView *view;

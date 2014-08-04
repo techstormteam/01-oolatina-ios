@@ -10,7 +10,6 @@
                 <outlet property="btnShare" destination="tcp-JN-Wc7" id="FV5-A5-eaD"/>
                 <outlet property="description" destination="AYf-Wk-WBj" id="SFN-Zl-7is"/>
                 <outlet property="name" destination="XZQ-6b-4rW" id="DE8-3E-Og0"/>
-                <outlet property="test" destination="pH4-0D-4uA" id="WFJ-eW-4AD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="PPW-S1-nhf"/>
             </connections>
         </placeholder>
@@ -35,7 +34,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROP-Ew-QKh" userLabel="btnDownload">
                     <rect key="frame" x="224" y="477" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" patternImage="57E61928-DFBA-40E4-9A3E-30253DD0753C" colorSpace="pattern"/>
+                    <color key="backgroundColor" patternImage="A3B44539-8F73-49CF-B3BD-F9AE0BE870D1" colorSpace="pattern"/>
                     <state key="normal" image="button_download.png">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,7 +48,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" image="button_share.png">
-                        <color key="titleColor" patternImage="6769898B-FF8E-4FDF-888F-14E0A8FBB45E" colorSpace="pattern"/>
+                        <color key="titleColor" patternImage="AA15393E-9F91-4C9D-8B92-12546A0702DD" colorSpace="pattern"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -61,16 +60,9 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="pH4-0D-4uA">
-            <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <connections>
-                <action selector="testTapped:" destination="-1" eventType="touchUpInside" id="8Zu-KI-ljl"/>
-            </connections>
-        </button>
     </objects>
     <resources>
-        <image name="57E61928-DFBA-40E4-9A3E-30253DD0753C" width="320" height="460">
+        <image name="A3B44539-8F73-49CF-B3BD-F9AE0BE870D1" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -9957,7 +9949,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="6769898B-FF8E-4FDF-888F-14E0A8FBB45E" width="320" height="460">
+        <image name="AA15393E-9F91-4C9D-8B92-12546A0702DD" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

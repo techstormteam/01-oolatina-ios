@@ -92,10 +92,18 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.lblTitle.text = @"hehehe";
+    PhotoEvent *photoEvent = [photoEvents objectAtIndex:[indexPath section]];
     
+    cell.lblTitle.text = NSLocalizedString(@"no_title", nil);
+    if ([photoEvent getTitle] != (id)[NSNull null] && [photoEvent getTitle].length != 0) {
+        cell.lblTitle.text = [photoEvent getTitle];
+    }
+    photos = [photoEvent getPhoto];
+    covAlbum = cell.covAlbum;
     return cell;
 }
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
