@@ -52,7 +52,7 @@
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    static NSString *simpleTableIdentifier = @"Cell";
+    static NSString *simpleTableIdentifier = @"PhotoCollectionCell";
     
     PhotoCollectionCell* newCell = [collectionView dequeueReusableCellWithReuseIdentifier:simpleTableIdentifier forIndexPath:indexPath];
     
@@ -64,7 +64,7 @@
     // init image
     newCell.imgPhoto.image = [Utility getImageFromURL:@"http://farm4.static.flickr.com/3092/2915896504_a88b69c9de.jpg"];
     //    newCell.imgPhoto = [NSString stringWithFormat:@"Section:%d, Item:%d", indexPath.section, indexPath.item];
-    return nil;
+    return newCell;
 }
 
 

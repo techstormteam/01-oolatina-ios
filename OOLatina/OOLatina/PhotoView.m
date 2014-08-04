@@ -100,6 +100,7 @@
     }
     photos = [photoEvent getPhoto];
     covAlbum = cell.covAlbum;
+    [cell.covAlbum registerNib:[UINib nibWithNibName:@"PhotoCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"PhotoCollectionCell"];
     return cell;
 }
 
