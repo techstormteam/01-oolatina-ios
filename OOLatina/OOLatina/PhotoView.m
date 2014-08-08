@@ -109,7 +109,8 @@
     photos = [photoEvent getPhoto];
     [cell passData: photos];
     [cell passPhotoSize: _imgSize];
-    
+    cell.covAlbum.backgroundColor = [UIColor clearColor];
+    cell.covAlbum.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
     [cell.covAlbum registerNib:[UINib nibWithNibName:@"PhotoCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"PhotoCollectionCell"];
     return cell;
 }
