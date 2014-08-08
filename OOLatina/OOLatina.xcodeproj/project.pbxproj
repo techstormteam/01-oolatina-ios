@@ -176,6 +176,7 @@
 		D03DD0D5198F532500603ACC /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D03DD0D4198F532500603ACC /* Utility.m */; };
 		D0478134198A3785004ACEE5 /* photo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478132198A3785004ACEE5 /* photo_icon.png */; };
 		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
+		D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096DD1994B9E900153348 /* UIImage+Resize.m */; };
 		D0926296198CD4550055D7A6 /* PhotoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926295198CD4550055D7A6 /* PhotoEvent.m */; };
 		D0926299198CDF5C0055D7A6 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926298198CDF5C0055D7A6 /* Photo.m */; };
 		D09262A0198D44430055D7A6 /* PhotoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */; };
@@ -453,6 +454,8 @@
 		D03DD0D4198F532500603ACC /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		D0478132198A3785004ACEE5 /* photo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon.png; sourceTree = "<group>"; };
 		D0478133198A3785004ACEE5 /* photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_icon@2x.png"; sourceTree = "<group>"; };
+		D06096DC1994B9E900153348 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		D06096DD1994B9E900153348 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		D0926294198CD4550055D7A6 /* PhotoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoEvent.h; sourceTree = "<group>"; };
 		D0926295198CD4550055D7A6 /* PhotoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEvent.m; sourceTree = "<group>"; };
 		D0926297198CDF5C0055D7A6 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
@@ -736,6 +739,9 @@
 				D0963F7A198B803500A22769 /* PhotoCustomCell.xib */,
 				D0963F7C198B806100A22769 /* PhotoCustomCell.h */,
 				D0963F7D198B806200A22769 /* PhotoCustomCell.m */,
+				D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */,
+				D09262A1198D44AB0055D7A6 /* PhotoCollectionCell.h */,
+				D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */,
 				D093784D198C5E4400626197 /* FirstGuideView.xib */,
 				D093786A198C8BBB00626197 /* FirstGuideView.h */,
 				D093786B198C8BBB00626197 /* FirstGuideView.m */,
@@ -743,9 +749,6 @@
 				D0926295198CD4550055D7A6 /* PhotoEvent.m */,
 				D0926297198CDF5C0055D7A6 /* Photo.h */,
 				D0926298198CDF5C0055D7A6 /* Photo.m */,
-				D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */,
-				D09262A1198D44AB0055D7A6 /* PhotoCollectionCell.h */,
-				D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */,
 				D09262A4198D4B130055D7A6 /* PhotoPreviewView.xib */,
 				D0112322198E0D190099D124 /* PhotoPreviewView.h */,
 				D0112323198E0D190099D124 /* PhotoPreviewView.m */,
@@ -757,6 +760,8 @@
 				D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */,
 				D03DD0D3198F532500603ACC /* Utility.h */,
 				D03DD0D4198F532500603ACC /* Utility.m */,
+				D06096DC1994B9E900153348 /* UIImage+Resize.h */,
+				D06096DD1994B9E900153348 /* UIImage+Resize.m */,
 				51FD5F6918CFCC260040369B /* Images.xcassets */,
 				51FD5F5818CFCC250040369B /* Supporting Files */,
 			);
@@ -1186,6 +1191,7 @@
 				D0963F7E198B806200A22769 /* PhotoCustomCell.m in Sources */,
 				51A63B0418D5AF4E005DCD55 /* iCarousel.m in Sources */,
 				51FD5FD918D35D900040369B /* Albums.m in Sources */,
+				D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */,
 				51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */,
 				D011233B198E2A600099D124 /* FSBasicImage.m in Sources */,
 				51FD5FAC18D1E86C0040369B /* NewsView.m in Sources */,

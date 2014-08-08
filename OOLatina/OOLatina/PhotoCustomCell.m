@@ -7,6 +7,7 @@
 //
 
 #import "PhotoCustomCell.h"
+#import "UIImage+Resize.h"
 
 @implementation PhotoCustomCell
 
@@ -28,6 +29,7 @@
     self = [super initWithCoder:aCoder];
     if (self) {
         // Initialization code
+        _photoIndex = 0;
     }
     return self;
 }
@@ -40,12 +42,12 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)collectionView {
     // _data is a class member variable that contains one array per section.
-    return 1;
+    return ((mPhotos.count - 1) / 3) + 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
     //    NSArray* sectionArray = [_data objectAtIndex:section];
-    return 1;
+    return 3;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -59,14 +61,49 @@
     if (newCell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:simpleTableIdentifier owner:self options:nil];
         newCell = [nib objectAtIndex:0];
+//        [newCell addTarget:self action:@selector(checkmarkPressed:) forControlEvents:UIControlEventTouchUpInside]
     }
     
-    // init image
-    newCell.imgPhoto.image = [Utility getImageFromURL:@"http://farm4.static.flickr.com/3092/2915896504_a88b69c9de.jpg"];
-    //    newCell.imgPhoto = [NSString stringWithFormat:@"Section:%d, Item:%d", indexPath.section, indexPath.item];
+    if (_photoIndex < [mPhotos count]) {
+        // init image
+        Photo *photo = [mPhotos objectAtIndex:_photoIndex];
+        NSString *url = [photo getUrl];
+        
+        UIImage *img = [Utility getImageFromURL:url];
+        CGFloat sa = newCell.imgPhoto.frame.origin.x;
+        sa = newCell.imgPhoto.frame.origin.y;
+        sa = newCell.imgPhoto.frame.size.height;
+        sa = newCell.imgPhoto.frame.size.width;
+        
+        newCell.imgPhoto.frame = CGRectMake(newCell.imgPhoto.frame.origin.x, newCell.imgPhoto.frame.origin.y, _photoSize.height,_photoSize.width);
+//        UIImage *scaledImage = [img resizedImageToFitInSize:_photoSize scaleIfSmaller:true];
+        UIImage *scaledImage = img;
+        newCell.imgPhoto.image = scaledImage;
+        sa = newCell.imgPhoto.frame.size.height;
+        sa = newCell.imgPhoto.frame.size.width;
+        CGFloat h = scaledImage.size.height;
+        CGFloat w = scaledImage.size.width;
+//        newCell.imgPhoto.center = newCell.imgPhoto.superview.center;
+        _photoIndex++;
+    }
     return newCell;
 }
 
+//didSelect
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    PhotoCollectionCell *cell = (PhotoCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    NSString *s = @"vdsv";
+    NSString *a = s;
+}
 
+- (void)passPhotoSize:(CGSize) pSize;
+{
+    _photoSize = pSize;
+}
+
+- (void)passData:(NSMutableArray *) photos
+{
+    mPhotos = photos;
+}
 
 @end

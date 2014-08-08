@@ -14,9 +14,12 @@
 @interface PhotoView : UIView  {
     NSMutableArray *photoEvents;
     NSMutableArray *photos;
-    UICollectionView *covAlbum;
+    NSMutableArray *sectionSizes;
 }
 
+@property (nonatomic, assign) NSInteger count;
+@property (nonatomic, assign) CGSize imgSize;
+@property (nonatomic, assign) NSNumber *numberOfImageInRow;
 @property (nonatomic, strong) IBOutlet UITableView *view;
 
 - (void)setup;

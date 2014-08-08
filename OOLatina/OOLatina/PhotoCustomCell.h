@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "PhotoCollectionCell.h"
+#import "Photo.h"
 #import "Utility.h"
 
-@interface PhotoCustomCell : UITableViewCell
+@interface PhotoCustomCell : UITableViewCell <UICollectionViewDelegate> {
+    NSMutableArray *mPhotos;
+}
 
+@property (nonatomic, assign) CGSize photoSize;
+@property (nonatomic, assign) NSUInteger photoIndex;
 @property (nonatomic, weak) IBOutlet UILabel *lblTitle;
 @property (nonatomic, strong) IBOutlet UICollectionView *covAlbum;
 
 - (void)setup;
+- (void)passPhotoSize:(CGSize)pSize;
+- (void)passData:(NSMutableArray *) photos;
 
 @end

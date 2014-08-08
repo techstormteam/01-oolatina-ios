@@ -27,4 +27,10 @@
     //    [self addSubview:self.view];
 }
 
+//didSelect
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    PhotoCollectionCell *cell = (PhotoCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+//    cell view
+}
+
 @end

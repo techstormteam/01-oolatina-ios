@@ -13,5 +13,6 @@
 + (void) saveImage:(UIImage *)image;
 + (UIImage *) getImageFromURL:(NSString *)fileURL;
 + (void) downloadImage:(NSString *)url;
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 
 @end

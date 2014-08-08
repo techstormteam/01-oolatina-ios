@@ -16,6 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        _numberOfImageInRow = [NSNumber numberWithInteger:3];
     }
     return self;
 }
@@ -33,6 +34,7 @@
     [[NSBundle mainBundle] loadNibNamed:@"PhotoView"
                                   owner:self options:nil];
     [self loadPhotoEvent];
+    
     [self addSubview:self.view];
 }
 
@@ -40,8 +42,10 @@
     
     if([SCUtils isNetworkAvailable])
     {
+        _count = 0;
+        _imgSize = CGSizeMake(100, 100);
         photoEvents = [[NSMutableArray alloc] init];
-        
+        sectionSizes = [[NSMutableArray alloc] init];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.oolatina.com/webservice/oolatina_api.php?command=GET_PHOTO"]];
         NSLog(@"URL : %@",url);
         NSData *data = [[NSData alloc] initWithContentsOfURL:url];
@@ -69,7 +73,11 @@
                 
             }
             [nPhotoEvent setPhoto:nPhotos];
-            
+            NSInteger heightOfTitle = 50;
+            NSInteger numberOfImageRows = ((nPhotos.count - 1) / [_numberOfImageInRow intValue]) + 1;
+            NSInteger heightOfAlbum = (numberOfImageRows * _imgSize.width);
+            NSInteger heightOfSection = heightOfTitle + heightOfAlbum;
+            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
             [photoEvents addObject:nPhotoEvent];
         }
         
@@ -99,7 +107,9 @@
         cell.lblTitle.text = [photoEvent getTitle];
     }
     photos = [photoEvent getPhoto];
-    covAlbum = cell.covAlbum;
+    [cell passData: photos];
+    [cell passPhotoSize: _imgSize];
+    
     [cell.covAlbum registerNib:[UINib nibWithNibName:@"PhotoCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"PhotoCollectionCell"];
     return cell;
 }
@@ -108,12 +118,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    NSNumber *height = [NSNumber numberWithInteger:1];
+    if (_count < sectionSizes.count) {
+        height = [sectionSizes objectAtIndex:_count];
+        _count++;
+    }
+//    return 150;
+    return [height intValue];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [photoEvents count];
+//    return 2;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
