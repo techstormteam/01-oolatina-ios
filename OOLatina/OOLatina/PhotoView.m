@@ -16,7 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _numberOfImageInRow = [NSNumber numberWithInteger:3];
+        _numberOfImageInRow = 3;
     }
     return self;
 }
@@ -43,7 +43,8 @@
     if([SCUtils isNetworkAvailable])
     {
         _count = 0;
-        _imgSize = CGSizeMake(100, 100);
+        CGFloat wid = self.view.frame.size.width / _numberOfImageInRow - 50;
+        _imgSize = CGSizeMake(wid, wid);
         photoEvents = [[NSMutableArray alloc] init];
         sectionSizes = [[NSMutableArray alloc] init];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.oolatina.com/webservice/oolatina_api.php?command=GET_PHOTO"]];
@@ -74,7 +75,7 @@
             }
             [nPhotoEvent setPhoto:nPhotos];
             NSInteger heightOfTitle = 50;
-            NSInteger numberOfImageRows = ((nPhotos.count - 1) / [_numberOfImageInRow intValue]) + 1;
+            NSInteger numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
             NSInteger heightOfAlbum = (numberOfImageRows * _imgSize.width);
             NSInteger heightOfSection = heightOfTitle + heightOfAlbum;
             [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
@@ -91,6 +92,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    PhotoEvent *photoEvent = [photoEvents objectAtIndex:[indexPath section]];
     static NSString *simpleTableIdentifier = @"PhotoCustomCell";
     
     PhotoCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -98,23 +101,20 @@
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:simpleTableIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        [cell passData: [photoEvent getPhoto]];
+        [cell passPhotoSize: _imgSize];
+        [cell setup];
     }
-    
-    PhotoEvent *photoEvent = [photoEvents objectAtIndex:[indexPath section]];
-    
+
     cell.lblTitle.text = NSLocalizedString(@"no_title", nil);
     if ([photoEvent getTitle] != (id)[NSNull null] && [photoEvent getTitle].length != 0) {
         cell.lblTitle.text = [photoEvent getTitle];
     }
-    photos = [photoEvent getPhoto];
-    [cell passData: photos];
-    [cell passPhotoSize: _imgSize];
-    cell.covAlbum.backgroundColor = [UIColor clearColor];
-    cell.covAlbum.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
-    [cell.covAlbum registerNib:[UINib nibWithNibName:@"PhotoCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"PhotoCollectionCell"];
+    
+//    cell.vieAlbum.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
+//    [cell.vieAlbum registerNib:[UINib nibWithNibName:@"PhotoCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"PhotoCollectionCell"];
     return cell;
 }
-
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

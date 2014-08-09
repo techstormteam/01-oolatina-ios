@@ -17,7 +17,6 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="dataSource" destination="-1" id="wCk-T5-UHH"/>
-                <outlet property="delegate" destination="-1" id="cNi-Kt-Sh3"/>
             </connections>
         </tableView>
     </objects>

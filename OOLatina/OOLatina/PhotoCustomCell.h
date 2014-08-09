@@ -10,15 +10,18 @@
 #import "PhotoCollectionCell.h"
 #import "Photo.h"
 #import "Utility.h"
+#import "GMGridView.h"
 
-@interface PhotoCustomCell : UITableViewCell <UICollectionViewDelegate> {
+
+@interface PhotoCustomCell : UITableViewCell <GMGridViewDataSource, GMGridViewActionDelegate> {
     NSMutableArray *mPhotos;
+    __gm_weak GMGridView *_gmGridView;
 }
 
 @property (nonatomic, assign) CGSize photoSize;
 @property (nonatomic, assign) NSUInteger photoIndex;
 @property (nonatomic, weak) IBOutlet UILabel *lblTitle;
-@property (nonatomic, strong) IBOutlet UICollectionView *covAlbum;
+@property (nonatomic, strong) IBOutlet UIView *vieAlbum;
 
 - (void)setup;
 - (void)passPhotoSize:(CGSize)pSize;

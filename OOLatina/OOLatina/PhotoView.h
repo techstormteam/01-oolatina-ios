@@ -11,7 +11,7 @@
 #import "SCUtils.h"
 #import "PhotoEvent.h"
 
-@interface PhotoView : UIView  {
+@interface PhotoView : UIView {
     NSMutableArray *photoEvents;
     NSMutableArray *photos;
     NSMutableArray *sectionSizes;
@@ -19,7 +19,7 @@
 
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) CGSize imgSize;
-@property (nonatomic, assign) NSNumber *numberOfImageInRow;
+@property (nonatomic, assign) CGFloat numberOfImageInRow;
 @property (nonatomic, strong) IBOutlet UITableView *view;
 
 - (void)setup;
