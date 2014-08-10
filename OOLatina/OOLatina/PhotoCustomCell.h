@@ -11,12 +11,14 @@
 #import "Photo.h"
 #import "Utility.h"
 #import "GMGridView.h"
+#import "PhotoPreviewView.h"
 
 
 @interface PhotoCustomCell : UIView <GMGridViewDataSource, GMGridViewActionDelegate> {
     NSMutableArray *mPhotos;
     __gm_weak GMGridView *_gmGridView;
     UILabel *lblTitle;
+    PhotoPreviewView *viePhotoPreview;
 }
 
 @property (nonatomic, assign) CGSize photoSize;

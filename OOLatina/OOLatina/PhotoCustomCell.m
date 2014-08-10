@@ -125,8 +125,18 @@
 }
 
 -(void)tapDetected{
-    NSLog(@"single Tap on imageview");
-    
+    if(viePhotoPreview != nil)
+    {
+        [self bringSubviewToFront:viePhotoPreview.view];
+    }
+    else
+    {
+        viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
+        viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        [self addSubview:viePhotoPreview.view];
+//        [self bringSubviewToFront:viePhotoPreview];
+        
+    }
 }
 
 

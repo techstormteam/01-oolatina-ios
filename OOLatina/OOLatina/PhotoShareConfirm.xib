@@ -14,17 +14,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lad-zB-f4d">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lad-zB-f4d">
                     <rect key="frame" x="0.0" y="20" width="320" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UGe-xa-ybu">
-                    <rect key="frame" x="0.0" y="58" width="236" height="169"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UGe-xa-ybu">
+                    <rect key="frame" x="0.0" y="58" width="221" height="169"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgT-bZ-9tO">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgT-bZ-9tO">
                     <rect key="frame" x="20" y="235" width="60" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Share">
@@ -40,6 +40,17 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="YgT-bZ-9tO" firstAttribute="top" secondItem="UGe-xa-ybu" secondAttribute="bottom" constant="8" id="0Pz-8r-Gf8"/>
+                <constraint firstAttribute="trailing" secondItem="lad-zB-f4d" secondAttribute="trailing" id="7qm-rx-ajz"/>
+                <constraint firstItem="UGe-xa-ybu" firstAttribute="top" secondItem="lad-zB-f4d" secondAttribute="bottom" constant="8" id="8uf-1h-6sZ"/>
+                <constraint firstItem="lad-zB-f4d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZEf-3m-lm9"/>
+                <constraint firstItem="YgT-bZ-9tO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ZFq-Ji-bwi"/>
+                <constraint firstItem="UGe-xa-ybu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g0N-xO-LHW"/>
+                <constraint firstItem="UGe-xa-ybu" firstAttribute="top" secondItem="lad-zB-f4d" secondAttribute="bottom" constant="8" id="jzh-wP-gGq"/>
+                <constraint firstItem="UGe-xa-ybu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nnk-bw-b1Z"/>
+                <constraint firstItem="lad-zB-f4d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="tk1-6O-QUN"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

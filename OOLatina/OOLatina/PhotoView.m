@@ -24,7 +24,7 @@
         gmGridView2.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         gmGridView2.style = GMGridViewStylePush;
         gmGridView2.itemSpacing = 5;
-        gmGridView2.minEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+        gmGridView2.minEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
         gmGridView2.centerGrid = YES;
         gmGridView2.layoutStrategy = [GMGridViewLayoutStrategyFactory strategyFromType:GMGridViewLayoutHorizontal];
         CGRect frame1 = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
@@ -89,38 +89,6 @@
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSNumber *height = [NSNumber numberWithInteger:1];
-    if (_count < sectionSizes.count) {
-        height = [sectionSizes objectAtIndex:_count];
-        _count++;
-    }
-//    return 150;
-    return [height intValue];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [photoEvents count];
-//    return 2;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"didSelectRowAtIndexPath");
-    // nothing
-}
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"willSelectRowAtIndexPath");
-    if (indexPath.row == 0) {
-        return nil;
-    }
-    
-    return indexPath;
-}
 
 //////////////////////////////////////////////////////////////
 #pragma mark GMGridViewDataSource

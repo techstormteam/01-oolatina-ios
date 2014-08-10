@@ -2,58 +2,38 @@
 //  PhotoPreviewView.m
 //  OOLatina
 //
-//  Created by Macbook air on 8/3/14.
+//  Created by Macbook air on 8/10/14.
 //  Copyright (c) 2014 Jérôme Laurent. All rights reserved.
 //
 
 #import "PhotoPreviewView.h"
-#import "FSBasicImage.h"
-#import "FSImageView.h"
+
+@interface PhotoPreviewView ()
+
+@end
 
 @implementation PhotoPreviewView
 
-
-
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code
+        // Custom initialization
     }
     return self;
 }
 
-- (IBAction)testTapped:(id)sender {
-    NSLog(@"fhjdsf");
-}
-
-- (IBAction)btnDownloadTapped:(id)sender {
-    NSLog(@"fhjdsf");
-}
-
-- (IBAction)btnShareTapped:(id)sender {
-}
-
-- (void)setup
+- (void)viewDidLoad
 {
-    [[NSBundle mainBundle] loadNibNamed:@"PhotoPreviewView"
-                                  owner:self options:nil];
-    url = @"http://www.saudimac.com/ar/wp-content/uploads/2010/10/etkalem-app-icon.jpg";
-    name = @"moi";
-    description = @"hehe";
-    [Utility downloadImage:url];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     
-    
-//    FSBasicImage *firstPhoto = [[FSBasicImage alloc] initWithImageURL:[NSURL URLWithString:@"http://example.com/1.jpg"] name:@"Photo 1"];
-    FSImageView *imgView = [[FSImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-//    [imgView setu]
-    UIImage *imaage = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3092/2915896504_a88b69c9de.jpg"]]];
-    
-    imgView.imageView.image =  imaage;
-    [self addSubview:self.test];
-//    self.view.frame = [UIScreen mainScreen].bounds;
-//    [self addSubview:self.view];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end
