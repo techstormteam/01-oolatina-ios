@@ -108,6 +108,7 @@
     [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     if (_photoIndex < [mPhotos count]) {
+
         // init image
         Photo *photo = [mPhotos objectAtIndex:_photoIndex];
         NSString *url = [photo getUrl];
@@ -119,20 +120,23 @@
         imageView.tintColor = [UIColor blackColor];
         UIImage *img = [Utility getImageFromURL:url];
         imageView.image = img;
+        imageView.tag = _photoIndex;
         [cell.contentView addSubview:imageView];
         
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
         singleTap.numberOfTapsRequired = 1;
         imageView.userInteractionEnabled = YES;
         [imageView addGestureRecognizer:singleTap];
-
+        
         _photoIndex++;
     }
     CGSize a = self.frame.size;
     return cell;
 }
 
--(void)tapDetected{
+-(void)imageTapped:(UITapGestureRecognizer *)recognizer{
+    UIImageView *imageView = (UIImageView *)recognizer.view;
+    Photo *photo = [mPhotos objectAtIndex:imageView.tag];
     if(viePhotoPreview != nil)
     {
         [self bringSubviewToFront:viePhotoPreview.view];
@@ -142,7 +146,9 @@
         CGSize a = self.frame.size;
         a = self.viewForBaselineLayout.frame.size;
         viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
-        viePhotoPreview.lblName.text = @"aaaaa";
+        viePhotoPreview.lblName.text = [photo getName];
+        viePhotoPreview.lblDescription.text = [photo getDescription];
+        viePhotoPreview.imgPhoto.image = [Utility getImageFromURL:[photo getUrl]];
 //        viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         CGRect bounds = CGRectMake(0, 0, self.frame.size.width, 568);
         viePhotoPreview.view.frame = bounds;

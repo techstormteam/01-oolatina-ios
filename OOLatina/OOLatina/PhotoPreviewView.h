@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Utility.h"
 
-@interface PhotoPreviewView : UIViewController {
-    NSString *url;
-}
-@property (strong, nonatomic) IBOutlet UIButton *btnDownload;
-@property (strong, nonatomic) IBOutlet UILabel *lblName;
+@interface PhotoPreviewView : UIViewController
 
-- (void)setUrl:(NSString*)url;
+@property (strong, nonatomic) IBOutlet UILabel *lblName;
+@property (strong, nonatomic) IBOutlet UILabel *lblDescription;
+@property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
+
 - (IBAction)btnDownload_tapped:(id)sender;
+- (IBAction)btnShare_tapped:(id)sender;
 @end

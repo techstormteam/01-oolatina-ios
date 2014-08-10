@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoPreviewView">
             <connections>
+                <outlet property="btnShare_tapped" destination="mm9-YU-Mmd" id="AsR-5A-9y1"/>
+                <outlet property="imgPhoto" destination="ygk-jg-9Z8" id="h5C-nW-YPJ"/>
+                <outlet property="lblDescription" destination="b2g-1M-Cxy" id="xpv-mO-G58"/>
                 <outlet property="lblName" destination="WNT-OQ-sPc" id="Bxq-UL-o6d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -50,6 +53,9 @@
                     <state key="normal" image="button_share.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnShare_tapped:" destination="-1" eventType="touchUpInside" id="Tph-1W-bAs"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

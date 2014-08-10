@@ -37,8 +37,11 @@
 }
 
 - (IBAction)btnDownload_tapped:(id)sender {
+    UIImage *image = _imgPhoto.image;
+    [Utility saveImage:image];
+}
+
+- (IBAction)btnShare_tapped:(id)sender {
     
-//    UIImage *image = [Utility downloadImage:url];
-//    [Utility saveImage:image];
 }
 @end
