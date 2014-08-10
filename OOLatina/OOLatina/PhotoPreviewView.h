@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblName;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property (strong, nonatomic) IBOutlet UIButton *btnShare;
 
 - (IBAction)btnDownload_tapped:(id)sender;
 - (IBAction)btnShare_tapped:(id)sender;
