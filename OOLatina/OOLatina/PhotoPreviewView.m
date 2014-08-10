@@ -18,6 +18,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [[NSBundle mainBundle] loadNibNamed:nibNameOrNil
+                                      owner:self options:nil];
         // Custom initialization
     }
     return self;
@@ -26,8 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,4 +36,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnDownload_tapped:(id)sender {
+    
+//    UIImage *image = [Utility downloadImage:url];
+//    [Utility saveImage:image];
+}
 @end

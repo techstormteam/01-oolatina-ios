@@ -96,7 +96,7 @@
 
 - (NSInteger)numberOfItemsInGMGridView:(GMGridView *)gridView
 {
-    return 10;
+    return [photoEvents count];
 }
 
 - (CGSize)GMGridView:(GMGridView *)gridView sizeForItemsInInterfaceOrientation:(UIInterfaceOrientation)orientation
@@ -137,6 +137,7 @@
     if (_count < [photoEvents count]) {
         PhotoEvent *photoEvent = [photoEvents objectAtIndex:_count];
         photos = [photoEvent getPhoto];
+        CGSize a = self.frame.size;
         PhotoCustomCell *groupPhotos = [[PhotoCustomCell alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         [groupPhotos passPhotoSize:_imgSize];
         [groupPhotos passData:photos];
@@ -148,7 +149,7 @@
             [groupPhotos setTitle:[photoEvent getTitle]];
         }
         [cell.contentView addSubview:groupPhotos];
-        
+        a = groupPhotos.frame.size;
         _count++;
     }
     

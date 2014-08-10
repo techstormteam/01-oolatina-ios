@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PhotoCollectionCell.h"
 #import "Photo.h"
 #import "Utility.h"
 #import "GMGridView.h"
 #import "PhotoPreviewView.h"
+#import "SCUtils.h"
 
 
 @interface PhotoCustomCell : UIView <GMGridViewDataSource, GMGridViewActionDelegate> {

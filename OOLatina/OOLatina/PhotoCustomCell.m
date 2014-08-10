@@ -23,6 +23,7 @@
 
 - (void)setup
 {
+    CGSize a = self.frame.size;
     // Initialization code
     _photoIndex = 0;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -38,6 +39,13 @@
     gmGridView.dataSource = self;
     _gmGridView = gmGridView;
     [self addSubview:_gmGridView];
+    
+//    a = gmGridView.frame.size;
+//    viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
+//    viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+//    [self addSubview:viePhotoPreview.view];
+    
+    CGSize b = self.frame.size;
 }
 
 - (void)passPhotoSize:(CGSize) pSize;
@@ -120,7 +128,7 @@
 
         _photoIndex++;
     }
-
+    CGSize a = self.frame.size;
     return cell;
 }
 
@@ -131,8 +139,14 @@
     }
     else
     {
+        CGSize a = self.frame.size;
+        a = self.viewForBaselineLayout.frame.size;
         viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
-        viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        viePhotoPreview.lblName.text = @"aaaaa";
+//        viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        CGRect bounds = CGRectMake(0, 0, self.frame.size.width, 568);
+        viePhotoPreview.view.frame = bounds;
+        self.frame = bounds;
         [self addSubview:viePhotoPreview.view];
 //        [self bringSubviewToFront:viePhotoPreview];
         

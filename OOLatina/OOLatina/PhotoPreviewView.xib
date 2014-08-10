@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoPreviewView">
             <connections>
+                <outlet property="lblName" destination="WNT-OQ-sPc" id="Bxq-UL-o6d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,32 +16,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[No Name]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNT-OQ-sPc" userLabel="lblName">
-                    <rect key="frame" x="0.0" y="26" width="320" height="37"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[No Description]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-1M-Cxy" userLabel="lblDescription">
-                    <rect key="frame" x="0.0" y="445" width="320" height="85"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="[No Description]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-1M-Cxy" userLabel="lblDescription">
+                    <rect key="frame" x="0.0" y="277" width="320" height="81"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-jg-9Z8">
-                    <rect key="frame" x="0.0" y="71" width="320" height="359"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-jg-9Z8">
+                    <rect key="frame" x="0.0" y="45" width="320" height="229"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.6784313917" green="0.89019614459999996" blue="0.25098040700000002" alpha="1" colorSpace="deviceRGB"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjt-De-OBQ" userLabel="btnDownload">
-                    <rect key="frame" x="230" y="538" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjt-De-OBQ" userLabel="btnDownload">
+                    <rect key="frame" x="210" y="366" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="button_download.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnDownload_tapped:" destination="-1" eventType="touchUpInside" id="U37-4C-pts"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-YU-Mmd" userLabel="btnShare">
-                    <rect key="frame" x="276" y="538" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-YU-Mmd" userLabel="btnShare">
+                    <rect key="frame" x="255" y="366" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="button_share.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,20 +54,13 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="WNT-OQ-sPc" secondAttribute="trailing" id="A17-Td-Jxt"/>
-                <constraint firstItem="WNT-OQ-sPc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="AUs-Yl-xMF"/>
-                <constraint firstItem="ygk-jg-9Z8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HoS-S9-eBP"/>
-                <constraint firstItem="b2g-1M-Cxy" firstAttribute="top" secondItem="ygk-jg-9Z8" secondAttribute="bottom" id="KEH-mV-KLL"/>
-                <constraint firstAttribute="bottom" secondItem="Mjt-De-OBQ" secondAttribute="bottom" id="NGo-u9-4kB"/>
-                <constraint firstItem="mm9-YU-Mmd" firstAttribute="top" secondItem="b2g-1M-Cxy" secondAttribute="bottom" id="OiD-nK-YMF"/>
-                <constraint firstAttribute="trailing" secondItem="ygk-jg-9Z8" secondAttribute="trailing" id="PlM-k3-axa"/>
-                <constraint firstAttribute="bottom" secondItem="mm9-YU-Mmd" secondAttribute="bottom" id="TBR-aB-LxU"/>
-                <constraint firstItem="mm9-YU-Mmd" firstAttribute="leading" secondItem="Mjt-De-OBQ" secondAttribute="trailing" constant="16" id="VA0-6e-Ubw"/>
-                <constraint firstItem="ygk-jg-9Z8" firstAttribute="top" secondItem="WNT-OQ-sPc" secondAttribute="bottom" constant="8" id="g5a-VW-ZNQ"/>
-                <constraint firstAttribute="trailing" secondItem="b2g-1M-Cxy" secondAttribute="trailing" id="gtM-kZ-GkS"/>
-                <constraint firstItem="WNT-OQ-sPc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pVb-zF-ehW"/>
-                <constraint firstItem="b2g-1M-Cxy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rji-bC-xZ3"/>
-                <constraint firstAttribute="trailing" secondItem="mm9-YU-Mmd" secondAttribute="trailing" constant="15" id="zLN-RS-Eoh"/>
+                <constraint firstAttribute="trailing" secondItem="ygk-jg-9Z8" secondAttribute="trailing" id="2KA-rd-fvh"/>
+                <constraint firstItem="ygk-jg-9Z8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C3F-Gf-lgi"/>
+                <constraint firstItem="WNT-OQ-sPc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I7Y-ad-DA7"/>
+                <constraint firstItem="Mjt-De-OBQ" firstAttribute="top" secondItem="b2g-1M-Cxy" secondAttribute="bottom" constant="8" id="JaF-6v-sgt"/>
+                <constraint firstItem="ygk-jg-9Z8" firstAttribute="top" secondItem="WNT-OQ-sPc" secondAttribute="bottom" constant="8" id="L9k-d1-kCc"/>
+                <constraint firstAttribute="trailing" secondItem="WNT-OQ-sPc" secondAttribute="trailing" id="oKF-YU-meS"/>
+                <constraint firstItem="WNT-OQ-sPc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rzA-g5-0Wk"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

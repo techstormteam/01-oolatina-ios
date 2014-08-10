@@ -183,8 +183,6 @@
 		D06096F4199518C000153348 /* UIView+GMGridViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096EF199518C000153348 /* UIView+GMGridViewAdditions.m */; };
 		D0926296198CD4550055D7A6 /* PhotoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926295198CD4550055D7A6 /* PhotoEvent.m */; };
 		D0926299198CDF5C0055D7A6 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926298198CDF5C0055D7A6 /* Photo.m */; };
-		D09262A0198D44430055D7A6 /* PhotoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */; };
-		D09262A3198D44AB0055D7A6 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */; };
 		D093784E198C5E4400626197 /* FirstGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D093784D198C5E4400626197 /* FirstGuideView.xib */; };
 		D0937862198C803600626197 /* button_download.png in Resources */ = {isa = PBXBuildFile; fileRef = D093785E198C803600626197 /* button_download.png */; };
 		D0937863198C803600626197 /* button_download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D093785F198C803600626197 /* button_download@2x.png */; };
@@ -482,9 +480,6 @@
 		D0926295198CD4550055D7A6 /* PhotoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEvent.m; sourceTree = "<group>"; };
 		D0926297198CDF5C0055D7A6 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		D0926298198CDF5C0055D7A6 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
-		D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionCell.xib; sourceTree = "<group>"; };
-		D09262A1198D44AB0055D7A6 /* PhotoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionCell.h; sourceTree = "<group>"; };
-		D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
 		D093784D198C5E4400626197 /* FirstGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstGuideView.xib; sourceTree = "<group>"; };
 		D093785E198C803600626197 /* button_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_download.png; sourceTree = "<group>"; };
 		D093785F198C803600626197 /* button_download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_download@2x.png"; sourceTree = "<group>"; };
@@ -762,9 +757,6 @@
 				D0963F7A198B803500A22769 /* PhotoCustomCell.xib */,
 				D0963F7C198B806100A22769 /* PhotoCustomCell.h */,
 				D0963F7D198B806200A22769 /* PhotoCustomCell.m */,
-				D092629F198D44430055D7A6 /* PhotoCollectionCell.xib */,
-				D09262A1198D44AB0055D7A6 /* PhotoCollectionCell.h */,
-				D09262A2198D44AB0055D7A6 /* PhotoCollectionCell.m */,
 				D093784D198C5E4400626197 /* FirstGuideView.xib */,
 				D093786A198C8BBB00626197 /* FirstGuideView.h */,
 				D093786B198C8BBB00626197 /* FirstGuideView.m */,
@@ -1102,7 +1094,6 @@
 				51A63B2018D5DD20005DCD55 /* dj.jpg in Resources */,
 				51A63A4718D48FB1005DCD55 /* backplay.png in Resources */,
 				514D097118DB600500872793 /* search_icon.png in Resources */,
-				D09262A0198D44430055D7A6 /* PhotoCollectionCell.xib in Resources */,
 				D0B54BDA198FE845005F65FE /* PhotoShareConfirm.xib in Resources */,
 				51FD5FCE18D33E610040369B /* button_pause@2x.png in Resources */,
 				51A63A4818D48FB1005DCD55 /* backplay@2x.png in Resources */,
@@ -1229,7 +1220,6 @@
 				51FD5F6818CFCC260040369B /* ViewController.m in Sources */,
 				51FD5FAF18D1E9DB0040369B /* AgendaView.m in Sources */,
 				51FD5FB218D1E9E70040369B /* RadioView.m in Sources */,
-				D09262A3198D44AB0055D7A6 /* PhotoCollectionCell.m in Sources */,
 				51FD5FD318D3450D0040369B /* ArtistTableViewCell.m in Sources */,
 				51A63AF618D4BD14005DCD55 /* AFHTTPSessionManager.m in Sources */,
 				514D095B18DA5C1D00872793 /* AgendaScroll.m in Sources */,
