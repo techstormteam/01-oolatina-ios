@@ -33,7 +33,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSo-kA-gX9">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSo-kA-gX9">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.9882352941176471" green="0.011764705882352941" blue="0.50980392156862742" alpha="1" colorSpace="deviceRGB"/>
@@ -51,6 +51,7 @@
                 <constraint firstAttribute="trailing" secondItem="Jb0-08-5GI" secondAttribute="trailing" constant="10" id="3L5-JC-L3o"/>
                 <constraint firstItem="Jb0-08-5GI" firstAttribute="leading" secondItem="uLy-h2-9Ug" secondAttribute="leading" constant="10" id="Is1-G6-AJu"/>
                 <constraint firstItem="oFO-0g-uI2" firstAttribute="leading" secondItem="uLy-h2-9Ug" secondAttribute="leading" constant="10" id="Jqn-61-c3p"/>
+                <constraint firstAttribute="bottom" secondItem="CSo-kA-gX9" secondAttribute="bottom" id="Lur-rK-MUj"/>
                 <constraint firstAttribute="trailing" secondItem="oFO-0g-uI2" secondAttribute="trailing" constant="10" id="d1b-Ic-gwH"/>
                 <constraint firstItem="Jb0-08-5GI" firstAttribute="top" secondItem="uLy-h2-9Ug" secondAttribute="top" constant="30" id="nbI-9w-Npo"/>
             </constraints>

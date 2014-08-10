@@ -352,8 +352,7 @@
         else
         {
             searchButton.hidden = YES;
-            mPhotoView = [[PhotoView alloc] init];
-            [mPhotoView setup];
+            mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
 //            PhotoPreviewView *vie = [[PhotoPreviewView alloc] init];
 //            [vie setup];
             [pageView addSubview:mPhotoView];

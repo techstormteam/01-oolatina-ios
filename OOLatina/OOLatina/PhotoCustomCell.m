@@ -11,31 +11,33 @@
 
 @implementation PhotoCustomCell
 
-@synthesize lblTitle = mTitle;
-@synthesize vieAlbum = mAlbum;
 
-
-- (id)initWithCoder:(NSCoder *)aCoder
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithCoder:aCoder];
+    self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _photoIndex = 0;
-        
-        
     }
     return self;
 }
 
--(void)setup
+- (void)setup
 {
-    GMGridView *gmGridView = [[GMGridView alloc] initWithFrame:mAlbum.bounds];
-//    gmGridView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    // Initialization code
+    _photoIndex = 0;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, self.frame.size.width, 20)];
+    lblTitle.textColor = [UIColor whiteColor];
+    [self addSubview:lblTitle];
+    
+    GMGridView *gmGridView = [[GMGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, 40)];
+    gmGridView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     gmGridView.backgroundColor = [UIColor clearColor];
+    gmGridView.centerGrid = false;
+    gmGridView.itemSpacing = 2;
+    gmGridView.dataSource = self;
     _gmGridView = gmGridView;
-    _gmGridView.dataSource = self;
-
-    [mAlbum addSubview:_gmGridView];
+    [self addSubview:_gmGridView];
 }
 
 - (void)passPhotoSize:(CGSize) pSize;
@@ -48,6 +50,10 @@
     mPhotos = photos;
 }
 
+- (void)setTitle:(NSString *)title
+{
+    lblTitle.text = title;
+}
 
 //////////////////////////////////////////////////////////////
 #pragma mark GMGridViewDataSource
@@ -56,6 +62,7 @@
 - (NSInteger)numberOfItemsInGMGridView:(GMGridView *)gridView
 {
     return mPhotos.count;
+//    return 10;
 }
 
 - (CGSize)GMGridView:(GMGridView *)gridView sizeForItemsInInterfaceOrientation:(UIInterfaceOrientation)orientation
@@ -97,23 +104,6 @@
         Photo *photo = [mPhotos objectAtIndex:_photoIndex];
         NSString *url = [photo getUrl];
         
-//        UIImage *img = [Utility getImageFromURL:url];
-        
-//        newCell.imgPhoto.frame = CGRectMake(newCell.imgPhoto.frame.origin.x, newCell.imgPhoto.frame.origin.y, _photoSize.height,_photoSize.width);
-        //        UIImage *scaledImage = [img resizedImageToFitInSize:_photoSize scaleIfSmaller:true];
-//        UIImage *scaledImage = img;
-//        newCell.imgPhoto.image = scaledImage;
-//        newCell.imgPhoto.center = newCell.imgPhoto.superview.center;
-        
-//        UILabel *label = [[UILabel alloc] initWithFrame:cell.contentView.bounds];
-//        label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//        label.text = @"aaa";
-//        label.textAlignment = UITextAlignmentCenter;
-//        label.backgroundColor = [UIColor clearColor];
-//        label.textColor = [UIColor blackColor];
-//        label.highlightedTextColor = [UIColor whiteColor];
-//        label.font = [UIFont boldSystemFontOfSize:20];
-//        [cell.contentView addSubview:label];
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -123,10 +113,20 @@
         imageView.image = img;
         [cell.contentView addSubview:imageView];
         
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
+        singleTap.numberOfTapsRequired = 1;
+        imageView.userInteractionEnabled = YES;
+        [imageView addGestureRecognizer:singleTap];
+
         _photoIndex++;
     }
 
     return cell;
+}
+
+-(void)tapDetected{
+    NSLog(@"single Tap on imageview");
+    
 }
 
 

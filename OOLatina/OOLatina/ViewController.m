@@ -19,12 +19,15 @@
 {
     [super viewDidLoad];
 
-    if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
+    if ([@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]
                                objectForKey:@"aValue"]]) {
         [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"aValue"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         mFirstGuideView = [[FirstGuideView alloc] initWithNibName:@"FirstGuideView" bundle:nil];
+        CGFloat s = self.view.frame.size.width;
+                CGFloat e = self.view.frame.size.height;
+        mFirstGuideView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
         mFirstGuideView.delegate = self;
         [self.view addSubview:mFirstGuideView.view];
     } else {

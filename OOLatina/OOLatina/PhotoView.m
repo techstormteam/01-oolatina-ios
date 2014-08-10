@@ -16,34 +16,34 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _numberOfImageInRow = 3;
+        _numberOfImageInRow = 4;
+        
+        [self loadPhotoEvent];
+        
+        GMGridView *gmGridView2 = [[GMGridView alloc] initWithFrame:self.bounds];
+        gmGridView2.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        gmGridView2.style = GMGridViewStylePush;
+        gmGridView2.itemSpacing = 5;
+        gmGridView2.minEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+        gmGridView2.centerGrid = YES;
+        gmGridView2.layoutStrategy = [GMGridViewLayoutStrategyFactory strategyFromType:GMGridViewLayoutHorizontal];
+        CGRect frame1 = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        gmGridView2.frame = frame1;
+        [self addSubview:gmGridView2];
+        _gmGridView2 = gmGridView2;
+        _gmGridView2.dataSource = self;
+        _gmGridView2.mainSuperView = self;
     }
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aCoder
-{
-    self = [super initWithCoder:aCoder];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (void)setup {
-    [[NSBundle mainBundle] loadNibNamed:@"PhotoView"
-                                  owner:self options:nil];
-    [self loadPhotoEvent];
-    
-    [self addSubview:self.view];
-}
 
 - (void)loadPhotoEvent {
     
     if([SCUtils isNetworkAvailable])
     {
         _count = 0;
-        CGFloat wid = self.view.frame.size.width / _numberOfImageInRow - 50;
+        CGFloat wid = self.frame.size.width / _numberOfImageInRow;
         _imgSize = CGSizeMake(wid, wid);
         photoEvents = [[NSMutableArray alloc] init];
         sectionSizes = [[NSMutableArray alloc] init];
@@ -89,34 +89,6 @@
 }
 
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    PhotoEvent *photoEvent = [photoEvents objectAtIndex:[indexPath section]];
-    static NSString *simpleTableIdentifier = @"PhotoCustomCell";
-    
-    PhotoCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:simpleTableIdentifier owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-        [cell passData: [photoEvent getPhoto]];
-        [cell passPhotoSize: _imgSize];
-        [cell setup];
-    }
-
-    cell.lblTitle.text = NSLocalizedString(@"no_title", nil);
-    if ([photoEvent getTitle] != (id)[NSNull null] && [photoEvent getTitle].length != 0) {
-        cell.lblTitle.text = [photoEvent getTitle];
-    }
-    
-//    cell.vieAlbum.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
-//    [cell.vieAlbum registerNib:[UINib nibWithNibName:@"PhotoCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"PhotoCollectionCell"];
-    return cell;
-}
-
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSNumber *height = [NSNumber numberWithInteger:1];
@@ -148,6 +120,77 @@
     }
     
     return indexPath;
+}
+
+//////////////////////////////////////////////////////////////
+#pragma mark GMGridViewDataSource
+//////////////////////////////////////////////////////////////
+
+- (NSInteger)numberOfItemsInGMGridView:(GMGridView *)gridView
+{
+    return 10;
+}
+
+- (CGSize)GMGridView:(GMGridView *)gridView sizeForItemsInInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        return CGSizeMake(self.frame.size.width, self.frame.size.height);
+    }
+    else
+    {
+        return CGSizeMake(self.frame.size.width, self.frame.size.height);
+    }
+}
+
+- (GMGridViewCell *)GMGridView:(GMGridView *)gridView cellForItemAtIndex:(NSInteger)index
+{
+    //NSLog(@"Creating view indx %d", index);
+    
+//    CGSize size = CGSizeMake(_photoSize.width, _photoSize.height);
+    
+    GMGridViewCell *cell = [gridView dequeueReusableCell];
+    
+    if (!cell)
+    {
+        cell = [[GMGridViewCell alloc] init];
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        view.backgroundColor = [UIColor clearColor];
+        view.layer.masksToBounds = NO;
+        view.layer.cornerRadius = 8;
+        
+       
+        cell.contentView = view;
+    }
+    
+    [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+
+    if (_count < [photoEvents count]) {
+        PhotoEvent *photoEvent = [photoEvents objectAtIndex:_count];
+        photos = [photoEvent getPhoto];
+        PhotoCustomCell *groupPhotos = [[PhotoCustomCell alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        [groupPhotos passPhotoSize:_imgSize];
+        [groupPhotos passData:photos];
+        [groupPhotos setup];
+        [cell.contentView addSubview:groupPhotos];
+
+        [groupPhotos setTitle:NSLocalizedString(@"no_title", nil)];
+        if ([photoEvent getTitle] != (id)[NSNull null] && [photoEvent getTitle].length != 0) {
+            [groupPhotos setTitle:[photoEvent getTitle]];
+        }
+        [cell.contentView addSubview:groupPhotos];
+        
+        _count++;
+    }
+    
+    return cell;
+}
+
+
+- (BOOL)GMGridView:(GMGridView *)gridView canDeleteItemAtIndex:(NSInteger)index
+{
+    return YES; //index % 2 == 0;
 }
 
 

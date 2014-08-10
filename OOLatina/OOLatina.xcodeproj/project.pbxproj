@@ -197,7 +197,6 @@
 		D093786C198C8BBB00626197 /* FirstGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093786B198C8BBB00626197 /* FirstGuideView.m */; };
 		D0963F6B198B399F00A22769 /* PhotoCell.h in Resources */ = {isa = PBXBuildFile; fileRef = D0963F6A198B399F00A22769 /* PhotoCell.h */; };
 		D0963F6D198B39CA00A22769 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F6C198B39CA00A22769 /* PhotoCell.m */; };
-		D0963F6F198B4EAB00A22769 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F6E198B4EAB00A22769 /* PhotoView.xib */; };
 		D0963F77198B583B00A22769 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F76198B583B00A22769 /* PhotoView.m */; };
 		D0963F7B198B803500A22769 /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7A198B803500A22769 /* PhotoCustomCell.xib */; };
 		D0963F7E198B806200A22769 /* PhotoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F7D198B806200A22769 /* PhotoCustomCell.m */; };
@@ -500,7 +499,6 @@
 		D093786B198C8BBB00626197 /* FirstGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstGuideView.m; sourceTree = "<group>"; };
 		D0963F6A198B399F00A22769 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		D0963F6C198B39CA00A22769 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
-		D0963F6E198B4EAB00A22769 /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
 		D0963F75198B583B00A22769 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
 		D0963F76198B583B00A22769 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
 		D0963F7A198B803500A22769 /* PhotoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCustomCell.xib; sourceTree = "<group>"; };
@@ -759,7 +757,6 @@
 				51FD5FF018D3AECA0040369B /* Video.m */,
 				51FD5FF218D3B98B0040369B /* VideoTableViewCell.h */,
 				51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */,
-				D0963F6E198B4EAB00A22769 /* PhotoView.xib */,
 				D0963F75198B583B00A22769 /* PhotoView.h */,
 				D0963F76198B583B00A22769 /* PhotoView.m */,
 				D0963F7A198B803500A22769 /* PhotoCustomCell.xib */,
@@ -1122,7 +1119,6 @@
 				51A63A6518D4B8A4005DCD55 /* Icon@2x.png in Resources */,
 				51A63B2218D5DD20005DCD55 /* merengue.jpg in Resources */,
 				51FD5F5C18CFCC250040369B /* InfoPlist.strings in Resources */,
-				D0963F6F198B4EAB00A22769 /* PhotoView.xib in Resources */,
 				51A63A4118D48FA9005DCD55 /* buttonpauseradio.png in Resources */,
 				51A63B2F18D5F549005DCD55 /* agenda_icon@2x.png in Resources */,
 				51A63B3018D5F549005DCD55 /* audio_icon@2x.png in Resources */,
