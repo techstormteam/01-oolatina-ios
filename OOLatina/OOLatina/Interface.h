@@ -31,7 +31,6 @@
     NavigationBar *mNavigationBar;
     TableView *mMenuTableView;
     NewsView *mNewsView;
-    AgendaView *mAgendaView;
     PhotoView *mPhotoView;
     RadioView *mRadioView;
     GalleryView *mGalleryView;

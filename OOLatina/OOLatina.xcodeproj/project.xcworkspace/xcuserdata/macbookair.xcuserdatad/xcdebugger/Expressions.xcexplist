@@ -11,18 +11,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[PhotoCustomCell collectionView:cellForItemAtIndexPath:]:PhotoCustomCell.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "newCell">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[ViewController viewDidLoad]:ViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "[[UIScreen mainScreen] applicationFrame].size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PhotoCustomCell collectionView:cellForItemAtIndexPath:]:PhotoCustomCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "newCell">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -11,8 +11,9 @@
 
 @implementation AgendaWholeView
 
-@synthesize couponButton;
-@synthesize groupbuyButton;
+@synthesize agendaButton;
+@synthesize arroundMeButton;
+@synthesize mapButton;
 @synthesize slidLabel;
 @synthesize nibScrollView;
 
@@ -50,8 +51,8 @@
 }
 
 - (void)dealloc {
-//    [couponButton release];
-//    [groupbuyButton release];
+//    [agendaButton release];
+//    [arroundMeButton release];
 //    [slidLabel release];
 //    [nibScrollView release];
 //    [super dealloc];
@@ -88,13 +89,17 @@
 
 - (void) addBasicView
 {
-    couponButton.showsTouchWhenHighlighted = YES;  //指定按钮被按下时发光
-    [couponButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];//此时选中
-    [couponButton addTarget:self action:@selector(couponButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    groupbuyButton.showsTouchWhenHighlighted = YES;  //指定按钮被按下时发光
-    [groupbuyButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];//此时未被选中
-    [groupbuyButton addTarget:self action:@selector(groupbuyButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    agendaButton.showsTouchWhenHighlighted = YES;
+    [agendaButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [agendaButton addTarget:self action:@selector(agendaButtonAction) forControlEvents:UIControlEventTouchUpInside];
     
+    arroundMeButton.showsTouchWhenHighlighted = YES;
+    [arroundMeButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
+    [arroundMeButton addTarget:self action:@selector(arroundMeButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    mapButton.showsTouchWhenHighlighted = YES;
+    [mapButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
+    [mapButton addTarget:self action:@selector(mapButtonAction) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark-
@@ -103,113 +108,67 @@
 - (void) btnActionShow
 {
     if (currentPage == 0) {
-        [self couponButtonAction];
-    }
-    else{
-        [self groupbuyButtonAction];
+        [self agendaButtonAction];
+    } else if (currentPage == 1) {
+        [self arroundMeButtonAction];
+    } else if (currentPage == 2) {
+        [self mapButtonAction];
     }
 }
 
-- (void) couponButtonAction
+- (void) agendaButtonAction
 {
-    [couponButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];//此时选中
-    [groupbuyButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];//此时未被选中
+    [agendaButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [arroundMeButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
+    [mapButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
     
-    [UIView beginAnimations:nil context:nil];//动画开始
+    [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
     
-    slidLabel.frame = CGRectMake(0, 106, 160, 4);
-    [nibScrollView setContentOffset:CGPointMake(320*0, 0)];//页面滑动
+    slidLabel.frame = CGRectMake(0, 36, 107, 4);
+    [nibScrollView setContentOffset:CGPointMake(nibScrollView.frame.size.width*0, 0)];
     
     [UIView commitAnimations];
 }
 
-- (void) groupbuyButtonAction
+- (void) arroundMeButtonAction
 {
-    [groupbuyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];//此时选中
-    [couponButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];//此时未被选中
+    [arroundMeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [agendaButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
+    [mapButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
     
-    [UIView beginAnimations:nil context:nil];//动画开始
+    [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
     
-    slidLabel.frame = CGRectMake(159, 106, 161, 4);
-    [nibScrollView setContentOffset:CGPointMake(320*1, 0)];
+    slidLabel.frame = CGRectMake(108, 36, 107, 4);
+    [nibScrollView setContentOffset:CGPointMake(nibScrollView.frame.size.width*1, 0)];
     
     [UIView commitAnimations];
 }
 
-#pragma mark -
-#pragma mark table view data source methods
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void) mapButtonAction
 {
-    if (tableView == couponTableView) {
-        return couponArry.count;
-    }
-    else{
-        return groupbuyArry.count;
-    }
+    [mapButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [arroundMeButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
+    [agendaButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.3];
+    
+    slidLabel.frame = CGRectMake(215, 36, 107, 4);
+    [nibScrollView setContentOffset:CGPointMake(nibScrollView.frame.size.width*2, 0)];
+    
+    [UIView commitAnimations];
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void) showSearch
 {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                       reuseIdentifier: CellIdentifier];
-    }else{
-
-        //         [[cell.subviews objectAtIndex:1] removeFromSuperview];
-        for (UIView *subView in cell.contentView.subviews)
-        {
-            [subView removeFromSuperview];
-        }
-    }
-    
-    if (tableView == couponTableView) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@", [couponArry objectAtIndex:indexPath.row]];
-    }
-    else{
-        cell.textLabel.text = [NSString stringWithFormat:@"%@", [groupbuyArry objectAtIndex:indexPath.row]];
-    }
-    
-    return cell;
+    [agendaView showSearch];
 }
 
-
-#pragma mark -
-#pragma mark table delegate methods
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    return indexPath;
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (tableView == couponTableView) {
-    }
-    else{
-    }
-    
-}
-- (NSInteger) tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void) loadEvent
 {
-    return 0;
-}
-
-
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 80;
+//    [agendaView loadEvent];
 }
 
 #pragma mark -
@@ -217,7 +176,7 @@
 
 - (void)initScrollView {
     
-    //设置 tableScrollView
+    //tableScrollView
     // a page is the width of the scroll view
     nibScrollView.pagingEnabled = YES;
     nibScrollView.clipsToBounds = NO;
@@ -228,10 +187,9 @@
     nibScrollView.delegate = self;
     
     [nibScrollView setContentOffset:CGPointMake(0, 0)];
-    
-    //公用
+
     currentPage = 0;
-    pageControl.numberOfPages = 2;
+    pageControl.numberOfPages = 3;
     pageControl.currentPage = 0;
     pageControl.backgroundColor = [UIColor whiteColor];
     [self createAllEmptyPagesForScrollView];
@@ -239,24 +197,16 @@
 
 - (void)createAllEmptyPagesForScrollView {
     
-    //设置 tableScrollView 内部数据
-    couponTableView = [[UITableView alloc]init ];
-    couponTableView.frame = CGRectMake(320*0, 0, 320, nibScrollView.frame.size.height);
-    groupbuyTableView = [[UITableView alloc]init ];
-    groupbuyTableView.frame = CGRectMake(320*1, 0, 320, nibScrollView.frame.size.height);
+    agendaView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
+    agendaView.frame = CGRectMake(nibScrollView.frame.size.width*0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
+    arroundMeView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
+    arroundMeView.frame = CGRectMake(nibScrollView.frame.size.width*1, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
+//    agendaMapView = [[AgendaMapView alloc]init ];
+//    agendaMapView.view.frame = CGRectMake(nibScrollView.frame.size.width*2, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
     
-    //设置tableView委托并添加进视图
-    couponTableView.delegate = self;
-    couponTableView.dataSource = self;
-    [nibScrollView addSubview: couponTableView];
-    groupbuyTableView.delegate = self;
-    groupbuyTableView.dataSource = self;
-    [nibScrollView addSubview: groupbuyTableView];
-    
-    //设置 nibTableView 数据源数组 -- 仅仅用与测试
-    couponArry = [[NSArray alloc]initWithObjects:@"coupon1",@"coupon2",@"coupon3", @"coupon4",nil ];
-    groupbuyArry = [[NSArray alloc]initWithObjects:@"groupbuy1",@"groupbuy2",@"groupbuy3", nil ];
-    
+    [nibScrollView addSubview: agendaView];
+    [nibScrollView addSubview: arroundMeView];
+//    [nibScrollView addSubview: agendaMapView];
 }
 
 // At the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
@@ -272,7 +222,7 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    //暂不处理 - 其实左右滑动还有包含开始等等操作，这里不做介绍
+
 }
 
 - (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view

@@ -130,7 +130,7 @@
 
 - (void)showSearch
 {
-    [mAgendaView showSearch];
+    [mAgendaWholeView showSearch];
 }
 
 - (void)showPageFeed:(NSString *)url
@@ -262,11 +262,11 @@
     
     if(rownumber == 1)
     {
-        if(mAgendaView != nil)
+        if(mAgendaWholeView != nil)
         {
             searchButton.hidden = NO;
-            [mAgendaView loadEvent];
-            [pageView bringSubviewToFront:mAgendaView];
+            [mAgendaWholeView loadEvent];
+            [pageView bringSubviewToFront:mAgendaWholeView];
         }
         else
         {

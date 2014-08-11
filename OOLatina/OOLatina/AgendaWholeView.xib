@@ -6,8 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AgendaWholeView">
             <connections>
-                <outlet property="couponButton" destination="rjf-ew-ZpI" id="oLY-9r-sNO"/>
-                <outlet property="groupbuyButton" destination="4wr-YY-58g" id="bXn-h2-48T"/>
+                <outlet property="agendaButton" destination="rjf-ew-ZpI" id="ooF-VT-vsl"/>
+                <outlet property="arroundMeButton" destination="4wr-YY-58g" id="M6D-cI-66w"/>
+                <outlet property="mapButton" destination="Hbd-iQ-mnK" id="yk5-C6-ug1"/>
                 <outlet property="nibScrollView" destination="0wO-B4-7D7" id="Efh-2d-val"/>
                 <outlet property="slidLabel" destination="ycv-UB-QKv" id="eFC-Q7-m6e"/>
                 <outlet property="view" destination="mcB-uQ-rVu" id="hLm-7B-Woy"/>
@@ -18,16 +19,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wO-B4-7D7">
-                    <rect key="frame" x="-1" y="100" width="321" height="441"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wO-B4-7D7">
+                    <rect key="frame" x="0.0" y="40" width="320" height="520"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjf-ew-ZpI">
-                    <rect key="frame" x="0.0" y="52" width="159" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjf-ew-ZpI" userLabel="agendaButton">
+                    <rect key="frame" x="-1" y="0.0" width="107" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" title="aaa">
+                    <state key="normal" title="Agenda">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -35,12 +36,12 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wr-YY-58g">
-                    <rect key="frame" x="155" y="52" width="165" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wr-YY-58g" userLabel="arroundMeButton">
+                    <rect key="frame" x="106" y="0.0" width="107" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" title="bbb">
+                    <state key="normal" title="Arround Me">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -48,8 +49,21 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-UB-QKv">
-                    <rect key="frame" x="-1" y="88" width="160" height="4"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-iQ-mnK" userLabel="mapButton">
+                    <rect key="frame" x="213" y="0.0" width="107" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Map">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-UB-QKv">
+                    <rect key="frame" x="0.0" y="36" width="107" height="4"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.1176470588" green="0.68627450980000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,6 +72,19 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rjf-ew-ZpI" firstAttribute="leading" secondItem="mcB-uQ-rVu" secondAttribute="leading" id="4oi-EJ-aoQ"/>
+                <constraint firstItem="Hbd-iQ-mnK" firstAttribute="top" secondItem="mcB-uQ-rVu" secondAttribute="top" id="6LJ-gc-0b8"/>
+                <constraint firstItem="0wO-B4-7D7" firstAttribute="top" secondItem="ycv-UB-QKv" secondAttribute="bottom" id="93s-6E-8d1"/>
+                <constraint firstItem="4wr-YY-58g" firstAttribute="top" secondItem="mcB-uQ-rVu" secondAttribute="top" id="CQi-Cp-z4R"/>
+                <constraint firstAttribute="bottom" secondItem="0wO-B4-7D7" secondAttribute="bottom" constant="8" id="HY9-82-D16"/>
+                <constraint firstItem="0wO-B4-7D7" firstAttribute="leading" secondItem="mcB-uQ-rVu" secondAttribute="leading" id="SYq-2l-rc6"/>
+                <constraint firstItem="Hbd-iQ-mnK" firstAttribute="leading" secondItem="4wr-YY-58g" secondAttribute="trailing" id="ZbQ-ge-1YM"/>
+                <constraint firstAttribute="trailing" secondItem="Hbd-iQ-mnK" secondAttribute="trailing" id="atG-tk-Duk"/>
+                <constraint firstItem="rjf-ew-ZpI" firstAttribute="top" secondItem="mcB-uQ-rVu" secondAttribute="top" id="iqa-5o-qDM"/>
+                <constraint firstAttribute="trailing" secondItem="0wO-B4-7D7" secondAttribute="trailing" id="mbR-bp-xuQ"/>
+                <constraint firstItem="4wr-YY-58g" firstAttribute="leading" secondItem="rjf-ew-ZpI" secondAttribute="trailing" id="rMq-gi-rBI"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
