@@ -177,6 +177,7 @@
 		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
 		D05B76D0199836510066DEEA /* AgendaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05B76CE199836510066DEEA /* AgendaMapView.m */; };
 		D05B76D1199836510066DEEA /* AgendaMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05B76CF199836510066DEEA /* AgendaMapView.xib */; };
+		D05B76D4199881060066DEEA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05B76D3199881060066DEEA /* MapKit.framework */; };
 		D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096DD1994B9E900153348 /* UIImage+Resize.m */; };
 		D06096F0199518C000153348 /* GMGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096E3199518BF00153348 /* GMGridView.m */; };
 		D06096F1199518C000153348 /* GMGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096E9199518C000153348 /* GMGridViewCell.m */; };
@@ -466,6 +467,7 @@
 		D05B76CD199836510066DEEA /* AgendaMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AgendaMapView.h; path = ../AgendaMapView.h; sourceTree = "<group>"; };
 		D05B76CE199836510066DEEA /* AgendaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AgendaMapView.m; path = ../AgendaMapView.m; sourceTree = "<group>"; };
 		D05B76CF199836510066DEEA /* AgendaMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AgendaMapView.xib; path = ../AgendaMapView.xib; sourceTree = "<group>"; };
+		D05B76D3199881060066DEEA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D06096DC1994B9E900153348 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		D06096DD1994B9E900153348 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		D06096E1199518BF00153348 /* GMGridView-Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMGridView-Constants.h"; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05B76D4199881060066DEEA /* MapKit.framework in Frameworks */,
 				51A63AFE18D4C89F005DCD55 /* CoreAudio.framework in Frameworks */,
 				51FD5FC818D33C500040369B /* AVFoundation.framework in Frameworks */,
 				51FD5FC618D33C3C0040369B /* AudioToolbox.framework in Frameworks */,
@@ -663,6 +666,7 @@
 		51FD5F5018CFCC250040369B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D05B76D3199881060066DEEA /* MapKit.framework */,
 				51A63AFF18D4C8AC005DCD55 /* AudioUnit.framework */,
 				51A63AFD18D4C89F005DCD55 /* CoreAudio.framework */,
 				51FD5FC718D33C500040369B /* AVFoundation.framework */,
@@ -778,15 +782,15 @@
 				D0B54BD6198FE845005F65FE /* PhotoShareConfirm.h */,
 				D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */,
 				D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */,
+				D093FA8419975F2200156A55 /* PhotoPreviewView.h */,
+				D093FA8519975F2200156A55 /* PhotoPreviewView.m */,
+				D093FA8619975F2200156A55 /* PhotoPreviewView.xib */,
 				D03DD0D3198F532500603ACC /* Utility.h */,
 				D03DD0D4198F532500603ACC /* Utility.m */,
 				D06096DC1994B9E900153348 /* UIImage+Resize.h */,
 				D06096DD1994B9E900153348 /* UIImage+Resize.m */,
 				51FD5F6918CFCC260040369B /* Images.xcassets */,
 				51FD5F5818CFCC250040369B /* Supporting Files */,
-				D093FA8419975F2200156A55 /* PhotoPreviewView.h */,
-				D093FA8519975F2200156A55 /* PhotoPreviewView.m */,
-				D093FA8619975F2200156A55 /* PhotoPreviewView.xib */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";

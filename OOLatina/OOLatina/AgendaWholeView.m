@@ -162,7 +162,7 @@
 }
 
 #pragma mark -
-#pragma mark 左右滑动相关函数
+#pragma mark
 
 - (void)initScrollView {
     
@@ -191,12 +191,12 @@
     agendaView.frame = CGRectMake(nibScrollView.frame.size.width*0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
     arroundMeView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
     arroundMeView.frame = CGRectMake(nibScrollView.frame.size.width*1, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
-//    agendaMapView = [[AgendaMapView alloc]init ];
-//    agendaMapView.view.frame = CGRectMake(nibScrollView.frame.size.width*2, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
+    agendaMapView = [[AgendaMapView alloc]init ];
+    agendaMapView.view.frame = CGRectMake(nibScrollView.frame.size.width*2, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
     
     [nibScrollView addSubview: agendaView];
     [nibScrollView addSubview: arroundMeView];
-//    [nibScrollView addSubview: agendaMapView];
+    [nibScrollView addSubview: agendaMapView.view];
 }
 
 // At the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
