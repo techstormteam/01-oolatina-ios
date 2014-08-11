@@ -18,40 +18,14 @@
 {
     UIImageView *background;
     UITableView *mTableView;
-    NSMutableArray *eventArray;
-    NSMutableArray *genreArray;
-    NSMutableArray *musicArray;
-    NSMutableArray *villeArray;
     UISearchBar *mSearchBar;
     AgendaScroll *mAgendaScroll;
-    UIView *popupView;
-    UITextField *calendarField;
-    UITextField *searchField;
-    UITextField *villeField;
-    UIButton *dropdownGenre;
-    UIButton *dropdownMusic;
-    UITextField *dropdownVille;
-    UITextField *genreField;
-    UITextField *musicField;
-    UIView *mbackPopup;
-    UIButton *closeButton;
     
-    DropDownListView *mDropDown;
-    CKCalendarView *mCalendarView;
-    UIActivityIndicatorView *mLoading;
-    int dropSelected;
+    NSMutableArray *eventArray;
     
-    NSString *villeSelected;
-    NSString *day;
-    NSString *month;
-    NSString *year;
-    NSString *musicArrayid;
-    NSString *genreArrayid;
 }
 
-- (void)loadEvent;
-- (void)showSearch;
-- (void)hideSearch;
-- (void)DropDownListViewDidCancel;
+- (void)loadEvent:(NSMutableArray *) eventArray;
+
 
 @end
