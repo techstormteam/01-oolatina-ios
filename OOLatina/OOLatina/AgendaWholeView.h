@@ -11,18 +11,13 @@
 #import "AgendaMapView.h"
 #import "SCUtils.h"
 
-@interface AgendaWholeView : UIViewController <UIScrollViewDelegate>
+@interface AgendaWholeView : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, CKCalendarDelegate, kDropDownListViewDelegate>
 {
 
-    NSArray *couponArry;
-    NSArray *groupbuyArry;
-    
     AgendaView *agendaView;
     AgendaView *arroundMeView;
     AgendaMapView *agendaMapView;
     
-    UITableView *couponTableView;
-    UITableView *groupbuyTableView;
     
 	UIPageControl *pageControl;
     int currentPage;
@@ -56,6 +51,10 @@
     CKCalendarView *mCalendarView;
     UIActivityIndicatorView *mLoading;
     int dropSelected;
+    
+    bool needLoadingAgenda;
+    bool needLoadingArroundMe;
+    bool needLoadingAgendaMap;
 }
 
 

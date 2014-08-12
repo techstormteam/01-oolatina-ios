@@ -17,6 +17,11 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [locationManager startUpdatingLocation];
+        
         background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         background.image = [UIImage imageNamed:@"background.png"];
         [self addSubview:background];
@@ -56,62 +61,65 @@
     }
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)loadEventArroundMe:eventList
 {
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return [eventArray count];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 80.0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    
-    AgendaCell *cell = (AgendaCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil)
+    if([SCUtils isNetworkAvailable])
     {
-        cell = [[AgendaCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    int modulo = indexPath.row % 2;
-    NSLog(@"modulo : %d",modulo);
-    if (modulo == 1)
-    {
-        cell.backgroundColor = [UIColor colorWithRed:29.0/255.0 green:29.0/255.0 blue:29.0/255.0 alpha:0.7];
+        CGFloat arroundRadius = 1000;
+        [mAgendaScroll removeAllEvent];
+        
+        for (int x=0; x<[eventList count]; x++)
+        {
+            Event *nEvent = [eventList objectAtIndex:x];
+            if ([self isInside:nEvent: arroundRadius]) {
+                [mAgendaScroll addEvent:nEvent];
+            }
+        }
+        [mAgendaScroll loadEvent];
+        
     }
     else
     {
-        cell.backgroundColor =  [UIColor colorWithRed:5.0/255.0 green:5.0/255.0 blue:5.0/255.0 alpha:0.7];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur de connexion" message:@"Verifier votre connexion à internet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
     }
-    
-    Event *mEvent = (Event *)[eventArray objectAtIndex:indexPath.row];
-    
-    cell.tag = indexPath.row;
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
-    [cell setTitleEvent:[mEvent getTitle]];
-    [cell setDayLetter:[mEvent getDayLetter]];
-    [cell setThumbnail:[mEvent getThumbnailEvent]];
-    [cell setDateToDay:[mEvent getDayLetter] andMonth:[mEvent getMonth] andYear:[mEvent getYear]];
-    [cell setAdresse:[mEvent getVille]];
-    cell.textLabel.textAlignment = NSTextAlignmentLeft;
-    
-    return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (bool)isInside:(Event *)event: (CGFloat)radius {
+    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:[event getLatitude] longitude:[event getLongitude]];;
+    CLLocation *agendaLocation = [[CLLocation alloc] initWithLatitude:[event getLatitude] longitude:[event getLongitude]];
+    CGFloat dis = [self distance:currentLocation: agendaLocation];
+    if (dis < radius) {
+        
+    }
+    return YES;
+}
+
+- (CGFloat) distance:(CLLocation *) from: (CLLocation *) to {
+    CLLocationDegrees a = abs(from.coordinate.longitude - to.coordinate.longitude);
+    CLLocationDegrees b = abs(from.coordinate.latitude - to.coordinate.latitude);
+    return sqrt((a * a) + (b * b));
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+//        longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+//        latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+    }
+}
 
 @end

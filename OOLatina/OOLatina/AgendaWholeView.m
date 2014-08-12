@@ -22,6 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self initSearch];
+        [self launchSearch];
     }
     return self;
 }
@@ -103,7 +104,7 @@
 }
 
 #pragma mark-
-#pragma mark 界面按钮事件
+#pragma mark
 
 - (void) btnActionShow
 {
@@ -118,6 +119,10 @@
 
 - (void) agendaButtonAction
 {
+    if (needLoadingAgenda) {
+        [agendaView  loadEvent:eventArray];
+        needLoadingAgenda = NO;
+    }
     [agendaButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [arroundMeButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
     [mapButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
@@ -133,6 +138,10 @@
 
 - (void) arroundMeButtonAction
 {
+    if (needLoadingArroundMe) {
+        [arroundMeView  loadEvent:eventArray];
+        needLoadingArroundMe = NO;
+    }
     [arroundMeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [agendaButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
     [mapButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
@@ -148,6 +157,10 @@
 
 - (void) mapButtonAction
 {
+    if (needLoadingAgendaMap) {
+        [agendaMapView loadEvent:eventArray];
+        needLoadingAgendaMap = NO;
+    }
     [mapButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [arroundMeButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
     [agendaButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
@@ -579,6 +592,9 @@
         [self loadEvent];
         mbackPopup.hidden = YES;
         closeButton.hidden = YES;
+        needLoadingAgenda = YES;
+        needLoadingArroundMe = YES;
+        needLoadingAgendaMap = YES;
     }
 }
 
@@ -609,9 +625,7 @@
 
 - (void)loadEvent
 {
-    [agendaView  loadEvent:eventArray];
-    [arroundMeView loadEvent:eventArray];
-//    [agendaMapView loadEvent];
+
 }
 
 - (void) initSearch

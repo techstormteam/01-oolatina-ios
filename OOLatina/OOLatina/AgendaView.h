@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "Event.h"
 #import "AgendaCell.h"
 #import "AgendaScroll.h"
@@ -14,17 +15,17 @@
 #import "DropDownListView.h"
 #import "ArrayDropDown.h"
 
-@interface AgendaView : UIView <UITextFieldDelegate, CKCalendarDelegate, kDropDownListViewDelegate>
+@interface AgendaView : UIView <CLLocationManagerDelegate>
 {
     UIImageView *background;
-    UITableView *mTableView;
-    UISearchBar *mSearchBar;
     AgendaScroll *mAgendaScroll;
     
     NSMutableArray *eventArray;
-    
+    CLLocationManager *locationManager;
+    CLLocation *currentLocation;
 }
 
+- (bool)isInside:(Event *)event: (CGFloat)radius;
 - (void)loadEvent:(NSMutableArray *) eventArray;
 
 

@@ -35,6 +35,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) loadEvent:eventArray
+{
+    
+}
+
 #pragma mark - MKMapViewDelegate
 
 //- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {

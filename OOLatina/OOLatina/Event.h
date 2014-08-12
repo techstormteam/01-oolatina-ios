@@ -35,7 +35,10 @@
 - (void)setVille:(NSString *)_ville;
 - (void)setCodePostal:(NSString *)_code;
 - (void)setLatitude:(CGFloat)_lat;
+- (float)getLatitude;
 - (void)setLongitude:(CGFloat)_long;
+- (float)getLongitude;
+
 - (NSString *)getMonth;
 - (NSString *)getYear;
 - (NSString *)getAdresse;

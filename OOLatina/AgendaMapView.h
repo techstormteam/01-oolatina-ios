@@ -11,4 +11,6 @@
 
 @interface AgendaMapView : UIViewController
 
+- (void) loadEvent:eventArray;
+
 @end

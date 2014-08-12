@@ -167,4 +167,15 @@
     return name;
 }
 
+- (float)getLatitude
+{
+    return latitude;
+}
+
+- (float)getLongitude
+{
+    return longitude;
+}
+
+
 @end

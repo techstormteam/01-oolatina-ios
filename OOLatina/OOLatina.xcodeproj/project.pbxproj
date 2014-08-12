@@ -178,6 +178,7 @@
 		D05B76D0199836510066DEEA /* AgendaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05B76CE199836510066DEEA /* AgendaMapView.m */; };
 		D05B76D1199836510066DEEA /* AgendaMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05B76CF199836510066DEEA /* AgendaMapView.xib */; };
 		D05B76D4199881060066DEEA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05B76D3199881060066DEEA /* MapKit.framework */; };
+		D05B76D619992E000066DEEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05B76D519992E000066DEEA /* CoreLocation.framework */; };
 		D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096DD1994B9E900153348 /* UIImage+Resize.m */; };
 		D06096F0199518C000153348 /* GMGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096E3199518BF00153348 /* GMGridView.m */; };
 		D06096F1199518C000153348 /* GMGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096E9199518C000153348 /* GMGridViewCell.m */; };
@@ -468,6 +469,7 @@
 		D05B76CE199836510066DEEA /* AgendaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AgendaMapView.m; path = ../AgendaMapView.m; sourceTree = "<group>"; };
 		D05B76CF199836510066DEEA /* AgendaMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AgendaMapView.xib; path = ../AgendaMapView.xib; sourceTree = "<group>"; };
 		D05B76D3199881060066DEEA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D05B76D519992E000066DEEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D06096DC1994B9E900153348 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		D06096DD1994B9E900153348 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		D06096E1199518BF00153348 /* GMGridView-Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMGridView-Constants.h"; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05B76D619992E000066DEEA /* CoreLocation.framework in Frameworks */,
 				D05B76D4199881060066DEEA /* MapKit.framework in Frameworks */,
 				51A63AFE18D4C89F005DCD55 /* CoreAudio.framework in Frameworks */,
 				51FD5FC818D33C500040369B /* AVFoundation.framework in Frameworks */,
@@ -666,6 +669,7 @@
 		51FD5F5018CFCC250040369B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D05B76D519992E000066DEEA /* CoreLocation.framework */,
 				D05B76D3199881060066DEEA /* MapKit.framework */,
 				51A63AFF18D4C8AC005DCD55 /* AudioUnit.framework */,
 				51A63AFD18D4C89F005DCD55 /* CoreAudio.framework */,
