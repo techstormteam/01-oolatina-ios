@@ -172,11 +172,11 @@
 		D0112341198E2A600099D124 /* FSImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112337198E2A600099D124 /* FSImageViewerViewController.m */; };
 		D0112342198E2A600099D124 /* FSPlaceholderImages.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112339198E2A600099D124 /* FSPlaceholderImages.m */; };
 		D0112346198E3FED0099D124 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112345198E3FED0099D124 /* EGOCache.m */; };
+		D03CD84D199B597C00CF3203 /* AgendaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03CD84B199B597C00CF3203 /* AgendaMapView.m */; };
+		D03CD84E199B597C00CF3203 /* AgendaMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03CD84C199B597C00CF3203 /* AgendaMapView.xib */; };
 		D03DD0D5198F532500603ACC /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D03DD0D4198F532500603ACC /* Utility.m */; };
 		D0478134198A3785004ACEE5 /* photo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478132198A3785004ACEE5 /* photo_icon.png */; };
 		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
-		D05B76D0199836510066DEEA /* AgendaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05B76CE199836510066DEEA /* AgendaMapView.m */; };
-		D05B76D1199836510066DEEA /* AgendaMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05B76CF199836510066DEEA /* AgendaMapView.xib */; };
 		D05B76D4199881060066DEEA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05B76D3199881060066DEEA /* MapKit.framework */; };
 		D05B76D619992E000066DEEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05B76D519992E000066DEEA /* CoreLocation.framework */; };
 		D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096DD1994B9E900153348 /* UIImage+Resize.m */; };
@@ -461,13 +461,13 @@
 		D011233A198E2A600099D124 /* FSTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTitleView.h; sourceTree = "<group>"; };
 		D0112344198E3FED0099D124 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		D0112345198E3FED0099D124 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		D03CD84A199B597C00CF3203 /* AgendaMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaMapView.h; sourceTree = "<group>"; };
+		D03CD84B199B597C00CF3203 /* AgendaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaMapView.m; sourceTree = "<group>"; };
+		D03CD84C199B597C00CF3203 /* AgendaMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgendaMapView.xib; sourceTree = "<group>"; };
 		D03DD0D3198F532500603ACC /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		D03DD0D4198F532500603ACC /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		D0478132198A3785004ACEE5 /* photo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon.png; sourceTree = "<group>"; };
 		D0478133198A3785004ACEE5 /* photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_icon@2x.png"; sourceTree = "<group>"; };
-		D05B76CD199836510066DEEA /* AgendaMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AgendaMapView.h; path = ../AgendaMapView.h; sourceTree = "<group>"; };
-		D05B76CE199836510066DEEA /* AgendaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AgendaMapView.m; path = ../AgendaMapView.m; sourceTree = "<group>"; };
-		D05B76CF199836510066DEEA /* AgendaMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AgendaMapView.xib; path = ../AgendaMapView.xib; sourceTree = "<group>"; };
 		D05B76D3199881060066DEEA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D05B76D519992E000066DEEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D06096DC1994B9E900153348 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -717,9 +717,9 @@
 				514D095A18DA5C1D00872793 /* AgendaScroll.m */,
 				514D095C18DA639900872793 /* AgendaDayCell.h */,
 				514D095D18DA639900872793 /* AgendaDayCell.m */,
-				D05B76CD199836510066DEEA /* AgendaMapView.h */,
-				D05B76CE199836510066DEEA /* AgendaMapView.m */,
-				D05B76CF199836510066DEEA /* AgendaMapView.xib */,
+				D03CD84A199B597C00CF3203 /* AgendaMapView.h */,
+				D03CD84B199B597C00CF3203 /* AgendaMapView.m */,
+				D03CD84C199B597C00CF3203 /* AgendaMapView.xib */,
 				D011231D198E0CE30099D124 /* AgendaWholeView.xib */,
 				D011231F198E0CFB0099D124 /* AgendaWholeView.h */,
 				D0112320198E0CFB0099D124 /* AgendaWholeView.m */,
@@ -1119,7 +1119,7 @@
 				514D096D18DB5BC000872793 /* right_arrow@2x.png in Resources */,
 				515FB73418DF437D00089750 /* icon_29pt_58x58.png in Resources */,
 				D0937868198C806A00626197 /* guide_image.png in Resources */,
-				D05B76D1199836510066DEEA /* AgendaMapView.xib in Resources */,
+				D03CD84E199B597C00CF3203 /* AgendaMapView.xib in Resources */,
 				51A63B2418D5DD20005DCD55 /* portoricaine.jpg in Resources */,
 				515FB73618DF437D00089750 /* icon_60pt_120x120.png in Resources */,
 				51A63B2318D5DD20005DCD55 /* oolatina.jpg in Resources */,
@@ -1269,7 +1269,7 @@
 				51FD5FD918D35D900040369B /* Albums.m in Sources */,
 				D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */,
 				51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */,
-				D05B76D0199836510066DEEA /* AgendaMapView.m in Sources */,
+				D03CD84D199B597C00CF3203 /* AgendaMapView.m in Sources */,
 				D011233B198E2A600099D124 /* FSBasicImage.m in Sources */,
 				51FD5FAC18D1E86C0040369B /* NewsView.m in Sources */,
 				51A63AF518D4BD14005DCD55 /* AFHTTPRequestOperationManager.m in Sources */,
