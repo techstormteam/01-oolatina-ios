@@ -50,24 +50,26 @@
 //    CGRect pho = self.imgPhoto.frame;
 //    CGRect sha = self.btnShare.frame;
     
-    mbackPopup = [[UIView alloc] initWithFrame:CGRectMake(20, 10, 265+20, 400)];
-    mbackPopup.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
-//    mbackPopup.hidden = YES;
-    [self.view addSubview:mbackPopup];
-    
-    popupView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, 265, 400)];
-    popupView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
-    //popupView.hidden = YES;
-    [mbackPopup addSubview:popupView];
-    
+    popupView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 40, 320)];
     mPhotoShareConfirm = [[PhotoShareConfirm alloc] initWithNibName:@"PhotoShareConfirm" bundle:nil];
+    mPhotoShareConfirm.view.bounds = popupView.bounds;
+    CGRect a = popupView.bounds;
+    CGSize psize = CGSizeMake(mPhotoShareConfirm.imgPhoto.frame.size.width, mPhotoShareConfirm.imgPhoto.frame.size.height);
+    mPhotoShareConfirm.imgPhoto.image = [Utility imageWithImage:self.imgPhoto.image scaledToSize:psize];
     [popupView addSubview:mPhotoShareConfirm.view];
-    
-    closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    closeButton.frame = CGRectMake(popupView.frame.origin.x+popupView.frame.size.width+10,0,30,30);
-    [closeButton setImage:[UIImage imageNamed:@"close_icon.png"] forState:UIControlStateNormal];
-    [closeButton addTarget:self action:@selector(closePopup) forControlEvents:UIControlEventTouchUpInside];
-    closeButton.hidden = YES;
-    [self.view addSubview:closeButton];
+    [self.view addSubview:popupView];
 }
+
+- (void)cancelTapped
+{
+    [popupView removeFromSuperview];
+    popupView = nil;
+}
+
+- (void)shareTapped
+{
+    [popupView removeFromSuperview];
+    popupView = nil;
+}
+
 @end

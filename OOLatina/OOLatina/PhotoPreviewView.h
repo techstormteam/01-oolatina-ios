@@ -10,12 +10,12 @@
 #import "Utility.h"
 #import "PhotoShareConfirm.h"
 
-@interface PhotoPreviewView : UIViewController
+@interface PhotoPreviewView : UIViewController <PhotoShareConfirmDelegate>
 {
     UIView *mbackPopup;
     UIButton *closeButton;
     UIView *popupView;
-    UIViewController *mPhotoShareConfirm;
+    PhotoShareConfirm *mPhotoShareConfirm;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *lblName;

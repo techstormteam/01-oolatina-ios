@@ -8,9 +8,6 @@
 
 #import "PhotoShareConfirm.h"
 
-@interface PhotoShareConfirm ()
-
-@end
 
 @implementation PhotoShareConfirm
 
@@ -35,4 +32,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnShareTapped:(id)sender {
+    [self.delegate shareTapped];
+}
+
+- (IBAction)btnCancelTapped:(id)sender {
+    [self.delegate cancelTapped];
+}
 @end
