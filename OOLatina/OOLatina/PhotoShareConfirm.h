@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PhotoShareConfirm : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property (strong, nonatomic) IBOutlet UIButton *btnShare;
+@property (strong, nonatomic) IBOutlet UIButton *btnCancel;
+@property (strong, nonatomic) IBOutlet UITextField *edtText;
 
 @end

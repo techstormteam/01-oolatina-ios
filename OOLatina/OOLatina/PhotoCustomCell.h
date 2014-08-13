@@ -21,6 +21,7 @@
     PhotoPreviewView *viePhotoPreview;
 }
 
+@property (nonatomic, assign) CGSize originalFrameSize;
 @property (nonatomic, assign) CGSize photoSize;
 @property (nonatomic, assign) NSUInteger photoIndex;
 

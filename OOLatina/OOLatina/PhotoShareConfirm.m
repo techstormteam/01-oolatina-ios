@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [[NSBundle mainBundle] loadNibNamed:nibNameOrNil owner:self options:nil];
     }
     return self;
 }

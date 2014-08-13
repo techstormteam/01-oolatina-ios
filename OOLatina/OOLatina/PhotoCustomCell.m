@@ -16,7 +16,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _originalFrameSize = self.frame.size;
     }
     return self;
 }
@@ -143,16 +143,23 @@
     }
     else
     {
-        CGSize a = self.frame.size;
-        a = self.viewForBaselineLayout.frame.size;
+        CGRect bounds = CGRectMake(0, 0, _originalFrameSize.width, _originalFrameSize.height);
+        self.frame = bounds;
         viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
+        
+        viePhotoPreview.view.frame = bounds;
+        
         viePhotoPreview.lblName.text = [photo getName];
         viePhotoPreview.lblDescription.text = [photo getDescription];
         viePhotoPreview.imgPhoto.image = [Utility getImageFromURL:[photo getUrl]];
 //        viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-        CGRect bounds = CGRectMake(0, 0, self.frame.size.width, 568);
-        viePhotoPreview.view.frame = bounds;
-        self.frame = bounds;
+        CGSize a = _originalFrameSize;
+        
+        CGRect nam = viePhotoPreview.lblName.frame;
+        CGRect des = viePhotoPreview.lblDescription.frame;
+        CGRect pho = viePhotoPreview.imgPhoto.frame;
+        CGRect sha = viePhotoPreview.btnShare.frame;
+        
         [self addSubview:viePhotoPreview.view];
 //        [self bringSubviewToFront:viePhotoPreview];
         

@@ -8,13 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "Utility.h"
+#import "PhotoShareConfirm.h"
 
 @interface PhotoPreviewView : UIViewController
+{
+    UIView *mbackPopup;
+    UIButton *closeButton;
+    UIView *popupView;
+    UIViewController *mPhotoShareConfirm;
+}
 
 @property (strong, nonatomic) IBOutlet UILabel *lblName;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
 @property (strong, nonatomic) IBOutlet UIButton *btnShare;
+
+
 
 - (IBAction)btnDownload_tapped:(id)sender;
 - (IBAction)btnShare_tapped:(id)sender;
