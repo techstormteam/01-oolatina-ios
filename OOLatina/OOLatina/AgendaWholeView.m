@@ -21,8 +21,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self initSearch];
-        [self launchSearch];
+        
+        
     }
     return self;
 }
@@ -32,11 +32,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self initSearch];
+    
+    [self launchSearch];
+    
     [self setNavBar];
     
     [self addBasicView];
     
     [self initScrollView];
+    
+    [self agendaButtonAction];
 }
 
 - (void)viewDidUnload
@@ -204,6 +210,7 @@
     agendaView.frame = CGRectMake(nibScrollView.frame.size.width*0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
     arroundMeView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
     arroundMeView.frame = CGRectMake(nibScrollView.frame.size.width*1, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
+    [arroundMeView gettingLocation];
     agendaMapView = [[AgendaMapView alloc]init ];
     agendaMapView.view.frame = CGRectMake(nibScrollView.frame.size.width*2, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
     

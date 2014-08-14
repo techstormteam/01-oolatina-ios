@@ -18,7 +18,6 @@
     if (self)
     {
         locationManager = [[CLLocationManager alloc] init];
-        locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [locationManager startUpdatingLocation];
         
@@ -38,6 +37,11 @@
         [self addSubview:mAgendaScroll];
     }
     return self;
+}
+
+- (void)gettingLocation
+{
+    locationManager.delegate = self;
 }
 
 - (void)loadEvent:eventList

@@ -42,22 +42,24 @@
 }
 
 - (IBAction)btnShare_tapped:(id)sender {
-//    CGRect bounds = CGRectMake(0, self.lblName.frame.size.height + 30, self.view.frame.size.width, self.view.frame.size.height - self.lblName.frame.size.height - 30 - self.lblDescription.frame.size.height - self.btnShare.frame.size.height);
-//    self.imgPhoto.frame = bounds;
-//    CGRect s = self.view.frame;
-//    CGRect nam = self.lblName.frame;
-//    CGRect des = self.lblDescription.frame;
-//    CGRect pho = self.imgPhoto.frame;
-//    CGRect sha = self.btnShare.frame;
-    
-    popupView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 40, 320)];
-    mPhotoShareConfirm = [[PhotoShareConfirm alloc] initWithNibName:@"PhotoShareConfirm" bundle:nil];
-    mPhotoShareConfirm.view.bounds = popupView.bounds;
-    CGRect a = popupView.bounds;
-    CGSize psize = CGSizeMake(mPhotoShareConfirm.imgPhoto.frame.size.width, mPhotoShareConfirm.imgPhoto.frame.size.height);
-    mPhotoShareConfirm.imgPhoto.image = [Utility imageWithImage:self.imgPhoto.image scaledToSize:psize];
-    [popupView addSubview:mPhotoShareConfirm.view];
-    [self.view addSubview:popupView];
+    mSocialChooser = [[SocialChooser alloc] initWithNibName:@"SocialChooser" bundle:nil];
+    [self.view addSubview:mSocialChooser.view];
+    mSocialChooser.delegate = self;
+}
+
+- (void)FacebookTapped
+{
+    mFacebookShare = [[TWBFacebookViewController alloc] init];
+    [mFacebookShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
+    [self.view addSubview:mFacebookShare.view];
+}
+
+- (void)TwitterTapped
+{
+    mTwitterShare = [[TWBTwitterViewController alloc] init];
+    [mTwitterShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
+    [self.view addSubview:mTwitterShare.view];
+
 }
 
 - (void)cancelTapped

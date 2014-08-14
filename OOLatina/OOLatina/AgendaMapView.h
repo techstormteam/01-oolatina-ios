@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 
-@interface AgendaMapView : UIViewController
+@interface AgendaMapView : UIViewController <CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+    CLLocation *currentLocation;
+}
 
 - (void) loadEvent:eventArray;
 

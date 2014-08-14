@@ -25,6 +25,7 @@
     CLLocation *currentLocation;
 }
 
+- (void)gettingLocation;
 - (bool)isInside:(Event *)event: (CGFloat)radius;
 - (void)loadEvent:(NSMutableArray *) eventArray;
 

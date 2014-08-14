@@ -30,7 +30,7 @@
         mDoubleScroll.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
         [self addSubview:mDoubleScroll];
         
-        [self parseXMLFileAtURL:@"http://studio.shua-creation.com/rss/rss.php"];
+        [self parseXMLFileAtURL:@"http://united-kingdom.oolatina.com/feed/"];
     }
     return self;
 }

@@ -9,13 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Utility.h"
 #import "PhotoShareConfirm.h"
+#import "TWBTwitterViewController.h"
+#import "TWBFacebookViewController.h"
+#import "SocialChooser.h"
 
-@interface PhotoPreviewView : UIViewController <PhotoShareConfirmDelegate>
+@interface PhotoPreviewView : UIViewController <PhotoShareConfirmDelegate, SocialChooserDelegate>
 {
     UIView *mbackPopup;
     UIButton *closeButton;
     UIView *popupView;
     PhotoShareConfirm *mPhotoShareConfirm;
+    TWBTwitterViewController *mTwitterShare;
+    TWBFacebookViewController *mFacebookShare;
+    SocialChooser *mSocialChooser;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *lblName;
