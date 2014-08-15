@@ -43,6 +43,8 @@
 
 - (IBAction)btnShare_tapped:(id)sender {
     mSocialChooser = [[SocialChooser alloc] initWithNibName:@"SocialChooser" bundle:nil];
+    mSocialChooser.view.frame = CGRectMake(0, 150, self.view.frame.size.width, 200);
+    CGRect r = mSocialChooser.view.frame;
     [self.view addSubview:mSocialChooser.view];
     mSocialChooser.delegate = self;
 }
@@ -52,6 +54,7 @@
     mFacebookShare = [[TWBFacebookViewController alloc] init];
     [mFacebookShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mFacebookShare.view];
+    [mSocialChooser.view removeFromSuperview];
 }
 
 - (void)TwitterTapped
@@ -59,7 +62,7 @@
     mTwitterShare = [[TWBTwitterViewController alloc] init];
     [mTwitterShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mTwitterShare.view];
-
+    [mSocialChooser.view removeFromSuperview];
 }
 
 - (void)cancelTapped

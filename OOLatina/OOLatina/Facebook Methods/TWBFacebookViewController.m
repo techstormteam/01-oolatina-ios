@@ -9,6 +9,7 @@
 #import "TWBFacebookViewController.h"
 #import "TWBSocialHelper.h"
 #import "MBProgressHUD.h"
+#import "iToast.h"
 
 @interface TWBFacebookViewController ()
 
@@ -73,6 +74,7 @@
                         break;
                     case SLComposeViewControllerResultDone:
                         NSLog(@"Compose Result: Done");
+                        [[[[iToast makeText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"posted_on", @""), @"Facebook"]] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
                     default:
                         break;
                 }}];
@@ -82,7 +84,7 @@
             
             postToWallWithTextAndImage;
         });
-        
+
         // Memory Management
         postToWallWithTextAndImage = nil;
     }

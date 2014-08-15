@@ -9,6 +9,7 @@
 #import "TWBTwitterViewController.h"
 #import "TWBSocialHelper.h"
 #import "MBProgressHUD.h"
+#import "iToast.h"
 
 @interface TWBTwitterViewController ()
 
@@ -64,7 +65,6 @@
  This method will post a predetermined string and image from the App Bundle to Twitter using the account specified in the Tweet Sheet.
  */
 - (void)postTextAndImageWithSLComposeViewController:(UIImage *)image {
-    [self showHud];
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         // Create a compose view controller for the service type Twitter
         SLComposeViewController *postTweetWithTextAndImage = ({
@@ -85,13 +85,13 @@
                         break;
                     case SLComposeViewControllerResultDone:
                         NSLog(@"Compose Result: Post Done");
+                        [[[[iToast makeText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"posted_on", @""), @"Twitter"]] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
                     default:
                         break;
                 }}];
             
             postTweetWithTextAndImage;
         });
-        [postTweetWithTextAndImage completionHandler];
         // Display the tweet sheet to the user
         [self presentViewController:postTweetWithTextAndImage animated:YES completion:nil];
         

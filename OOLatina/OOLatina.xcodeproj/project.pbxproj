@@ -216,6 +216,7 @@
 		D09C7B44199CBC6900BEB735 /* SocialChooser.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09C7B42199CBC6900BEB735 /* SocialChooser.xib */; };
 		D09C7B46199CC10000BEB735 /* facebook_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D09C7B45199CC10000BEB735 /* facebook_icon.png */; };
 		D09C7B48199CC82900BEB735 /* twitter_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D09C7B47199CC82900BEB735 /* twitter_icon.png */; };
+		D09C7B4C199D8F7100BEB735 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C7B4B199D8F7100BEB735 /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D0B54BD9198FE845005F65FE /* PhotoShareConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */; };
 		D0B54BDA198FE845005F65FE /* PhotoShareConfirm.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */; };
 /* End PBXBuildFile section */
@@ -546,6 +547,8 @@
 		D09C7B42199CBC6900BEB735 /* SocialChooser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialChooser.xib; sourceTree = "<group>"; };
 		D09C7B45199CC10000BEB735 /* facebook_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_icon.png; sourceTree = "<group>"; };
 		D09C7B47199CC82900BEB735 /* twitter_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_icon.png; sourceTree = "<group>"; };
+		D09C7B4A199D8F7100BEB735 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		D09C7B4B199D8F7100BEB735 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
 		D0B54BD6198FE845005F65FE /* PhotoShareConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoShareConfirm.h; sourceTree = "<group>"; };
 		D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShareConfirm.m; sourceTree = "<group>"; };
 		D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoShareConfirm.xib; sourceTree = "<group>"; };
@@ -724,6 +727,7 @@
 		51FD5F5718CFCC250040369B /* OOLatina */ = {
 			isa = PBXGroup;
 			children = (
+				D09C7B49199D8F7100BEB735 /* toast-notifications */,
 				D09C7B1E199CA49F00BEB735 /* TWB Social Helper */,
 				D09C7B21199CA49F00BEB735 /* TWB Tweet Object */,
 				D09C7B24199CA49F00BEB735 /* Twitter Accounts View Controller */,
@@ -1114,6 +1118,15 @@
 			path = "Facebook Methods";
 			sourceTree = "<group>";
 		};
+		D09C7B49199D8F7100BEB735 /* toast-notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D09C7B4A199D8F7100BEB735 /* iToast.h */,
+				D09C7B4B199D8F7100BEB735 /* iToast.m */,
+			);
+			path = "toast-notifications";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1415,6 +1428,7 @@
 				51C73F2418D8F20000EECBA5 /* SCUtils.m in Sources */,
 				51FD5FF118D3AECA0040369B /* Video.m in Sources */,
 				D09C7B2F199CA49F00BEB735 /* TWBSocialHelper.m in Sources */,
+				D09C7B4C199D8F7100BEB735 /* iToast.m in Sources */,
 				51FD5FED18D3AAAC0040369B /* LBYouTubeExtractor.m in Sources */,
 				51C73F1E18D8DEB200EECBA5 /* Event.m in Sources */,
 				D011233C198E2A600099D124 /* FSBasicImageSource.m in Sources */,
