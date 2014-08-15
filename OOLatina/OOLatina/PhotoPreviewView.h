@@ -15,11 +15,8 @@
 #import "MBProgressHUD.h"
 #import "iToast.h"
 
-@interface PhotoPreviewView : UIViewController <PhotoShareConfirmDelegate, SocialChooserDelegate>
+@interface PhotoPreviewView : UIViewController <SocialChooserDelegate>
 {
-    UIView *mbackPopup;
-    UIButton *closeButton;
-    UIView *popupView;
     PhotoShareConfirm *mPhotoShareConfirm;
     TWBTwitterViewController *mTwitterShare;
     TWBFacebookViewController *mFacebookShare;
@@ -34,6 +31,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
 @property (strong, nonatomic) IBOutlet UIButton *btnShare;
 @property (strong, nonatomic) IBOutlet UIButton *btnDownload;
+@property (strong, nonatomic) IBOutlet UIView *vieActionGroup;
 
 
 - (void)setImageUrl:(NSString *)url;

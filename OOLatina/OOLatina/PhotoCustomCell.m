@@ -151,11 +151,8 @@
         [viePhotoPreview setImageUrl:[photo getUrl]];
         viePhotoPreview.lblName.text = [photo getName];
         viePhotoPreview.lblDescription.text = [photo getDescription];
-//        viePhotoPreview.imgPhoto.image = [Utility getImageFromURL:[photo getUrl]];
-//        viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         
         [self addSubview:viePhotoPreview.view];
-//        [self bringSubviewToFront:viePhotoPreview];
         
     }
 }

@@ -32,6 +32,7 @@
                 [self hideHud];
             });
         });
+//        [_imgPhoto removeFromSuperview];
     }
     return self;
 }
@@ -82,8 +83,7 @@
     [mFacebookShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mFacebookShare.view];
     [mSocialChooser.view removeFromSuperview];
-    [self.view bringSubviewToFront:_btnShare];
-    [self.view bringSubviewToFront:_btnDownload];
+    [self.view bringSubviewToFront:_vieActionGroup];
 }
 
 - (void)TwitterTapped
@@ -92,20 +92,7 @@
     [mTwitterShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mTwitterShare.view];
     [mSocialChooser.view removeFromSuperview];
-    [self.view bringSubviewToFront:_btnShare];
-    [self.view bringSubviewToFront:_btnDownload];
-}
-
-- (void)cancelTapped
-{
-    [popupView removeFromSuperview];
-    popupView = nil;
-}
-
-- (void)shareTapped
-{
-    [popupView removeFromSuperview];
-    popupView = nil;
+    [self.view bringSubviewToFront:_vieActionGroup];
 }
 
 #pragma mark - ProgressHud
