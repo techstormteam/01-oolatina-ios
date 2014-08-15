@@ -40,7 +40,7 @@
 #pragma mark - delefate tableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 3;
 }
 
 //- (NSInteger)tableView:(UITableView *)tableView numberOfSectionsInTableView: (NSInteger)section {

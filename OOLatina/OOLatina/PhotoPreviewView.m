@@ -20,7 +20,18 @@
     if (self) {
         [[NSBundle mainBundle] loadNibNamed:nibNameOrNil
                                       owner:self options:nil];
-        // Custom initialization
+        
+        [self showHud:NSLocalizedString(@"", @"") superView:_imgPhoto];
+        dispatch_queue_t myQueue = dispatch_queue_create("PhotoDownload",NULL);
+        dispatch_async(myQueue, ^{
+            // Perform long running process
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *image = [Utility getImageFromURL:mImageUrl];
+                _imgPhoto.image = image;
+                [self hideHud];
+            });
+        });
     }
     return self;
 }
@@ -28,6 +39,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,14 +50,29 @@
 }
 
 - (IBAction)btnDownload_tapped:(id)sender {
-    UIImage *image = _imgPhoto.image;
-    [Utility saveImage:image];
+    [self showHud:NSLocalizedString(@"downloading", @"") superView:self.view];
+    dispatch_queue_t myQueue = dispatch_queue_create("PhotoDownload",NULL);
+    dispatch_async(myQueue, ^{
+        // Perform long running process
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage *image = [Utility getImageFromURL:mImageUrl];
+            [Utility saveImage:image];
+            [self hideHud];
+            [[[[iToast makeText:NSLocalizedString(@"Photo Downloaded", @"")] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
+        });
+    });
+    
+}
+
+- (void)setImageUrl:(NSString *)url
+{
+    mImageUrl = url;
 }
 
 - (IBAction)btnShare_tapped:(id)sender {
     mSocialChooser = [[SocialChooser alloc] initWithNibName:@"SocialChooser" bundle:nil];
     mSocialChooser.view.frame = CGRectMake(0, 150, self.view.frame.size.width, 200);
-    CGRect r = mSocialChooser.view.frame;
     [self.view addSubview:mSocialChooser.view];
     mSocialChooser.delegate = self;
 }
@@ -75,6 +103,23 @@
 {
     [popupView removeFromSuperview];
     popupView = nil;
+}
+
+#pragma mark - ProgressHud
+-(void)showHud:(NSString *)text superView:view
+{
+    if (_theHud == nil) {
+        _theHud = [[MBProgressHUD alloc] init];
+    }
+    
+    _theHud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    _theHud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0];
+    _theHud.labelText = text;
+}
+
+-(void)hideHud
+{
+    [_theHud hide:YES];
 }
 
 @end

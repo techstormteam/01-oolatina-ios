@@ -23,7 +23,7 @@
 
 - (void)setup
 {
-    CGSize a = self.frame.size;
+    
     // Initialization code
     _photoIndex = 0;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -45,7 +45,6 @@
 //    viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 //    [self addSubview:viePhotoPreview.view];
     
-    CGSize b = self.frame.size;
 }
 
 - (void)passPhotoSize:(CGSize) pSize;
@@ -148,17 +147,12 @@
         viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
         
         viePhotoPreview.view.frame = bounds;
-        
+
+        [viePhotoPreview setImageUrl:[photo getUrl]];
         viePhotoPreview.lblName.text = [photo getName];
         viePhotoPreview.lblDescription.text = [photo getDescription];
-        viePhotoPreview.imgPhoto.image = [Utility getImageFromURL:[photo getUrl]];
+//        viePhotoPreview.imgPhoto.image = [Utility getImageFromURL:[photo getUrl]];
 //        viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-        CGSize a = _originalFrameSize;
-        
-        CGRect nam = viePhotoPreview.lblName.frame;
-        CGRect des = viePhotoPreview.lblDescription.frame;
-        CGRect pho = viePhotoPreview.imgPhoto.frame;
-        CGRect sha = viePhotoPreview.btnShare.frame;
         
         [self addSubview:viePhotoPreview.view];
 //        [self bringSubviewToFront:viePhotoPreview];
