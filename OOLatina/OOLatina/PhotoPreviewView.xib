@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoPreviewView">
             <connections>
+                <outlet property="btnDownload" destination="Mjt-De-OBQ" id="BNH-fx-0AJ"/>
                 <outlet property="btnShare" destination="mm9-YU-Mmd" id="uYb-B4-8Zl"/>
                 <outlet property="imgPhoto" destination="ygk-jg-9Z8" id="h5C-nW-YPJ"/>
                 <outlet property="lblDescription" destination="b2g-1M-Cxy" id="xpv-mO-G58"/>

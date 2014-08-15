@@ -33,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
 @property (strong, nonatomic) IBOutlet UIButton *btnShare;
+@property (strong, nonatomic) IBOutlet UIButton *btnDownload;
 
 
 - (void)setImageUrl:(NSString *)url;

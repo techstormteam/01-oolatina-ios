@@ -62,7 +62,6 @@
             [[[[iToast makeText:NSLocalizedString(@"Photo Downloaded", @"")] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
         });
     });
-    
 }
 
 - (void)setImageUrl:(NSString *)url
@@ -83,6 +82,8 @@
     [mFacebookShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mFacebookShare.view];
     [mSocialChooser.view removeFromSuperview];
+    [self.view bringSubviewToFront:_btnShare];
+    [self.view bringSubviewToFront:_btnDownload];
 }
 
 - (void)TwitterTapped
@@ -91,6 +92,8 @@
     [mTwitterShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mTwitterShare.view];
     [mSocialChooser.view removeFromSuperview];
+    [self.view bringSubviewToFront:_btnShare];
+    [self.view bringSubviewToFront:_btnDownload];
 }
 
 - (void)cancelTapped
