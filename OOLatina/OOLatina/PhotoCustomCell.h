@@ -13,7 +13,18 @@
 #import "PhotoPreviewView.h"
 #import "SCUtils.h"
 #import "MBProgressHUD.h"
+#import "UIImage+Resize.h"
+#import "GMGridViewLayoutStrategies.h"
+#import "PhotoImageView.h"
 
+
+@class PhotoCustomCell;
+
+@protocol PhotoCustomCellDelegate <NSObject>
+
+- (void)photoTapped:(UITapGestureRecognizer *)recognizer;
+
+@end
 
 @interface PhotoCustomCell : UIView <GMGridViewDataSource, GMGridViewActionDelegate> {
     NSMutableArray *mPhotos;
@@ -23,6 +34,7 @@
     dispatch_queue_t myQueue;
 }
 
+@property (nonatomic, weak) id<PhotoCustomCellDelegate> delegate;
 @property (nonatomic, strong) MBProgressHUD *theHud;
 @property (nonatomic, assign) CGSize originalFrameSize;
 @property (nonatomic, assign) CGSize photoSize;

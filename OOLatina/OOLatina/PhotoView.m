@@ -34,7 +34,7 @@
         gmGridView2.style = GMGridViewStylePush;
         gmGridView2.itemSpacing = 5;
         gmGridView2.minEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-        gmGridView2.centerGrid = YES;
+        gmGridView2.centerGrid = NO;
         gmGridView2.layoutStrategy = [GMGridViewLayoutStrategyFactory strategyFromType:GMGridViewLayoutHorizontal];
         CGRect frame1 = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         gmGridView2.frame = frame1;
@@ -81,6 +81,25 @@
                 [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
                 [nPhotos addObject:nPhoto];
                 
+//                nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//                
+//                nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//                
+//                nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+                
+
             }
             [nPhotoEvent setPhoto:nPhotos];
             NSInteger heightOfTitle = 50;
@@ -89,6 +108,33 @@
             NSInteger heightOfSection = heightOfTitle + heightOfAlbum;
             [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
             [photoEvents addObject:nPhotoEvent];
+            
+            
+            
+            
+            
+//            nPhotoEvent = [[PhotoEvent alloc] init];
+//            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
+//            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
+//            
+//            
+//            nPhotos = [[NSMutableArray alloc] init];
+//            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
+//                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
+//                
+//                Photo *nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//            }
+//            [nPhotoEvent setPhoto:nPhotos];
+//            heightOfTitle = 50;
+//            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
+//            heightOfAlbum = (numberOfImageRows * _imgSize.width);
+//            heightOfSection = heightOfTitle + heightOfAlbum;
+//            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
+//            [photoEvents addObject:nPhotoEvent];
         }
         
         // Load table view
@@ -97,6 +143,30 @@
 
 }
 
+-(void)photoTapped:(UITapGestureRecognizer *)recognizer{
+    PhotoImageView *imageView = (PhotoImageView *)recognizer.view;
+    Photo *photo = [imageView getPhotoInfo];
+    if(viePhotoPreview != nil)
+    {
+        [self bringSubviewToFront:viePhotoPreview.view];
+    }
+    else
+    {
+        CGRect bounds = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        self.frame = bounds;
+        viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
+        
+        viePhotoPreview.view.frame = bounds;
+        
+        [viePhotoPreview setImageUrl:[photo getUrl]];
+        viePhotoPreview.lblName.text = [photo getName];
+        viePhotoPreview.lblDescription.text = [photo getDescription];
+        viePhotoPreview.lblDescription.numberOfLines = 3;
+        
+        [self addSubview:viePhotoPreview.view];
+        
+    }
+}
 
 
 //////////////////////////////////////////////////////////////
@@ -106,33 +176,31 @@
 - (NSInteger)numberOfItemsInGMGridView:(GMGridView *)gridView
 {
     return [photoEvents count];
+//    return 5;
 }
 
 - (CGSize)GMGridView:(GMGridView *)gridView sizeForItemsInInterfaceOrientation:(UIInterfaceOrientation)orientation
 {
+    
     if (UIInterfaceOrientationIsLandscape(orientation))
     {
-        return CGSizeMake(self.frame.size.width, self.frame.size.height);
+        return CGSizeMake(300, 200);
     }
     else
     {
-        return CGSizeMake(self.frame.size.width, self.frame.size.height);
+        return CGSizeMake(300, 200);
     }
 }
 
 - (GMGridViewCell *)GMGridView:(GMGridView *)gridView cellForItemAtIndex:(NSInteger)index
 {
-    //NSLog(@"Creating view indx %d", index);
-    
-//    CGSize size = CGSizeMake(_photoSize.width, _photoSize.height);
-    
     GMGridViewCell *cell = [gridView dequeueReusableCell];
     
     if (!cell)
     {
         cell = [[GMGridViewCell alloc] init];
         
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
         view.backgroundColor = [UIColor clearColor];
         view.layer.masksToBounds = NO;
         view.layer.cornerRadius = 8;
@@ -144,10 +212,11 @@
     [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
 
     if (_count < [photoEvents count]) {
+//    if (_count < 5) {
         PhotoEvent *photoEvent = [photoEvents objectAtIndex:_count];
         photos = [photoEvent getPhoto];
-        CGSize a = self.frame.size;
         PhotoCustomCell *groupPhotos = [[PhotoCustomCell alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        groupPhotos.delegate = self;
         [groupPhotos passPhotoSize:_imgSize];
         [groupPhotos passData:photos];
         [groupPhotos setup];
@@ -158,7 +227,6 @@
             [groupPhotos setTitle:[photoEvent getTitle]];
         }
         [cell.contentView addSubview:groupPhotos];
-        a = groupPhotos.frame.size;
         _count++;
     }
     

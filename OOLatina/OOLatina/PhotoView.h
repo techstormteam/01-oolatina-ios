@@ -13,12 +13,13 @@
 #import "GMGridView.h"
 #import "GMGridViewLayoutStrategies.h"
 
-@interface PhotoView : UIView <GMGridViewDataSource> {
+@interface PhotoView : UIView <GMGridViewDataSource, PhotoCustomCellDelegate> {
     NSMutableArray *photoEvents;
     NSMutableArray *photos;
     NSMutableArray *sectionSizes;
     UIImageView *background;
     UIView *backgroundPlayer;
+    PhotoPreviewView *viePhotoPreview;
     
     __gm_weak GMGridView *_gmGridView2;
 }

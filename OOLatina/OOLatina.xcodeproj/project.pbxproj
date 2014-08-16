@@ -203,6 +203,7 @@
 		D0963F7B198B803500A22769 /* PhotoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7A198B803500A22769 /* PhotoCustomCell.xib */; };
 		D0963F7E198B806200A22769 /* PhotoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0963F7D198B806200A22769 /* PhotoCustomCell.m */; };
 		D0963F80198C075700A22769 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0963F7F198C075700A22769 /* Localizable.strings */; };
+		D09AECB3199F910F000CDCC6 /* PhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D09AECB2199F910F000CDCC6 /* PhotoImageView.m */; };
 		D09C7B17199C96F700BEB735 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C7B12199C96F600BEB735 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D09C7B18199C96F700BEB735 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C7B15199C96F700BEB735 /* MBProgressHUD.m */; };
 		D09C7B1D199C975000BEB735 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C7B1C199C975000BEB735 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -523,6 +524,8 @@
 		D0963F7C198B806100A22769 /* PhotoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCustomCell.h; sourceTree = "<group>"; };
 		D0963F7D198B806200A22769 /* PhotoCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCustomCell.m; sourceTree = "<group>"; };
 		D0963F7F198C075700A22769 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D09AECB1199F910F000CDCC6 /* PhotoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoImageView.h; sourceTree = "<group>"; };
+		D09AECB2199F910F000CDCC6 /* PhotoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoImageView.m; sourceTree = "<group>"; };
 		D09C7B10199C96F600BEB735 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		D09C7B11199C96F600BEB735 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		D09C7B12199C96F600BEB735 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
@@ -847,6 +850,8 @@
 				D09C7B40199CBC6900BEB735 /* SocialChooser.h */,
 				D09C7B41199CBC6900BEB735 /* SocialChooser.m */,
 				D09C7B42199CBC6900BEB735 /* SocialChooser.xib */,
+				D09AECB1199F910F000CDCC6 /* PhotoImageView.h */,
+				D09AECB2199F910F000CDCC6 /* PhotoImageView.m */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -1403,6 +1408,7 @@
 				51FD5F9D18CFD5810040369B /* TableView.m in Sources */,
 				D0112342198E2A600099D124 /* FSPlaceholderImages.m in Sources */,
 				D03DD0D5198F532500603ACC /* Utility.m in Sources */,
+				D09AECB3199F910F000CDCC6 /* PhotoImageView.m in Sources */,
 				51A63B1418D5D4BF005DCD55 /* UIScrollLinear.m in Sources */,
 				51FD5FE318D3A46F0040369B /* VideoCategory.m in Sources */,
 				51A63AF918D4BD14005DCD55 /* AFURLConnectionOperation.m in Sources */,

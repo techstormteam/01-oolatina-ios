@@ -7,7 +7,7 @@
 //
 
 #import "PhotoCustomCell.h"
-#import "UIImage+Resize.h"
+
 
 @implementation PhotoCustomCell
 
@@ -35,16 +35,13 @@
     GMGridView *gmGridView = [[GMGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, 40)];
     gmGridView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     gmGridView.backgroundColor = [UIColor clearColor];
+    gmGridView.layoutStrategy = [GMGridViewLayoutStrategyFactory strategyFromType:GMGridViewLayoutVertical];
     gmGridView.centerGrid = false;
     gmGridView.itemSpacing = 2;
     gmGridView.dataSource = self;
     _gmGridView = gmGridView;
     [self addSubview:_gmGridView];
     
-//    a = gmGridView.frame.size;
-//    viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
-//    viePhotoPreview.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-//    [self addSubview:viePhotoPreview.view];
     
 }
 
@@ -114,7 +111,7 @@
         NSString *url = [photo getUrl];
         
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
+        PhotoImageView *imageView = [[PhotoImageView alloc] initWithFrame:cell.contentView.bounds];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 //        imageView.backgroundColor = [UIColor blackColor];
 //        imageView.tintColor = [UIColor blackColor];
@@ -129,7 +126,7 @@
                 [self hideHud];
             });
         });
-        imageView.tag = _photoIndex;
+        [imageView setPhotoInfo:photo];
         [cell.contentView addSubview:imageView];
         
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
@@ -143,30 +140,8 @@
 }
 
 -(void)imageTapped:(UITapGestureRecognizer *)recognizer{
-    UIImageView *imageView = (UIImageView *)recognizer.view;
-    Photo *photo = [mPhotos objectAtIndex:imageView.tag];
-    if(viePhotoPreview != nil)
-    {
-        [self bringSubviewToFront:viePhotoPreview.view];
-    }
-    else
-    {
-        CGRect bounds = CGRectMake(0, 0, _originalFrameSize.width, _originalFrameSize.height);
-        self.frame = bounds;
-        viePhotoPreview = [[PhotoPreviewView alloc] initWithNibName:@"PhotoPreviewView" bundle:nil];
-        
-        viePhotoPreview.view.frame = bounds;
-
-        [viePhotoPreview setImageUrl:[photo getUrl]];
-        viePhotoPreview.lblName.text = [photo getName];
-        viePhotoPreview.lblDescription.text = [photo getDescription];
-        viePhotoPreview.lblDescription.numberOfLines = 3;
-        
-        [self addSubview:viePhotoPreview.view];
-        
-    }
+    [self.delegate photoTapped:recognizer];
 }
-
 
 - (BOOL)GMGridView:(GMGridView *)gridView canDeleteItemAtIndex:(NSInteger)index
 {
