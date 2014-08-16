@@ -22,7 +22,7 @@
     TWBFacebookViewController *mFacebookShare;
     SocialChooser *mSocialChooser;
     NSString *mImageUrl;
-    
+    UIButton *closeButton;
 }
 
 @property (nonatomic, strong) MBProgressHUD   * theHud;

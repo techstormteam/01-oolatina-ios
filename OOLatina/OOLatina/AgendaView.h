@@ -23,6 +23,7 @@
     NSMutableArray *eventArray;
     CLLocationManager *locationManager;
     CLLocation *currentLocation;
+    
 }
 
 - (void)gettingLocation;

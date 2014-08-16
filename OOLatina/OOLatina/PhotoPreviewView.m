@@ -32,7 +32,7 @@
                 [self hideHud];
             });
         });
-//        [_imgPhoto removeFromSuperview];
+
     }
     return self;
 }
@@ -72,9 +72,27 @@
 
 - (IBAction)btnShare_tapped:(id)sender {
     mSocialChooser = [[SocialChooser alloc] initWithNibName:@"SocialChooser" bundle:nil];
-    mSocialChooser.view.frame = CGRectMake(0, 150, self.view.frame.size.width, 200);
+    mSocialChooser.view.frame = CGRectMake(20, 150, self.view.frame.size.width - 40, 200);
+    mSocialChooser.tbvChooser.frame = mSocialChooser.view.frame;
     [self.view addSubview:mSocialChooser.view];
+    [self.view bringSubviewToFront:mSocialChooser.view];
     mSocialChooser.delegate = self;
+    closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    closeButton.frame = CGRectMake(mSocialChooser.view.frame.origin.x+mSocialChooser.view.frame.size.width - 15,130,30,30);
+    
+    [closeButton setImage:[UIImage imageNamed:@"close_icon.png"] forState:UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(closePopup) forControlEvents:UIControlEventTouchUpInside];
+//    closeButton.hidden = YES;
+    [self.view addSubview:closeButton];
+
+    
+}
+
+//The event handling method
+- (void)closePopup {
+    if (mSocialChooser != nil) {
+        [self removeSocialChooserPopup];
+    }
 }
 
 - (void)FacebookTapped
@@ -82,7 +100,7 @@
     mFacebookShare = [[TWBFacebookViewController alloc] init];
     [mFacebookShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mFacebookShare.view];
-    [mSocialChooser.view removeFromSuperview];
+    [self removeSocialChooserPopup];
     [self.view bringSubviewToFront:_vieActionGroup];
 }
 
@@ -91,8 +109,14 @@
     mTwitterShare = [[TWBTwitterViewController alloc] init];
     [mTwitterShare postTextAndImageWithSLComposeViewController:_imgPhoto.image];
     [self.view addSubview:mTwitterShare.view];
-    [mSocialChooser.view removeFromSuperview];
+    [self removeSocialChooserPopup];
     [self.view bringSubviewToFront:_vieActionGroup];
+}
+
+- (void)removeSocialChooserPopup
+{
+    [mSocialChooser.view removeFromSuperview];
+    [closeButton removeFromSuperview];
 }
 
 #pragma mark - ProgressHud

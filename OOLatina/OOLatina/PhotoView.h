@@ -17,9 +17,12 @@
     NSMutableArray *photoEvents;
     NSMutableArray *photos;
     NSMutableArray *sectionSizes;
+    UIImageView *background;
+    UIView *backgroundPlayer;
     
     __gm_weak GMGridView *_gmGridView2;
 }
+
 
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) CGSize imgSize;

@@ -17,6 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _originalFrameSize = self.frame.size;
+        myQueue = dispatch_queue_create("PhotoDownload",NULL);
     }
     return self;
 }
@@ -97,7 +98,7 @@
         cell = [[GMGridViewCell alloc] init];
         
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-        view.backgroundColor = [UIColor redColor];
+        view.backgroundColor = [UIColor blackColor];
         view.layer.masksToBounds = NO;
         view.layer.cornerRadius = 8;
         
@@ -115,10 +116,19 @@
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        imageView.backgroundColor = [UIColor clearColor];
-        imageView.tintColor = [UIColor blackColor];
-        UIImage *img = [Utility getImageFromURL:url];
-        imageView.image = img;
+//        imageView.backgroundColor = [UIColor blackColor];
+//        imageView.tintColor = [UIColor blackColor];
+        
+        [self showHud:@"" superView:cell.contentView];
+        dispatch_async(myQueue, ^{
+            // Perform long running process
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *img = [Utility getImageFromURL:url];
+                imageView.image = img;
+                [self hideHud];
+            });
+        });
         imageView.tag = _photoIndex;
         [cell.contentView addSubview:imageView];
         
@@ -129,7 +139,6 @@
         
         _photoIndex++;
     }
-    CGSize a = self.frame.size;
     return cell;
 }
 
@@ -191,5 +200,21 @@
 //    }
 }
 
+#pragma mark - ProgressHud
+-(void)showHud:(NSString *)text superView:view
+{
+    if (_theHud == nil) {
+        _theHud = [[MBProgressHUD alloc] init];
+    }
+    
+    _theHud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    _theHud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0];
+    _theHud.labelText = text;
+}
+
+-(void)hideHud
+{
+    [_theHud hide:YES];
+}
 
 @end

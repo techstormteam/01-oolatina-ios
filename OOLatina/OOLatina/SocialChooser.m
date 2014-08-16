@@ -20,6 +20,8 @@
     if (self) {
         // Custom initialization
         _socialNumber = 0;
+        self.view.layer.cornerRadius = 5.0;
+        
     }
     return self;
 }
@@ -28,6 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,9 +46,6 @@
     return 3;
 }
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfSectionsInTableView: (NSInteger)section {
-//    return 2;
-//}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,12 +54,12 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-
+    _tbvChooser.frame = self.view.bounds;
+//    cell.frame = self.view.bounds;
+    
     UIColor *pinkColor = [UIColor colorWithRed:226.0/255.0 green:94.0/255.0 blue:117.0/255.0 alpha:1.0];
     NSInteger section = _socialNumber;
     switch (section) {

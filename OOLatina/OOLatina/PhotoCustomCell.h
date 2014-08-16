@@ -12,6 +12,7 @@
 #import "GMGridView.h"
 #import "PhotoPreviewView.h"
 #import "SCUtils.h"
+#import "MBProgressHUD.h"
 
 
 @interface PhotoCustomCell : UIView <GMGridViewDataSource, GMGridViewActionDelegate> {
@@ -19,8 +20,10 @@
     __gm_weak GMGridView *_gmGridView;
     UILabel *lblTitle;
     PhotoPreviewView *viePhotoPreview;
+    dispatch_queue_t myQueue;
 }
 
+@property (nonatomic, strong) MBProgressHUD *theHud;
 @property (nonatomic, assign) CGSize originalFrameSize;
 @property (nonatomic, assign) CGSize photoSize;
 @property (nonatomic, assign) NSUInteger photoIndex;

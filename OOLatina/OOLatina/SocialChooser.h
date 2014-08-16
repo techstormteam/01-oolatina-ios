@@ -19,6 +19,7 @@
 
 @interface SocialChooser : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UITableView *tbvChooser;
 @property (nonatomic, assign) NSInteger socialNumber;
 @property (nonatomic, weak) id<SocialChooserDelegate> delegate;
 

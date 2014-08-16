@@ -44,19 +44,22 @@
     locationManager.delegate = self;
 }
 
+
+
 - (void)loadEvent:eventList
 {
     if([SCUtils isNetworkAvailable])
     {
+        
+        eventArray =eventList;
         [mAgendaScroll removeAllEvent];
-
-        for (int x=0; x<[eventList count]; x++)
+        for (int x=0; x<eventArray.count; x++)
         {
-            Event *nEvent = [eventList objectAtIndex:x];
+            Event *nEvent = [eventArray objectAtIndex:x];
             [mAgendaScroll addEvent:nEvent];
         }
-        [mAgendaScroll loadEvent];
-
+        [mAgendaScroll setCurrentEventCount:0];
+        [mAgendaScroll loadEventPart:10];
     }
     else
     {
@@ -64,6 +67,7 @@
         [alert show];
     }
 }
+
 
 - (void)loadEventArroundMe:eventList
 {
@@ -79,7 +83,7 @@
                 [mAgendaScroll addEvent:nEvent];
             }
         }
-        [mAgendaScroll loadEvent];
+        [mAgendaScroll loadEventPart:10];
         
     }
     else

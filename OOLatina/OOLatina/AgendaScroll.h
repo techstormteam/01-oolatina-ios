@@ -10,17 +10,21 @@
 #import "Event.h"
 #import "AgendaDayCell.h"
 
-@interface AgendaScroll : UIView
+@interface AgendaScroll : UIView<UIScrollViewDelegate>
 {
     UIScrollView *mScrollView;
     NSMutableArray *mEventArray;
     NSMutableArray *mEventCell;
     int yPos;
+    
+    dispatch_queue_t myQueue;
+    bool inProgress;
+    int currentEventCount;
 }
 
+- (void)setCurrentEventCount:(int)currentCount;
 - (void)addEvent:(Event *)_event;
-- (void)loadEvent;
-
+- (void)loadEventPart:(int)nextAmount;
 - (void)removeAllEvent;
 
 @end

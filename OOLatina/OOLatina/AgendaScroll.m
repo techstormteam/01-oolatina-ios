@@ -15,15 +15,19 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        myQueue = dispatch_queue_create("LoadingEvent",NULL);
+        inProgress = false;
         mEventArray = [[NSMutableArray alloc] init];
         mEventCell = [[NSMutableArray alloc] init];
         mScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        mScrollView.delegate = self;
         [self addSubview:mScrollView];
         
         yPos = 10;
     }
     return self;
 }
+
 
 - (void)removeAllEvent
 {
@@ -79,20 +83,45 @@
     return -1;
 }
 
-- (void)loadEvent
+- (void)setCurrentEventCount:(int)currentCount
 {
-    for (int x=0; x<mEventArray.count; x++)
-    {
-        AgendaDayCell *mAgendaDayCell = [[AgendaDayCell alloc] initWithFrame:CGRectMake(5, yPos, mScrollView.frame.size.width-10, 100)];
-        mAgendaDayCell.layer.cornerRadius = 5.0;
-        [mAgendaDayCell.layer setMasksToBounds:YES];
-        [mAgendaDayCell addMutableEvent:[mEventArray objectAtIndex:x]];
-        [mEventCell addObject:mAgendaDayCell];
-        [mScrollView addSubview:mAgendaDayCell];
-        
-        yPos = yPos + mAgendaDayCell.frame.size.height + 10;
-        mScrollView.contentSize = CGSizeMake(mScrollView.frame.size.width,yPos);
+    currentEventCount = currentCount;
+    inProgress = false;
+}
+
+- (void)loadEventPart:(int)nextAmount
+{
+    if (!inProgress) {
+        inProgress = true;
+//        dispatch_async(myQueue, ^{
+//            // Perform long running process
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+                NSInteger end = currentEventCount + nextAmount - 1;
+                if (end > mEventArray.count - 1) {
+                    end = mEventArray.count - 1;
+                }
+                for (int x=currentEventCount; x<end; x++)
+                {
+                    AgendaDayCell *mAgendaDayCell = [[AgendaDayCell alloc] initWithFrame:CGRectMake(5, yPos, mScrollView.frame.size.width-10, 100)];
+                    mAgendaDayCell.layer.cornerRadius = 5.0;
+                    [mAgendaDayCell.layer setMasksToBounds:YES];
+                    [mAgendaDayCell addMutableEvent:[mEventArray objectAtIndex:x]];
+                    [mEventCell addObject:mAgendaDayCell];
+                    [mScrollView addSubview:mAgendaDayCell];
+                    
+                    yPos = yPos + mAgendaDayCell.frame.size.height + 10;
+                    mScrollView.contentSize = CGSizeMake(mScrollView.frame.size.width,yPos);
+                }
+                inProgress = false;
+//            });
+//        });
     }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self loadEventPart:10];
 }
 
 @end

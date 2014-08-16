@@ -6,17 +6,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaScroll.h"
-            timestampString = "428473978.058706"
+            timestampString = "429866556.690289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "@interface AgendaScroll"
-            landmarkType = "2">
+            landmarkName = "-addEvent:"
+            landmarkType = "4">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaScroll.m"
-            timestampString = "428474199.736639"
+            timestampString = "429866331.01785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "-initWithFrame:"
             landmarkType = "5">
          </BreakpointContent>
@@ -79,22 +79,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "243"
             endingLineNumber = "243"
-            landmarkName = "-selectedRow:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/Interface.m"
-            timestampString = "428818437.42737"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
             landmarkName = "-selectedRow:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,28 +218,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaView.m"
-            timestampString = "429671268.265247"
+            timestampString = "429866331.01785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-loadEvent:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/AgendaScroll.m"
-            timestampString = "428498380.800844"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-loadEvent"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -394,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.1347"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215">
+            startingLineNumber = "224"
+            endingLineNumber = "224">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -408,11 +376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.1347"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195">
+            startingLineNumber = "204"
+            endingLineNumber = "204">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -422,11 +390,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.1347"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183">
+            startingLineNumber = "192"
+            endingLineNumber = "192">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -436,11 +404,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.1347"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184">
+            startingLineNumber = "193"
+            endingLineNumber = "193">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -450,11 +418,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.1347"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189">
+            startingLineNumber = "198"
+            endingLineNumber = "198">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -464,11 +432,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/Interface.m"
-            timestampString = "429354161.910321"
+            timestampString = "429799670.345188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "359"
-            endingLineNumber = "359"
+            startingLineNumber = "356"
+            endingLineNumber = "356"
             landmarkName = "-selectedRow:"
             landmarkType = "5">
          </BreakpointContent>
@@ -512,11 +480,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.h"
-            timestampString = "429266977.890555"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "numberOfImageInRow"
             landmarkType = "19">
             <Locations>
@@ -558,11 +526,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429291029.25235"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-loadPhotoEvent"
             landmarkType = "5">
          </BreakpointContent>
@@ -986,11 +954,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429291029.25235"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-loadPhotoEvent"
             landmarkType = "5">
          </BreakpointContent>
@@ -1002,11 +970,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429291029.25235"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-loadPhotoEvent"
             landmarkType = "5">
          </BreakpointContent>
@@ -1018,11 +986,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429291029.25235"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-loadPhotoEvent"
             landmarkType = "5">
          </BreakpointContent>
@@ -1034,11 +1002,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429291029.25235"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-loadPhotoEvent"
             landmarkType = "5">
          </BreakpointContent>
@@ -1258,7 +1226,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879272.891681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -1274,11 +1242,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429881209.561428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116">
+            startingLineNumber = "140"
+            endingLineNumber = "140">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1528,11 +1496,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/Interface.m"
-            timestampString = "429354161.910321"
+            timestampString = "429799670.345188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
             landmarkName = "-showCategoryVideo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1544,11 +1512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/Interface.m"
-            timestampString = "429354161.910321"
+            timestampString = "429799670.345188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "390"
-            endingLineNumber = "390"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "-showCategoryVideo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2040,11 +2008,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "@implementation PhotoCustomCell"
             landmarkType = "3">
          </BreakpointContent>
@@ -2056,11 +2024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "@implementation PhotoCustomCell"
             landmarkType = "3">
          </BreakpointContent>
@@ -2102,11 +2070,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "@implementation PhotoCustomCell"
             landmarkType = "3">
          </BreakpointContent>
@@ -2118,11 +2086,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429778273.561566"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "-GMGridViewDidTapOnEmptySpace:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2134,11 +2102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2150,11 +2118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2166,11 +2134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2182,11 +2150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-numberOfItemsInGMGridView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2198,11 +2166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429778273.561566"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "-GMGridView:canDeleteItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2214,11 +2182,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-passData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2230,11 +2198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2246,11 +2214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2262,11 +2230,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429291029.25235"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "-loadPhotoEvent"
             landmarkType = "5">
          </BreakpointContent>
@@ -2278,11 +2246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2294,11 +2262,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2310,11 +2278,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429291029.25235"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "-loadPhotoEvent"
             landmarkType = "5">
          </BreakpointContent>
@@ -2326,11 +2294,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429323583.095269"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2342,11 +2310,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429323583.095269"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-numberOfItemsInGMGridView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2358,11 +2326,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429357348.082674"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-setup"
             landmarkType = "5">
          </BreakpointContent>
@@ -2374,11 +2342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-GMGridView:sizeForItemsInInterfaceOrientation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2406,11 +2374,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429323583.095269"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2422,11 +2390,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429323583.095269"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2438,11 +2406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429323583.095269"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2454,11 +2422,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.1347"
+            timestampString = "429800582.266427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "-GMGridView:cellForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2470,11 +2438,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429357348.082674"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-setup"
             landmarkType = "5">
          </BreakpointContent>
@@ -2502,11 +2470,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2518,11 +2486,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429621235.517014"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2534,11 +2502,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2550,7 +2518,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879272.891681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -2566,11 +2534,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2582,11 +2550,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/Interface.m"
-            timestampString = "429354164.903625"
+            timestampString = "429799093.185298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
             landmarkName = "-selectedRow:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2598,7 +2566,103 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.1347"
+            timestampString = "429800582.266427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "-GMGridView:cellForItemAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoView.m"
+            timestampString = "429800582.266427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-GMGridView:cellForItemAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoView.m"
+            timestampString = "429800582.266427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-GMGridView:cellForItemAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoCustomCell.m"
+            timestampString = "429798557.687169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-GMGridView:sizeForItemsInInterfaceOrientation:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoCustomCell.m"
+            timestampString = "429798557.687169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-GMGridView:cellForItemAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoCustomCell.m"
+            timestampString = "429798557.687169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-setup"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoCustomCell.m"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
@@ -2613,108 +2677,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OOLatina/PhotoView.m"
-            timestampString = "429354394.260793"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "-GMGridView:cellForItemAtIndex:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/PhotoView.m"
-            timestampString = "429356976.343137"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "-GMGridView:cellForItemAtIndex:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-GMGridView:sizeForItemsInInterfaceOrientation:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-GMGridView:cellForItemAtIndex:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429359312.334489"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "-setup"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-GMGridView:cellForItemAtIndex:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429778273.561566"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2726,11 +2694,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2742,7 +2710,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879272.891681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -2806,7 +2774,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaView.m"
-            timestampString = "429671268.265247"
+            timestampString = "429866331.01785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -2885,22 +2853,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OOLatina/AgendaView.m"
-            timestampString = "429671268.265247"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-loadEvent:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaWholeView.m"
             timestampString = "429671268.265247"
             startingColumnNumber = "9223372036854775807"
@@ -2966,7 +2918,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaView.m"
-            timestampString = "429671268.265247"
+            timestampString = "429866331.01785"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-isInside::"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/AgendaView.m"
+            timestampString = "429866331.01785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -2982,27 +2950,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaView.m"
-            timestampString = "429671268.265247"
+            timestampString = "429866331.01785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-isInside::"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/AgendaView.m"
-            timestampString = "429671268.265247"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-isInside::"
             landmarkType = "5">
          </BreakpointContent>
@@ -3014,11 +2966,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/AgendaView.m"
-            timestampString = "429671268.265247"
+            timestampString = "429866331.01785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-isInside::"
             landmarkType = "5">
          </BreakpointContent>
@@ -3030,11 +2982,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429759630.562666"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-imageTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3046,7 +2998,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429620520.006604"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -3158,7 +3110,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/SocialChooser.m"
-            timestampString = "429705643.657786"
+            timestampString = "429880719.410166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -3174,7 +3126,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/SocialChooser.m"
-            timestampString = "429707077.013042"
+            timestampString = "429880719.410166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -3190,7 +3142,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/SocialChooser.m"
-            timestampString = "429707092.218801"
+            timestampString = "429880719.410166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -3222,7 +3174,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879806.650362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -3238,27 +3190,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879806.650362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "-btnShare_tapped:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
             landmarkName = "-btnShare_tapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3366,7 +3302,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879272.891681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -3382,7 +3318,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879272.891681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -3398,7 +3334,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429879272.891681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -3414,11 +3350,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoPreviewView.m"
-            timestampString = "429782825.586466"
+            timestampString = "429881209.561428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-showHud:superView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3446,12 +3382,394 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OOLatina/PhotoCustomCell.m"
-            timestampString = "429777844.984641"
+            timestampString = "429798557.687169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "-imageTapped:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/SocialChooser.m"
+            timestampString = "429880719.410166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429879272.891681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429881209.561428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-closePopup"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429881209.561428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-FacebookTapped"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429881209.561428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-FacebookTapped"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429881209.561428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-FacebookTapped"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429881209.561428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-closePopup"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/CellAgenda.m"
+            timestampString = "429849370.369992"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-loadImage:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/CellAgenda.m"
+            timestampString = "429820346.005578"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-loadImage:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/CellAgenda.m"
+            timestampString = "429863456.64186"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-loadImage:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CellAgenda loadImage:]"
+                  moduleName = "OOLatina"
+                  urlString = "file:///Users/macbookair/Documents/01-oolatina-ios/OOLatina/OOLatina/CellAgenda.m"
+                  timestampString = "429863456.645935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__24-[CellAgenda loadImage:]_block_invoke"
+                  moduleName = "OOLatina"
+                  urlString = "file:///Users/macbookair/Documents/01-oolatina-ios/OOLatina/OOLatina/CellAgenda.m"
+                  timestampString = "429863456.646432"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/AgendaScroll.m"
+            timestampString = "429866474.714838"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "@implementation AgendaScroll"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/AgendaScroll.m"
+            timestampString = "429867353.444976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "-scrollViewDidEndDecelerating:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/AgendaScroll.m"
+            timestampString = "429867353.444976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-loadEventPart:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/AgendaScroll.m"
+            timestampString = "429866983.620352"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-addEvent:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/AgendaScroll.m"
+            timestampString = "429867525.014888"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-loadEventPart:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/AgendaScroll.m"
+            timestampString = "429867527.211593"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-scrollViewDidEndDecelerating:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429880947.639775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-btnShare_tapped:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429881209.561428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-btnShare_tapped:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/SocialChooser.m"
+            timestampString = "429880719.410166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/SocialChooser.m"
+            timestampString = "429880389.777448"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-initWithNibName:bundle:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/SocialChooser.m"
+            timestampString = "429880634.457405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OOLatina/PhotoPreviewView.m"
+            timestampString = "429880947.639775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-btnShare_tapped:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

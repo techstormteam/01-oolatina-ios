@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import "Utility.h"
 
 @interface CellAgenda : UIView
 {
