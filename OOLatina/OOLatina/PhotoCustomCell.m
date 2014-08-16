@@ -160,6 +160,7 @@
         [viePhotoPreview setImageUrl:[photo getUrl]];
         viePhotoPreview.lblName.text = [photo getName];
         viePhotoPreview.lblDescription.text = [photo getDescription];
+        viePhotoPreview.lblDescription.numberOfLines = 3;
         
         [self addSubview:viePhotoPreview.view];
         
