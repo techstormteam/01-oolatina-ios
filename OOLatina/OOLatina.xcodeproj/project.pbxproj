@@ -220,6 +220,7 @@
 		D09C7B4C199D8F7100BEB735 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C7B4B199D8F7100BEB735 /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D0B54BD9198FE845005F65FE /* PhotoShareConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */; };
 		D0B54BDA198FE845005F65FE /* PhotoShareConfirm.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */; };
+		D0DB8E1019A1FA5F00B5CCC1 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB8E0F19A1FA5F00B5CCC1 /* MyAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -555,6 +556,8 @@
 		D0B54BD6198FE845005F65FE /* PhotoShareConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoShareConfirm.h; sourceTree = "<group>"; };
 		D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShareConfirm.m; sourceTree = "<group>"; };
 		D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoShareConfirm.xib; sourceTree = "<group>"; };
+		D0DB8E0E19A1FA5F00B5CCC1 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		D0DB8E0F19A1FA5F00B5CCC1 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -852,6 +855,8 @@
 				D09C7B42199CBC6900BEB735 /* SocialChooser.xib */,
 				D09AECB1199F910F000CDCC6 /* PhotoImageView.h */,
 				D09AECB2199F910F000CDCC6 /* PhotoImageView.m */,
+				D0DB8E0E19A1FA5F00B5CCC1 /* MyAnnotation.h */,
+				D0DB8E0F19A1FA5F00B5CCC1 /* MyAnnotation.m */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -1396,6 +1401,7 @@
 				51FD5F6218CFCC250040369B /* AppDelegate.m in Sources */,
 				D0926299198CDF5C0055D7A6 /* Photo.m in Sources */,
 				D0B54BD9198FE845005F65FE /* PhotoShareConfirm.m in Sources */,
+				D0DB8E1019A1FA5F00B5CCC1 /* MyAnnotation.m in Sources */,
 				D09C7B34199CA49F00BEB735 /* TWBTwitterViewController.m in Sources */,
 				514D096118DA67B100872793 /* CellAgenda.m in Sources */,
 				51A63AFC18D4BD14005DCD55 /* AFURLSessionManager.m in Sources */,

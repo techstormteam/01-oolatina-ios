@@ -164,7 +164,7 @@
 - (void) mapButtonAction
 {
     if (needLoadingAgendaMap) {
-        [agendaMapView loadEvent:eventArray];
+        [agendaMapView addAnnotations:eventArray];
         needLoadingAgendaMap = NO;
     }
     [mapButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

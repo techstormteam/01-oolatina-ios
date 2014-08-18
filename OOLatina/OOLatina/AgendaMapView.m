@@ -26,7 +26,40 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.mapView.delegate = self;
+    
+    
+    
 //    locationManager.delegate = self;
+}
+
+- (void)addAnnotations:eventArray{
+    if([SCUtils isNetworkAvailable])
+    {
+        eventList = eventArray;
+        [self.mapView removeAnnotations:annotationList];
+        for (int x=0; x<[eventArray count]; x++)
+        {
+            Event *nEvent = [eventArray objectAtIndex:x];
+            CLLocationCoordinate2D coordinate1;
+            coordinate1.latitude = [nEvent getLatitude];
+            coordinate1.longitude = [nEvent getLongitude];
+            
+            MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+            point.coordinate = coordinate1;
+            point.title = [nEvent getTitle];
+            point.subtitle = [nEvent getAdresse];
+            [annotationList addObject:point];
+            [self.mapView addAnnotation:point];
+        }
+        
+        [self initZoomView];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur de connexion" message:@"Verifier votre connexion à internet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,7 +73,25 @@
     
 }
 
+- (void) initZoomView
+{
+    if (eventList != nil && eventList.count > 0) {
+        Event *nEvent = [eventList objectAtIndex:0];
+        CLLocationCoordinate2D firstAgendaLocation;
+        firstAgendaLocation.latitude = [nEvent getLatitude];
+        firstAgendaLocation.longitude = [nEvent getLongitude];
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(firstAgendaLocation, 800, 800);
+        [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    }
+}
+
 #pragma mark - MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    
+    
+}
 
 //- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
 //    if ([view conformsToProtocol:@protocol(JPSThumbnailAnnotationViewProtocol)]) {

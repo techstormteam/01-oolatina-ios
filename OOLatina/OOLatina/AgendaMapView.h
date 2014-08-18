@@ -8,13 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import "MyAnnotation.h"
+#import "Event.h"
+#import "SCUtils.h"
 
 
-@interface AgendaMapView : UIViewController {
+@interface AgendaMapView : UIViewController<MKMapViewDelegate> {
     CLLocationManager *locationManager;
     CLLocation *currentLocation;
+    NSMutableArray *eventList;
+    NSMutableArray *annotationList;
 }
 
-- (void) loadEvent:eventArray;
+- (void)addAnnotations:(NSMutableArray *)eventArray;
+
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
