@@ -79,7 +79,7 @@
         for (int x=0; x<[eventList count]; x++)
         {
             Event *nEvent = [eventList objectAtIndex:x];
-            if ([self isInside:nEvent: arroundRadius]) {
+            if ([self isInside:nEvent radius:arroundRadius]) {
                 [mAgendaScroll addEvent:nEvent];
             }
         }
@@ -93,20 +93,16 @@
     }
 }
 
-- (bool)isInside:(Event *)event: (CGFloat)radius {
-    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:[event getLatitude] longitude:[event getLongitude]];;
-    CLLocation *agendaLocation = [[CLLocation alloc] initWithLatitude:[event getLatitude] longitude:[event getLongitude]];
-    CGFloat dis = [self distance:currentLocation: agendaLocation];
-    if (dis < radius) {
-        
+- (bool)isInside:(Event *)ev radius:(CGFloat)rad {
+    CLLocation *curLocation = currentLocation;
+//    CLLocation *curLocation = [[CLLocation alloc] initWithLatitude:17 longitude:18];
+    CLLocation *agendaLocation = [[CLLocation alloc] initWithLatitude:[ev getLatitude] longitude:[ev getLongitude]];
+    CLLocationDistance distance = [curLocation distanceFromLocation:agendaLocation];
+    
+    if (distance <= rad) {
+        return YES;
     }
-    return YES;
-}
-
-- (CGFloat) distance:(CLLocation *) from: (CLLocation *) to {
-    CLLocationDegrees a = abs(from.coordinate.longitude - to.coordinate.longitude);
-    CLLocationDegrees b = abs(from.coordinate.latitude - to.coordinate.latitude);
-    return sqrt((a * a) + (b * b));
+    return NO;
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -122,7 +118,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
+    currentLocation = newLocation;
     
     if (currentLocation != nil) {
 //        longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];

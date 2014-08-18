@@ -27,8 +27,9 @@
 }
 
 - (void)gettingLocation;
-- (bool)isInside:(Event *)event: (CGFloat)radius;
+- (bool)isInside:(Event *)ev radius:(CGFloat)rad;
 - (void)loadEvent:(NSMutableArray *) eventArray;
+- (void)loadEventArroundMe:(NSMutableArray *) eventArray;
 
 
 @end

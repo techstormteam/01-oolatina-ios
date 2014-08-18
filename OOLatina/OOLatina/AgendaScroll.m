@@ -91,17 +91,17 @@
 
 - (void)loadEventPart:(int)nextAmount
 {
-    if (!inProgress) {
-        inProgress = true;
+//    if (!inProgress) {
+//        inProgress = true;
 //        dispatch_async(myQueue, ^{
 //            // Perform long running process
 //            
 //            dispatch_async(dispatch_get_main_queue(), ^{
-                NSInteger end = currentEventCount + nextAmount - 1;
-                if (end > mEventArray.count - 1) {
-                    end = mEventArray.count - 1;
-                }
-                for (int x=currentEventCount; x<end; x++)
+//                NSInteger end = currentEventCount + nextAmount - 1;
+//                if (end > mEventArray.count - 1) {
+//                    end = mEventArray.count - 1;
+//                }
+                for (int x=0; x<mEventArray.count; x++)
                 {
                     AgendaDayCell *mAgendaDayCell = [[AgendaDayCell alloc] initWithFrame:CGRectMake(5, yPos, mScrollView.frame.size.width-10, 100)];
                     mAgendaDayCell.layer.cornerRadius = 5.0;
@@ -113,15 +113,15 @@
                     yPos = yPos + mAgendaDayCell.frame.size.height + 10;
                     mScrollView.contentSize = CGSizeMake(mScrollView.frame.size.width,yPos);
                 }
-                inProgress = false;
+//                inProgress = false;
 //            });
 //        });
-    }
+//    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self loadEventPart:10];
+//    [self loadEventPart:10];
 }
 
 @end

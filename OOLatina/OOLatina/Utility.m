@@ -8,7 +8,10 @@
 
 #import "Utility.h"
 
+
 @implementation Utility
+
+static NSMutableDictionary *cachedImages;
 
 + (void) saveImage:(UIImage *)image
 {
@@ -18,8 +21,20 @@
 + (UIImage *) getImageFromURL:(NSString *)fileURL {
     UIImage * result;
     
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
-    result = [UIImage imageWithData:data];
+    if (cachedImages == nil)
+    {
+        cachedImages = [[NSMutableDictionary alloc] init];
+    }
+
+    UIImage *image = [cachedImages objectForKey:fileURL];
+    if (image == nil)
+    {
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
+        result = [UIImage imageWithData:data];
+        cachedImages[fileURL] = result;
+    } else {
+        result = image;
+    }
     
     return result;
 }

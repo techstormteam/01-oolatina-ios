@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-@interface AgendaMapView : UIViewController <CLLocationManagerDelegate> {
+@interface AgendaMapView : UIViewController {
     CLLocationManager *locationManager;
     CLLocation *currentLocation;
 }

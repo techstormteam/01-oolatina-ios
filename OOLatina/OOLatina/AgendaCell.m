@@ -75,8 +75,7 @@
 
 - (void)setThumbnail:(NSString *)_thumb
 {
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:_thumb]];
-    thumbnail.image = [UIImage imageWithData:data];
+    thumbnail.image = [Utility getImageFromURL:_thumb];
 }
 
 - (void)setDateToDay:(NSString *)day andMonth:(NSString *)month andYear:(NSString *)year

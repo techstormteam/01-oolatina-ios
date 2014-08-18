@@ -145,7 +145,7 @@
 - (void) arroundMeButtonAction
 {
     if (needLoadingArroundMe) {
-        [arroundMeView  loadEvent:eventArray];
+        [arroundMeView  loadEventArroundMe:eventArray];
         needLoadingArroundMe = NO;
     }
     [arroundMeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

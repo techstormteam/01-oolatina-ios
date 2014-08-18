@@ -92,21 +92,20 @@
 
 - (void)loadImage:(Event *)_event
 {
-    dispatch_queue_t myQueue = dispatch_queue_create("PhotoDownload",NULL);
-    dispatch_async(myQueue, ^{
-        // Perform long running process
-        
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-//            UIImage *image = [Utility getImageFromURL:[_event getThumbnailEvent]];
-//            thumbnail.image = image;
+//    dispatch_queue_t myQueue = dispatch_queue_create("PhotoDownload",NULL);
+//    dispatch_async(myQueue, ^{
+//        // Perform long running process
+//        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage *image = [Utility getImageFromURL:[_event getThumbnailEvent]];
+//            thumbnail.image = [Utility imageWithImage:image scaledToSize:thumbnail.frame.size];
+            thumbnail.image = image;
             
-            NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[_event getThumbnailEvent]]];
-            thumbnail.image = [UIImage imageWithData:data];
+//            NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[_event getThumbnailEvent]]];
+//            thumbnail.image = [UIImage imageWithData:data];
             [mLoading stopAnimating];
             mLoading.hidden = YES;
-        });
-    });
+//        });
+//    });
     //dispatch_async(dispatch_get_main_queue(), ^{
     
     
