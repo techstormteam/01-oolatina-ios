@@ -54,7 +54,6 @@
 {
     scrollView =[[UIScrollView alloc] initWithFrame:self.bounds];
     scrollView.delaysContentTouches = NO;
-    scrollView.canCancelContentTouches = NO;
     CGSize a = self.frame.size;
     [self addSubview:scrollView];
     
@@ -83,9 +82,6 @@
             [mView addSubview:groupPhotos];
             _count++;
         }
-
-        mView.backgroundColor = [UIColor blueColor];
-        
         
         
         [scrollView addSubview:mView];
@@ -99,7 +95,7 @@
     if([SCUtils isNetworkAvailable])
     {
         _count = 0;
-        CGFloat wid = self.frame.size.width / _numberOfImageInRow;
+        CGFloat wid = (self.frame.size.width / _numberOfImageInRow) - 5;
         _imgSize = CGSizeMake(wid, wid);
         photoEvents = [[NSMutableArray alloc] init];
         sectionSizes = [[NSMutableArray alloc] init];
