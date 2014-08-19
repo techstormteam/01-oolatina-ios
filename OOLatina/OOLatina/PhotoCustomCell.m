@@ -32,16 +32,24 @@
     lblTitle.textColor = [UIColor whiteColor];
     [self addSubview:lblTitle];
     
-    GMGridView *gmGridView = [[GMGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, 40)];
-    gmGridView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    gmGridView.backgroundColor = [UIColor clearColor];
-    gmGridView.layoutStrategy = [GMGridViewLayoutStrategyFactory strategyFromType:GMGridViewLayoutVertical];
-    gmGridView.centerGrid = false;
-    gmGridView.itemSpacing = 2;
-
-    gmGridView.dataSource = self;
-    _gmGridView = gmGridView;
-    [self addSubview:_gmGridView];
+    _gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, self.frame.size.height)];
+    _gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+	_gridView.autoresizesSubviews = YES;
+	_gridView.delegate = self;
+	_gridView.dataSource = self;
+    [self addSubview:_gridView];
+    
+    [_gridView reloadData];
+//    GMGridView *gmGridView = [[GMGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, 40)];
+//    gmGridView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    gmGridView.backgroundColor = [UIColor clearColor];
+//    gmGridView.layoutStrategy = [GMGridViewLayoutStrategyFactory strategyFromType:GMGridViewLayoutVertical];
+//    gmGridView.centerGrid = false;
+//    gmGridView.itemSpacing = 2;
+//
+//    gmGridView.dataSource = self;
+//    _gmGridView = gmGridView;
+//    [self addSubview:_gmGridView];
     
     
 }
@@ -61,93 +69,11 @@
     lblTitle.text = title;
 }
 
-//////////////////////////////////////////////////////////////
-#pragma mark GMGridViewDataSource
-//////////////////////////////////////////////////////////////
-
-- (NSInteger)numberOfItemsInGMGridView:(GMGridView *)gridView
-{
-    return mPhotos.count;
-//    return 10;
-}
-
-- (CGSize)GMGridView:(GMGridView *)gridView sizeForItemsInInterfaceOrientation:(UIInterfaceOrientation)orientation
-{
-    if (UIInterfaceOrientationIsLandscape(orientation))
-    {
-        return _photoSize;
-    }
-    else
-    {
-        return _photoSize;
-    }
-}
-
-- (GMGridViewCell *)GMGridView:(GMGridView *)gridView cellForItemAtIndex:(NSInteger)index
-{
-    //NSLog(@"Creating view indx %d", index);
-    
-    CGSize size = CGSizeMake(_photoSize.width, _photoSize.height);
-    
-    GMGridViewCell *cell = [gridView dequeueReusableCell];
-    
-    if (!cell)
-    {
-        cell = [[GMGridViewCell alloc] init];
-        
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-        view.backgroundColor = [UIColor blackColor];
-        view.layer.masksToBounds = NO;
-        view.layer.cornerRadius = 8;
-        
-        cell.contentView = view;
-    }
-    
-    [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
-    if (_photoIndex < [mPhotos count]) {
-
-        // init image
-        Photo *photo = [mPhotos objectAtIndex:_photoIndex];
-        NSString *url = [photo getUrl];
-        
-        
-        PhotoImageView *imageView = [[PhotoImageView alloc] initWithFrame:cell.contentView.bounds];
-        imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//        imageView.backgroundColor = [UIColor blackColor];
-//        imageView.tintColor = [UIColor blackColor];
-        
-        [self showHud:@"" superView:cell.contentView];
-        dispatch_async(myQueue, ^{
-            // Perform long running process
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                UIImage *img = [Utility getImageFromURL:url];
-                imageView.image = img;
-                [self hideHud];
-            });
-        });
-        [imageView setPhotoInfo:photo];
-        [cell.contentView addSubview:imageView];
-        
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
-        singleTap.numberOfTapsRequired = 1;
-        imageView.userInteractionEnabled = YES;
-        [imageView addGestureRecognizer:singleTap];
-        
-        _photoIndex++;
-    }
-    return cell;
-}
 
 -(void)imageTapped:(UITapGestureRecognizer *)recognizer{
     [self.delegate photoTapped:recognizer];
 }
 
-- (BOOL)GMGridView:(GMGridView *)gridView canDeleteItemAtIndex:(NSInteger)index
-{
-    return YES; //index % 2 == 0;
-}
 
 //////////////////////////////////////////////////////////////
 #pragma mark GMGridViewActionDelegate
@@ -193,5 +119,100 @@
 {
     [_theHud hide:YES];
 }
+
+#pragma mark -
+#pragma mark Grid View Data Source
+
+- (NSUInteger) numberOfItemsInGridView: (AQGridView *) aGridView
+{
+    return mPhotos.count;
+}
+
+- (AQGridViewCell *) gridView: (AQGridView *) aGridView cellForItemAtIndex: (NSUInteger) index
+{
+//    static NSString * PlainCellIdentifier = @"PlainCellIdentifier";
+//    static NSString * FilledCellIdentifier = @"FilledCellIdentifier";
+      static NSString * OffsetCellIdentifier = @"OffsetCellIdentifier";
+    
+    AQGridViewCell * cell = (AQGridViewCell *)[aGridView dequeueReusableCellWithIdentifier: OffsetCellIdentifier];
+    
+//    switch ( _cellType )
+//    {
+//        case ImageDemoCellTypePlain:
+//        {
+    
+            if ( cell == nil )
+            {
+                cell = [[AQGridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, _photoSize.width, _photoSize.height)
+                                                         reuseIdentifier: OffsetCellIdentifier];
+                cell.selectionGlowColor = [UIColor blueColor];
+            }
+    
+    if (_photoIndex < [mPhotos count]) {
+        
+        // init image
+        Photo *photo = [mPhotos objectAtIndex:_photoIndex];
+        NSString *url = [photo getUrl];
+        CGRect h = cell.contentView.bounds;
+        
+        PhotoImageView *imageView = [[PhotoImageView alloc] initWithFrame:cell.contentView.bounds];
+        imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        //        imageView.backgroundColor = [UIColor blackColor];
+        //        imageView.tintColor = [UIColor blackColor];
+        
+        [self showHud:@"" superView:cell.contentView];
+        dispatch_async(myQueue, ^{
+            // Perform long running process
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *img = [Utility getImageFromURL:url];
+                imageView.image = img;
+                [self hideHud];
+            });
+        });
+        [imageView setPhotoInfo:photo];
+        [cell.contentView addSubview:imageView];
+        
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
+        singleTap.numberOfTapsRequired = 1;
+        imageView.userInteractionEnabled = YES;
+        [imageView addGestureRecognizer:singleTap];
+        
+        _photoIndex++;
+    }
+//            break;
+//        }
+//            
+//        case ImageDemoCellTypeFill:
+//        {
+//            ImageDemoFilledCell * filledCell = (ImageDemoFilledCell *)[aGridView dequeueReusableCellWithIdentifier: FilledCellIdentifier];
+//            if ( filledCell == nil )
+//            {
+//                filledCell = [[ImageDemoFilledCell alloc] initWithFrame: CGRectMake(0.0, 0.0, 200.0, 150.0)
+//                                                        reuseIdentifier: FilledCellIdentifier];
+//                filledCell.selectionStyle = AQGridViewCellSelectionStyleBlueGray;
+//            }
+//            
+//            filledCell.image = [UIImage imageNamed: [_imageNames objectAtIndex: index]];
+//            filledCell.title = [[_imageNames objectAtIndex: index] stringByDeletingPathExtension];
+//            
+//            cell = filledCell;
+//            break;
+//        }
+//            
+//        default:
+//            break;
+//    }
+    
+    return ( cell );
+}
+
+- (CGSize) portraitGridCellSizeForGridView: (AQGridView *) aGridView
+{
+//    return ( _photoSize );
+    return CGSizeMake(75, 75);
+}
+
+
 
 @end

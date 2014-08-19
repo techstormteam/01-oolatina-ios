@@ -16,6 +16,7 @@
 #import "UIImage+Resize.h"
 #import "GMGridViewLayoutStrategies.h"
 #import "PhotoImageView.h"
+#import "AQGridView.h"
 
 
 @class PhotoCustomCell;
@@ -26,8 +27,9 @@
 
 @end
 
-@interface PhotoCustomCell : UIView <GMGridViewDataSource, GMGridViewActionDelegate> {
+@interface PhotoCustomCell : UIView <AQGridViewDelegate, AQGridViewDataSource> {
     NSMutableArray *mPhotos;
+    AQGridView * _gridView;
     __gm_weak GMGridView *_gmGridView;
     UILabel *lblTitle;
     PhotoPreviewView *viePhotoPreview;
