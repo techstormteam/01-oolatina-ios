@@ -21,6 +21,7 @@
     UIView *backgroundPlayer;
     PhotoPreviewView *viePhotoPreview;
     
+    UIScrollView *scrollView;
     __gm_weak GMGridView *_gmGridView2;
 }
 
