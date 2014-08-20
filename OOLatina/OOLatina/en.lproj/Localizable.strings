@@ -35,3 +35,8 @@
 "select" = "Select";
 "music" = "Music";
 "hint_music" = "Bachata, Salsa, Kizomba, ...";
+
+"arround_me" = "Arround Me";
+"map" = "Map";
+"photo_downloaded" = "Photo Downloaded";
+"share_photo_via" = "SHARE PHOTO VIA";

@@ -64,7 +64,7 @@
     NSInteger section = _socialNumber;
     switch (section) {
         case 0: // title
-            cell.textLabel.text = @"SHARE PHOTO VIA";
+            cell.textLabel.text = NSLocalizedString(@"share_photo_via", @"");
             cell.backgroundColor = pinkColor;
             break;
         case 1: // facebook

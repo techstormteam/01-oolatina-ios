@@ -45,6 +45,7 @@
     UIImageView *background;
     UIButton *searchButton;
     
+    NSMutableArray *arrayImageNames;
     NSMutableArray *arrayMenu;
     int currentRowCloseMenu;
     BOOL MenuNavActive;

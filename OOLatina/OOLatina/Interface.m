@@ -45,6 +45,16 @@
     [arrayMenu addObject:NSLocalizedString(@"radio", nil)];
     [arrayMenu addObject:NSLocalizedString(@"photo", nil)];
     
+    arrayImageNames = [[NSMutableArray alloc] init];
+    [arrayImageNames addObject:@"news"];
+    [arrayImageNames addObject:@"agenda"];
+    //[arrayImageNames addObject:@"Gallery"];
+    [arrayImageNames addObject:@"audio"];
+    [arrayImageNames addObject:@"video"];
+    [arrayImageNames addObject:@"radio"];
+    [arrayImageNames addObject:@"photo"];
+    
+    
     mWebView = nil;
     
     self.view.backgroundColor = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:1.0];
@@ -114,7 +124,7 @@
         [mElement SetTitleColor:CGRectMake(255, 255, 255, 255)];
         mElement.tag = x;
         
-        NSString *fileName = [NSString stringWithFormat:@"%@_icon.png",arrayMenu[x]];
+        NSString *fileName = [NSString stringWithFormat:@"%@_icon.png",arrayImageNames[x]];
         UIImageView *mImage = [[UIImageView alloc] initWithFrame:CGRectMake((60-30)/2, (50-20)/2, 20, 20)];
         mImage.image = [UIImage imageNamed:[fileName lowercaseString]];
         [mElement addSubview:mImage];

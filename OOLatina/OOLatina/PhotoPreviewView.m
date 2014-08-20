@@ -60,7 +60,7 @@
             UIImage *image = [Utility getImageFromURL:mImageUrl];
             [Utility saveImage:image];
             [self hideHud];
-            [[[[iToast makeText:NSLocalizedString(@"Photo Downloaded", @"")] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
+            [[[[iToast makeText:NSLocalizedString(@"photo_downloaded", @"")] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
         });
     });
 }

@@ -34,7 +34,7 @@
     
     [self initSearch];
     
-    [self launchSearch];
+    [self loadSearchData];
     
     [self setNavBar];
     
@@ -43,6 +43,10 @@
     [self initScrollView];
     
     [self agendaButtonAction];
+    
+    [agendaButton setTitle:NSLocalizedString(@"agenda", @"") forState:UIControlStateNormal];
+    [arroundMeButton setTitle:NSLocalizedString(@"arround_me", @"") forState:UIControlStateNormal];
+    [mapButton setTitle:NSLocalizedString(@"map", @"") forState:UIControlStateNormal];
 }
 
 - (void)viewDidUnload
@@ -563,11 +567,11 @@
     [mCalendarView removeFromSuperview];
 }
 
-- (void)launchSearch
+- (void)loadSearchData
 {
     if([SCUtils isNetworkAvailable])
     {
-//        [mAgendaScroll removeAllEvent];
+        //        [mAgendaScroll removeAllEvent];
         
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.oolatina.com/webservice/oolatina_api.php?command=GET_EVENT&year=2014&search=%@&ville=%@&day=%@&month=%@&year=%@&music=%@&genre=%@",[self urlEncodeUsingEncoding:searchField.text],villeField.text,day,month,year,musicArrayid,genreArrayid]];
         NSLog(@"URL : %@",url);
@@ -603,6 +607,12 @@
         needLoadingArroundMe = YES;
         needLoadingAgendaMap = YES;
     }
+}
+
+- (void)launchSearch
+{
+    [self loadSearchData];
+    [self btnActionShow];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -794,4 +804,11 @@
     
     [self loadArray];
 }
+
+- (void)closePopup
+{
+    mbackPopup.hidden = YES;
+    closeButton.hidden = YES;
+}
+
 @end

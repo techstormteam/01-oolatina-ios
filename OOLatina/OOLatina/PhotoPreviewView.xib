@@ -35,11 +35,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-jg-9Z8">
-                    <rect key="frame" x="0.0" y="52" width="320" height="337"/>
+                    <rect key="frame" x="0.0" y="52" width="320" height="277"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="337" id="tyN-L2-u5u"/>
+                        <constraint firstAttribute="height" constant="277" id="mAI-e5-NEE"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22i-GT-gJV" userLabel="vieActionGroup">
@@ -77,16 +77,16 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="b2g-1M-Cxy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="0bs-1a-VNf"/>
+                <constraint firstItem="ygk-jg-9Z8" firstAttribute="top" secondItem="WNT-OQ-sPc" secondAttribute="bottom" constant="8" id="77v-OI-D81"/>
                 <constraint firstItem="22i-GT-gJV" firstAttribute="top" secondItem="b2g-1M-Cxy" secondAttribute="bottom" constant="8" id="7ki-el-eax"/>
                 <constraint firstItem="WNT-OQ-sPc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8cS-km-ubG"/>
                 <constraint firstAttribute="bottom" secondItem="22i-GT-gJV" secondAttribute="bottom" constant="65" id="9wq-DF-ca5"/>
                 <constraint firstAttribute="trailing" secondItem="22i-GT-gJV" secondAttribute="trailing" constant="20" id="AMY-Ae-1Kh"/>
-                <constraint firstAttribute="trailing" secondItem="ygk-jg-9Z8" secondAttribute="trailing" id="IH7-sP-qxx"/>
                 <constraint firstAttribute="trailing" secondItem="b2g-1M-Cxy" secondAttribute="trailing" constant="11" id="PxR-R2-zeP"/>
-                <constraint firstItem="ygk-jg-9Z8" firstAttribute="top" secondItem="WNT-OQ-sPc" secondAttribute="bottom" constant="8" id="RJa-xx-waA"/>
                 <constraint firstAttribute="trailing" secondItem="WNT-OQ-sPc" secondAttribute="trailing" constant="10" id="Vdr-X8-EMR"/>
+                <constraint firstItem="ygk-jg-9Z8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xsj-WT-hSt"/>
                 <constraint firstItem="WNT-OQ-sPc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="aPw-5B-Kmp"/>
-                <constraint firstItem="ygk-jg-9Z8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wdN-kA-NTM"/>
+                <constraint firstAttribute="trailing" secondItem="ygk-jg-9Z8" secondAttribute="trailing" id="pBh-En-Kkx"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

@@ -161,7 +161,6 @@
 		51FD5FEE18D3AAAC0040369B /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FEC18D3AAAC0040369B /* LBYouTubePlayerViewController.m */; };
 		51FD5FF118D3AECA0040369B /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF018D3AECA0040369B /* Video.m */; };
 		51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */; };
-		D011231E198E0CE30099D124 /* AgendaWholeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D011231D198E0CE30099D124 /* AgendaWholeView.xib */; };
 		D0112321198E0CFB0099D124 /* AgendaWholeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112320198E0CFB0099D124 /* AgendaWholeView.m */; };
 		D011233B198E2A600099D124 /* FSBasicImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112327198E2A600099D124 /* FSBasicImage.m */; };
 		D011233C198E2A600099D124 /* FSBasicImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0112329198E2A600099D124 /* FSBasicImageSource.m */; };
@@ -177,6 +176,7 @@
 		D016CDFC19A4A3220073D981 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D016CDF819A4A3220073D981 /* InfoPlist.strings */; };
 		D016CDFD19A4A3220073D981 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = D016CDFA19A4A3220073D981 /* Main.strings */; };
 		D016CDFE19A4A3680073D981 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D016CE0019A4A3680073D981 /* Localizable.strings */; };
+		D016CE0319A4BF1C0073D981 /* AgendaWholeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D016CE0519A4BF1C0073D981 /* AgendaWholeView.xib */; };
 		D03CD84D199B597C00CF3203 /* AgendaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03CD84B199B597C00CF3203 /* AgendaMapView.m */; };
 		D03CD84E199B597C00CF3203 /* AgendaMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03CD84C199B597C00CF3203 /* AgendaMapView.xib */; };
 		D03DD0D5198F532500603ACC /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D03DD0D4198F532500603ACC /* Utility.m */; };
@@ -465,7 +465,6 @@
 		51FD5FF018D3AECA0040369B /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		51FD5FF218D3B98B0040369B /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
 		51FD5FF318D3B98C0040369B /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
-		D011231D198E0CE30099D124 /* AgendaWholeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgendaWholeView.xib; sourceTree = "<group>"; };
 		D011231F198E0CFB0099D124 /* AgendaWholeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaWholeView.h; sourceTree = "<group>"; };
 		D0112320198E0CFB0099D124 /* AgendaWholeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaWholeView.m; sourceTree = "<group>"; };
 		D0112326198E2A600099D124 /* FSBasicImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBasicImage.h; sourceTree = "<group>"; };
@@ -498,6 +497,9 @@
 		D016CDFB19A4A3220073D981 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Main.strings; sourceTree = "<group>"; };
 		D016CE0119A4A3750073D981 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D016CE0219A4A3760073D981 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D016CE0419A4BF1C0073D981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AgendaWholeView.xib; sourceTree = "<group>"; };
+		D016CE0A19A4BF310073D981 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/AgendaWholeView.strings; sourceTree = "<group>"; };
+		D016CE0B19A4BF3C0073D981 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AgendaWholeView.strings; sourceTree = "<group>"; };
 		D03CD84A199B597C00CF3203 /* AgendaMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaMapView.h; sourceTree = "<group>"; };
 		D03CD84B199B597C00CF3203 /* AgendaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaMapView.m; sourceTree = "<group>"; };
 		D03CD84C199B597C00CF3203 /* AgendaMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgendaMapView.xib; sourceTree = "<group>"; };
@@ -819,7 +821,7 @@
 				D03CD84A199B597C00CF3203 /* AgendaMapView.h */,
 				D03CD84B199B597C00CF3203 /* AgendaMapView.m */,
 				D03CD84C199B597C00CF3203 /* AgendaMapView.xib */,
-				D011231D198E0CE30099D124 /* AgendaWholeView.xib */,
+				D016CE0519A4BF1C0073D981 /* AgendaWholeView.xib */,
 				D011231F198E0CFB0099D124 /* AgendaWholeView.h */,
 				D0112320198E0CFB0099D124 /* AgendaWholeView.m */,
 				514D095F18DA67B100872793 /* CellAgenda.h */,
@@ -1431,7 +1433,7 @@
 				51A63B4A18D65E51005DCD55 /* merengueCat.jpg in Resources */,
 				51FD5F9718CFD22E0040369B /* news_icon.png in Resources */,
 				514D098F18DC3E9E00872793 /* default-portrait@2x.png in Resources */,
-				D011231E198E0CE30099D124 /* AgendaWholeView.xib in Resources */,
+				D016CE0319A4BF1C0073D981 /* AgendaWholeView.xib in Resources */,
 				D0937864198C803600626197 /* button_share.png in Resources */,
 				51FD5F9818CFD22E0040369B /* radio_icon.png in Resources */,
 				51FD5F9618CFD22E0040369B /* navigation_bar.png in Resources */,
@@ -1668,6 +1670,16 @@
 				D016CE0219A4A3760073D981 /* fr */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D016CE0519A4BF1C0073D981 /* AgendaWholeView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D016CE0419A4BF1C0073D981 /* Base */,
+				D016CE0A19A4BF310073D981 /* fr */,
+				D016CE0B19A4BF3C0073D981 /* en */,
+			);
+			name = AgendaWholeView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

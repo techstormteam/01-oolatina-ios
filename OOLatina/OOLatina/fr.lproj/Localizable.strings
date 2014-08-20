@@ -1,23 +1,22 @@
 /* Localizable.strings is the default filename iOS uses for localized text. Resist the urge to name the file something else, otherwise you will have to type the name of your .strings file every time you reference a localized string. */
-"news" = "neee";
-"agenda" = "addd";
-"audio" = "xxx";
-"video" = "Vidccceo";
+"news" = "Nouvelles";
+"agenda" = "Ordre du jour";
+"audio" = "Acoustique";
+"video" = "Vidéo";
 "radio" = "Radio";
 "photo" = "Photo";
 
-"no_title" = "[No title]";
-"posted_on" = "Posted on";
-"downloading" = "Downloading";
-"loading" = "Loading";
-"event_not_found" = "Event Not Found.";
+"no_title" = "[Pas de titre]";
+"posted_on" = "Message posté sur";
+"downloading" = "Téléchargement";
+"event_not_found" = "Événement non trouvé.";
 
-"title_guide" = "Browser application menu";
-"description_guide" = "To navigate simply swipe your hand from left to right to bring up the application's menu, navigate the different headings";
+"title_guide" = "Menu de l'application de navigateur";
+"description_guide" = "Pour naviguer simplement glisser votre main de gauche à droite pour faire apparaître le menu de l'application, naviguer dans les différentes rubriques";
 
-"dance_shows" = "Dance Shows";
-"dance_workshops" = "Dance workshops";
-"dance_party" = "Dance party";
+"dance_shows" = "Des spectacles de danse";
+"dance_workshops" = "Ateliers de danse";
+"dance_party" = "Soirée de danses";
 "salsa_cubaine" = "Salsa Cubaine";
 "salsa_portoricaine" = "Salsa Portoricaine";
 "bachata" = "Bachata";
@@ -25,13 +24,18 @@
 "reggaeton" = "Reggaeton";
 "merengue" = "Merengue";
 
-"research" = "Research";
-"calendar" = "Calendar";
+"research" = "Recherche";
+"calendar" = "Calendrier";
 "city" = "Ville";
-"date_and_city" = "Date & City";
-"find_events" = "FIND EVENTS";
-"kind" = "Kind";
-"hint_kind" = "State, Party, Course, ...";
-"select" = "Select";
-"music" = "Music";
+"date_and_city" = "Date et ville";
+"find_events" = "Trouver des événements";
+"kind" = "Genre";
+"hint_kind" = "État, Partie, Cours, ...";
+"select" = "Sélectionner";
+"music" = "Musique";
 "hint_music" = "Bachata, Salsa, Kizomba, ...";
+
+"arround_me" = "Autour de moi";
+"map" = "Carte";
+"photo_downloaded" = "Les photos téléchargées";
+"share_photo_via" = "PARTAGER PHOTO VIA";
