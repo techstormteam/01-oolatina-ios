@@ -14,11 +14,14 @@
 #import "CKCalendarView.h"
 #import "DropDownListView.h"
 #import "ArrayDropDown.h"
+#import "iToast.h"
+#import "MBProgressHUD.h"
 
 @interface AgendaView : UIView <CLLocationManagerDelegate>
 {
     UIImageView *background;
     AgendaScroll *mAgendaScroll;
+    UILabel *mNotFound;
     
     NSMutableArray *eventArray;
     CLLocationManager *locationManager;
@@ -26,6 +29,7 @@
     
 }
 
+@property (nonatomic, strong) MBProgressHUD   * theHud;
 - (void)gettingLocation;
 - (bool)isInside:(Event *)ev radius:(CGFloat)rad;
 - (void)loadEvent:(NSMutableArray *) eventArray;

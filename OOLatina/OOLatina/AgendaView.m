@@ -25,6 +25,13 @@
         background.image = [UIImage imageNamed:@"background.png"];
         [self addSubview:background];
         
+        mNotFound = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        mNotFound.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
+        mNotFound.text = NSLocalizedString(@"event_not_found", @"c");
+        mNotFound.textAlignment = UITextAlignmentCenter;
+        mNotFound.textColor = [UIColor whiteColor];
+        [mNotFound setFont: [UIFont fontWithName:@"Arial" size:24.0f]];
+        
         if([SCUtils isPhone5])
         {
             mAgendaScroll = [[AgendaScroll alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height-60)];
@@ -73,6 +80,10 @@
 {
     if([SCUtils isNetworkAvailable])
     {
+        [self hideEventNotFound];
+//        [self showHud:NSLocalizedString(@"loading", @"") superView:self];
+        [[[[iToast makeText:NSLocalizedString(@"Discover events arround 1 KM from here", @"")] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
+        
         CGFloat arroundRadius = 1000;
         [mAgendaScroll removeAllEvent];
         
@@ -84,7 +95,8 @@
             }
         }
         [mAgendaScroll loadEventPart:10];
-        
+//        [self hideHud];
+        [self showEventNotFound];
     }
     else
     {
@@ -124,6 +136,34 @@
 //        longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
 //        latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
     }
+}
+
+#pragma mark - NotFound
+-(void)showEventNotFound
+{
+    [self addSubview:mNotFound];
+}
+
+-(void)hideEventNotFound
+{
+    [mNotFound removeFromSuperview];
+}
+
+#pragma mark - ProgressHud
+-(void)showHud:(NSString *)text superView:view
+{
+    if (_theHud == nil) {
+        _theHud = [[MBProgressHUD alloc] init];
+    }
+    
+    _theHud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    _theHud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0];
+    _theHud.labelText = text;
+}
+
+-(void)hideHud
+{
+    [_theHud hide:YES];
 }
 
 @end

@@ -9,6 +9,8 @@
 "no_title" = "[No title]";
 "posted_on" = "Posted on";
 "downloading" = "Downloading";
+"loading" = "Loading";
+"event_not_found" = "Event Not Found.";
 
 "title_guide" = "Browser application menu";
 "description_guide" = "To navigate simply swipe your hand from left to right to bring up the application's menu, navigate the different headings";
