@@ -18,7 +18,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        mNotFound = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        mNotFound.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
+        mNotFound.text = NSLocalizedString(@"event_not_found", @"c");
+        mNotFound.textAlignment = UITextAlignmentCenter;
+        mNotFound.textColor = [UIColor whiteColor];
+        [mNotFound setFont: [UIFont fontWithName:@"Arial" size:24.0f]];
     }
     return self;
 }
@@ -36,6 +41,7 @@
 - (void)addAnnotations:eventArray{
     if([SCUtils isNetworkAvailable])
     {
+        [self hideEventNotFound];
         eventList = eventArray;
         [self.mapView removeAnnotations:annotationList];
         for (int x=0; x<[eventArray count]; x++)
@@ -54,6 +60,9 @@
         }
         
         [self initZoomView];
+        if ([eventArray count] <= 0) {
+            [self showEventNotFound];
+        }
     }
     else
     {
@@ -71,6 +80,17 @@
 - (void) loadEvent:eventArray
 {
     
+}
+
+#pragma mark - NotFound
+-(void)showEventNotFound
+{
+    [self.view addSubview:mNotFound];
+}
+
+-(void)hideEventNotFound
+{
+    [mNotFound removeFromSuperview];
 }
 
 - (void) initZoomView

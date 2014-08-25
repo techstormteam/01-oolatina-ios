@@ -19,6 +19,9 @@
     CLLocation *currentLocation;
     NSMutableArray *eventList;
     NSMutableArray *annotationList;
+    
+    UIImageView *background;
+    UILabel *mNotFound;
 }
 
 - (void)addAnnotations:(NSMutableArray *)eventArray;

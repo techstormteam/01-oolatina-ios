@@ -57,16 +57,21 @@
 {
     if([SCUtils isNetworkAvailable])
     {
-        
+        [self hideEventNotFound];
         eventArray =eventList;
         [mAgendaScroll removeAllEvent];
+        int count = 0;
         for (int x=0; x<eventArray.count; x++)
         {
             Event *nEvent = [eventArray objectAtIndex:x];
             [mAgendaScroll addEvent:nEvent];
+            count++;
         }
         [mAgendaScroll setCurrentEventCount:0];
         [mAgendaScroll loadEventPart:10];
+        if (count <= 0) {
+            [self showEventNotFound];
+        }
     }
     else
     {
@@ -86,17 +91,20 @@
         
         CGFloat arroundRadius = 1000;
         [mAgendaScroll removeAllEvent];
-        
+        int count = 0;
         for (int x=0; x<[eventList count]; x++)
         {
             Event *nEvent = [eventList objectAtIndex:x];
             if ([self isInside:nEvent radius:arroundRadius]) {
                 [mAgendaScroll addEvent:nEvent];
+                count++;
             }
         }
         [mAgendaScroll loadEventPart:10];
 //        [self hideHud];
-        [self showEventNotFound];
+        if (count <= 0) {
+            [self showEventNotFound];
+        }
     }
     else
     {
