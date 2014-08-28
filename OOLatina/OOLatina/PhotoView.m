@@ -124,23 +124,23 @@
                 [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
                 [nPhotos addObject:nPhoto];
                 
-                nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
-                
-                nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
-                
-                nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
+//                nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//                
+//                nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//                
+//                nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
                 
 
             }
@@ -156,143 +156,143 @@
             
             
             
-            nPhotoEvent = [[PhotoEvent alloc] init];
-            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
-            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
-            
-            
-            nPhotos = [[NSMutableArray alloc] init];
-            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
-                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
-                
-                Photo *nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
-            }
-            [nPhotoEvent setPhoto:nPhotos];
-            heightOfTitle = 50;
-            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
-            heightOfAlbum = (numberOfImageRows * _imgSize.width);
-            heightOfSection = heightOfTitle + heightOfAlbum;
-            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
-            [photoEvents addObject:nPhotoEvent];
-            
-            
-            
-            
-            
-            
-            nPhotoEvent = [[PhotoEvent alloc] init];
-            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
-            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
-            
-            
-            nPhotos = [[NSMutableArray alloc] init];
-            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
-                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
-                
-                Photo *nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
-            }
-            [nPhotoEvent setPhoto:nPhotos];
-            heightOfTitle = 50;
-            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
-            heightOfAlbum = (numberOfImageRows * _imgSize.width);
-            heightOfSection = heightOfTitle + heightOfAlbum;
-            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
-            [photoEvents addObject:nPhotoEvent];
-
-            
-            
-            
-            
-            
-            
-            nPhotoEvent = [[PhotoEvent alloc] init];
-            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
-            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
-            
-            
-            nPhotos = [[NSMutableArray alloc] init];
-            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
-                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
-                
-                Photo *nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
-            }
-            [nPhotoEvent setPhoto:nPhotos];
-            heightOfTitle = 50;
-            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
-            heightOfAlbum = (numberOfImageRows * _imgSize.width);
-            heightOfSection = heightOfTitle + heightOfAlbum;
-            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
-            [photoEvents addObject:nPhotoEvent];
-
-            
-            
-            
-            
-            
-            
-            nPhotoEvent = [[PhotoEvent alloc] init];
-            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
-            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
-            
-            
-            nPhotos = [[NSMutableArray alloc] init];
-            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
-                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
-                
-                Photo *nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
-            }
-            [nPhotoEvent setPhoto:nPhotos];
-            heightOfTitle = 50;
-            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
-            heightOfAlbum = (numberOfImageRows * _imgSize.width);
-            heightOfSection = heightOfTitle + heightOfAlbum;
-            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
-            [photoEvents addObject:nPhotoEvent];
-
-            
-            
-            
-            
-            
-            
-            nPhotoEvent = [[PhotoEvent alloc] init];
-            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
-            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
-            
-            
-            nPhotos = [[NSMutableArray alloc] init];
-            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
-                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
-                
-                Photo *nPhoto = [[Photo alloc] init];
-                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
-                [nPhotos addObject:nPhoto];
-            }
-            [nPhotoEvent setPhoto:nPhotos];
-            heightOfTitle = 50;
-            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
-            heightOfAlbum = (numberOfImageRows * _imgSize.width);
-            heightOfSection = heightOfTitle + heightOfAlbum;
-            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
-            [photoEvents addObject:nPhotoEvent];
+//            nPhotoEvent = [[PhotoEvent alloc] init];
+//            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
+//            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
+//            
+//            
+//            nPhotos = [[NSMutableArray alloc] init];
+//            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
+//                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
+//                
+//                Photo *nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//            }
+//            [nPhotoEvent setPhoto:nPhotos];
+//            heightOfTitle = 50;
+//            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
+//            heightOfAlbum = (numberOfImageRows * _imgSize.width);
+//            heightOfSection = heightOfTitle + heightOfAlbum;
+//            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
+//            [photoEvents addObject:nPhotoEvent];
+//            
+//            
+//            
+//            
+//            
+//            
+//            nPhotoEvent = [[PhotoEvent alloc] init];
+//            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
+//            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
+//            
+//            
+//            nPhotos = [[NSMutableArray alloc] init];
+//            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
+//                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
+//                
+//                Photo *nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//            }
+//            [nPhotoEvent setPhoto:nPhotos];
+//            heightOfTitle = 50;
+//            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
+//            heightOfAlbum = (numberOfImageRows * _imgSize.width);
+//            heightOfSection = heightOfTitle + heightOfAlbum;
+//            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
+//            [photoEvents addObject:nPhotoEvent];
+//
+//            
+//            
+//            
+//            
+//            
+//            
+//            nPhotoEvent = [[PhotoEvent alloc] init];
+//            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
+//            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
+//            
+//            
+//            nPhotos = [[NSMutableArray alloc] init];
+//            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
+//                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
+//                
+//                Photo *nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//            }
+//            [nPhotoEvent setPhoto:nPhotos];
+//            heightOfTitle = 50;
+//            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
+//            heightOfAlbum = (numberOfImageRows * _imgSize.width);
+//            heightOfSection = heightOfTitle + heightOfAlbum;
+//            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
+//            [photoEvents addObject:nPhotoEvent];
+//
+//            
+//            
+//            
+//            
+//            
+//            
+//            nPhotoEvent = [[PhotoEvent alloc] init];
+//            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
+//            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
+//            
+//            
+//            nPhotos = [[NSMutableArray alloc] init];
+//            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
+//                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
+//                
+//                Photo *nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//            }
+//            [nPhotoEvent setPhoto:nPhotos];
+//            heightOfTitle = 50;
+//            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
+//            heightOfAlbum = (numberOfImageRows * _imgSize.width);
+//            heightOfSection = heightOfTitle + heightOfAlbum;
+//            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
+//            [photoEvents addObject:nPhotoEvent];
+//
+//            
+//            
+//            
+//            
+//            
+//            
+//            nPhotoEvent = [[PhotoEvent alloc] init];
+//            [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
+//            [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
+//            
+//            
+//            nPhotos = [[NSMutableArray alloc] init];
+//            for (int photoNumber=0; photoNumber<mPhotos.count; photoNumber++) {
+//                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:photoNumber];
+//                
+//                Photo *nPhoto = [[Photo alloc] init];
+//                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
+//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
+//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
+//                [nPhotos addObject:nPhoto];
+//            }
+//            [nPhotoEvent setPhoto:nPhotos];
+//            heightOfTitle = 50;
+//            numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
+//            heightOfAlbum = (numberOfImageRows * _imgSize.width);
+//            heightOfSection = heightOfTitle + heightOfAlbum;
+//            [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
+//            [photoEvents addObject:nPhotoEvent];
 
         }
         

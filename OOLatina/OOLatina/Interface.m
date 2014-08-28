@@ -132,10 +132,10 @@
         [mMenuTableView AddElement:mElement];
     }
     
-    mNewsView = [[NewsView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
-    mNewsView.delegate = self;
-    mNewsView.backgroundColor = [UIColor redColor];
-    [pageView addSubview:mNewsView];
+//    mNewsView = [[NewsView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
+//    mNewsView.delegate = self;
+//    mNewsView.backgroundColor = [UIColor redColor];
+//    [pageView addSubview:mNewsView];
 }
 
 - (void)showSearch

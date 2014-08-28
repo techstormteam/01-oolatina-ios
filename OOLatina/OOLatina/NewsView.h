@@ -7,23 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIDoubleScroll.h"
+#import "NewsScroller.h"
+#import "NewsCell.h"
 
 @protocol NewsViewDelegate <NSObject>
 - (void)showPageFeed:(NSString *)url;
 @end
 
-@interface NewsView : UIView <UIDoubleScrollDelegate, NSXMLParserDelegate>
+@interface NewsView : UIView <UITableViewDataSource, UITableViewDelegate>
 {
-    UIDoubleScroll *mDoubleScroll;
+    NewsScroller *mNewsScroller;
     UIImageView *background;
-    NSMutableArray *arrayRSS;
-    NSMutableArray *stories;
-    NSXMLParser *rssParser;
     
     NSMutableDictionary *item;
     NSString *currentElement;
-    NSMutableString *currentTitle,*currentDate,*currentSummary,*currentLink,*currentDescription;
+    NSMutableString *currentTitle,*currentSummary,*currentImageLink,*currentDescription;
 }
 
 @property (nonatomic,assign) id<NewsViewDelegate> delegate;
