@@ -10,10 +10,22 @@
 
 @implementation NewsCell
 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self) {
+        [[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:self options:nil];
+    }
+    
+    return self;
+}
+
 - (void)awakeFromNib
 {
     // Initialization code
-//    [[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:self options:nil];
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

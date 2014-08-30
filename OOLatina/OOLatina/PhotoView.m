@@ -16,10 +16,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _numberOfImageInRow = 4;
-        
-        
-        
+        _numberOfImageInRow = 3;
+
         background = [[UIImageView alloc] initWithFrame:self.bounds];
         background.contentMode = UIViewContentModeScaleToFill;
         background.image = [UIImage imageNamed:@"background.png"];

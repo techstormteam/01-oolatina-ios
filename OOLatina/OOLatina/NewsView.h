@@ -9,15 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "NewsScroller.h"
 #import "NewsCell.h"
+#import "News.h"
+#import "Utility.h"
 
 @protocol NewsViewDelegate <NSObject>
 - (void)showPageFeed:(NSString *)url;
 @end
 
-@interface NewsView : UIView <UITableViewDataSource, UITableViewDelegate>
+@interface NewsView : UIView<UITableViewDataSource, UITableViewDelegate>
 {
+    int newsCount;
+    NSMutableArray *newsObjects;
     NewsScroller *mNewsScroller;
     UIImageView *background;
+    dispatch_queue_t myQueue;
     
     NSMutableDictionary *item;
     NSString *currentElement;
