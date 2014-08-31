@@ -21,11 +21,12 @@
     {
         background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         background.image = [UIImage imageNamed:@"background.png"];
-        [self addSubview:background];
+//        [self addSubview:background];
         
         mNewsScroller = [[NewsScroller alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         mNewsScroller.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-        mNewsScroller.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
+//        mNewsScroller.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
+        mNewsScroller.backgroundView = background;
         [self addSubview:mNewsScroller];
         [self loadNewsEvent];
         mNewsScroller.delegate = self;
@@ -141,7 +142,9 @@
     if (cell == nil && newsCount < [newsObjects count]) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:self options:nil];
         cell = (NewsCell *)[nib objectAtIndex:0];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.frame = CGRectMake(0, 0, tableView.frame.size.width, 300);
+        cell.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
         News *news = [newsObjects objectAtIndex:newsCount];
         if ([news getTitle] == nil) {
             cell.mTitle.text = NSLocalizedString(@"no_title", nil);

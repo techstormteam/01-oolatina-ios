@@ -14,35 +14,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[No Title]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-wL-63L">
-                        <rect key="frame" x="127" y="0.0" width="234" height="26"/>
+                        <rect key="frame" x="127" y="10" width="234" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[No Description]" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="234" translatesAutoresizingMaskIntoConstraints="NO" id="kLN-O0-EU1">
-                        <rect key="frame" x="127" y="34" width="234" height="104"/>
+                        <rect key="frame" x="127" y="44" width="234" height="94"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXL-VB-xqm">
-                        <rect key="frame" x="0.0" y="0.0" width="119" height="146"/>
+                        <rect key="frame" x="0.0" y="10" width="119" height="136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="119" id="TQS-Pr-kQa"/>
+                            <constraint firstAttribute="width" constant="119" id="DcS-qy-Qm1"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="QXL-VB-xqm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FPk-C2-ASY"/>
-                    <constraint firstItem="kLN-O0-EU1" firstAttribute="top" secondItem="gkT-wL-63L" secondAttribute="bottom" constant="8" id="JI7-j1-dsQ"/>
-                    <constraint firstItem="gkT-wL-63L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Jay-wl-jty"/>
-                    <constraint firstItem="kLN-O0-EU1" firstAttribute="leading" secondItem="QXL-VB-xqm" secondAttribute="trailing" constant="8" id="PdQ-kt-feo"/>
-                    <constraint firstAttribute="trailing" secondItem="gkT-wL-63L" secondAttribute="trailing" id="WQB-3H-6bn"/>
-                    <constraint firstItem="QXL-VB-xqm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YTB-UX-nYM"/>
-                    <constraint firstAttribute="trailing" secondItem="kLN-O0-EU1" secondAttribute="trailing" id="ZMt-R0-q4G"/>
-                    <constraint firstItem="gkT-wL-63L" firstAttribute="leading" secondItem="QXL-VB-xqm" secondAttribute="trailing" constant="8" id="k3a-98-9JG"/>
+                    <constraint firstItem="kLN-O0-EU1" firstAttribute="leading" secondItem="QXL-VB-xqm" secondAttribute="trailing" constant="8" id="CL3-0e-9DM"/>
+                    <constraint firstItem="gkT-wL-63L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NtQ-75-ed7"/>
+                    <constraint firstItem="QXL-VB-xqm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cVh-aQ-VNh"/>
+                    <constraint firstAttribute="trailing" secondItem="kLN-O0-EU1" secondAttribute="trailing" id="eMo-O8-gTf"/>
+                    <constraint firstItem="gkT-wL-63L" firstAttribute="leading" secondItem="QXL-VB-xqm" secondAttribute="trailing" constant="8" id="gIc-fY-wWj"/>
+                    <constraint firstItem="QXL-VB-xqm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qgh-6i-xTM"/>
+                    <constraint firstAttribute="trailing" secondItem="gkT-wL-63L" secondAttribute="trailing" id="u6w-Do-sl2"/>
+                    <constraint firstItem="kLN-O0-EU1" firstAttribute="top" secondItem="gkT-wL-63L" secondAttribute="bottom" constant="8" id="zBi-ii-fh8"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
