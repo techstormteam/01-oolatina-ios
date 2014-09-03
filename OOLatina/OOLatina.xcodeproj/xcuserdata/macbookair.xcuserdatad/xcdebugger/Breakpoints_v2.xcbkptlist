@@ -2955,7 +2955,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "-isInside:radius:"
+            landmarkName = "-loadEventArroundMe:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2971,7 +2971,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "-isInside:radius:"
+            landmarkName = "-loadEventArroundMe:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
