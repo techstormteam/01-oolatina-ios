@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -13,41 +13,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="146"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[No Title]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-wL-63L">
-                        <rect key="frame" x="127" y="10" width="234" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[No Description]" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="234" translatesAutoresizingMaskIntoConstraints="NO" id="kLN-O0-EU1">
-                        <rect key="frame" x="127" y="44" width="234" height="94"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXL-VB-xqm">
-                        <rect key="frame" x="0.0" y="10" width="119" height="136"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QXL-VB-xqm">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="146"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="119" id="DcS-qy-Qm1"/>
-                        </constraints>
                     </imageView>
+                    <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3Q-jq-VEv">
+                        <rect key="frame" x="69" y="104" width="292" height="42"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[No Title]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-wL-63L">
+                                <rect key="frame" x="0.0" y="0.0" width="292" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.15355785472972974" blue="0.45399598817567566" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="Bpa-db-4Ob"/>
+                            <constraint firstAttribute="trailing" secondItem="gkT-wL-63L" secondAttribute="trailing" id="PlX-wM-yTu"/>
+                            <constraint firstItem="gkT-wL-63L" firstAttribute="top" secondItem="U3Q-jq-VEv" secondAttribute="top" id="TPr-ot-TQE"/>
+                            <constraint firstAttribute="bottom" secondItem="gkT-wL-63L" secondAttribute="bottom" id="feC-pb-bLE"/>
+                            <constraint firstItem="gkT-wL-63L" firstAttribute="leading" secondItem="U3Q-jq-VEv" secondAttribute="leading" id="nD0-mV-2Cd"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="kLN-O0-EU1" firstAttribute="leading" secondItem="QXL-VB-xqm" secondAttribute="trailing" constant="8" id="CL3-0e-9DM"/>
-                    <constraint firstItem="gkT-wL-63L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NtQ-75-ed7"/>
-                    <constraint firstItem="QXL-VB-xqm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cVh-aQ-VNh"/>
-                    <constraint firstAttribute="trailing" secondItem="kLN-O0-EU1" secondAttribute="trailing" id="eMo-O8-gTf"/>
-                    <constraint firstItem="gkT-wL-63L" firstAttribute="leading" secondItem="QXL-VB-xqm" secondAttribute="trailing" constant="8" id="gIc-fY-wWj"/>
-                    <constraint firstItem="QXL-VB-xqm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qgh-6i-xTM"/>
-                    <constraint firstAttribute="trailing" secondItem="gkT-wL-63L" secondAttribute="trailing" id="u6w-Do-sl2"/>
-                    <constraint firstItem="kLN-O0-EU1" firstAttribute="top" secondItem="gkT-wL-63L" secondAttribute="bottom" constant="8" id="zBi-ii-fh8"/>
+                    <constraint firstItem="U3Q-jq-VEv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="69" id="1U9-9E-rcy"/>
+                    <constraint firstItem="QXL-VB-xqm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZkT-DT-Kz6"/>
+                    <constraint firstAttribute="bottom" secondItem="U3Q-jq-VEv" secondAttribute="bottom" id="hrM-Jr-3cz"/>
+                    <constraint firstItem="QXL-VB-xqm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iWC-Ir-nPG"/>
+                    <constraint firstAttribute="trailing" secondItem="U3Q-jq-VEv" secondAttribute="trailing" id="muO-gb-NRI"/>
+                    <constraint firstAttribute="bottom" secondItem="QXL-VB-xqm" secondAttribute="bottom" id="ql8-gG-yr5"/>
+                    <constraint firstAttribute="trailing" secondItem="QXL-VB-xqm" secondAttribute="trailing" id="wnM-BG-1OD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="mDescription" destination="kLN-O0-EU1" id="dh3-8S-6L8"/>
                 <outlet property="mImage" destination="QXL-VB-xqm" id="HHX-In-zG8"/>
                 <outlet property="mTitle" destination="gkT-wL-63L" id="8c5-bO-1bx"/>
             </connections>

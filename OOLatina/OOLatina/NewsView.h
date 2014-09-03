@@ -19,6 +19,7 @@
 @interface NewsView : UIView<UITableViewDataSource, UITableViewDelegate>
 {
     int newsCount;
+    int heightOfCell;
     NSMutableArray *newsObjects;
     NewsScroller *mNewsScroller;
     UIImageView *background;

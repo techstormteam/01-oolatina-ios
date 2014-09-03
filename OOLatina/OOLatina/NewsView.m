@@ -19,6 +19,7 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        heightOfCell = 200;
         background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         background.image = [UIImage imageNamed:@"background.png"];
 //        [self addSubview:background];
@@ -143,7 +144,8 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:self options:nil];
         cell = (NewsCell *)[nib objectAtIndex:0];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.frame = CGRectMake(0, 0, tableView.frame.size.width, 300);
+        CGRect fr = CGRectMake(0, 0, tableView.frame.size.width, heightOfCell);
+        cell.frame = fr;
         cell.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
         News *news = [newsObjects objectAtIndex:newsCount];
         if ([news getTitle] == nil) {
@@ -157,8 +159,7 @@
             cell.mDescription.text = [news getDescription];
         }
         UIImage *image = [Utility getImageFromURL:[news getImage]];
-        cell.mImage.image = [Utility imageWithImage:image scaledToMaxWidth:cell.mImage.frame.size.width maxHeight:cell.mImage.frame.size.height] ;
-        
+        cell.mImage.image = [Utility imageWithImage:image scaledToSize:fr.size];
         newsCount++;
     }
     
@@ -171,7 +172,7 @@
  #pragma mark - Table view delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 300;
+    return heightOfCell;
 }
 
 
