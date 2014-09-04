@@ -21,9 +21,30 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        
     }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    // just for test GUI
+    agendaDetail = [[AgendaDetail alloc] initWithFrame:CGRectMake(0, 0, 320, 658)];
+    Event *nEvent = [[Event alloc] init];
+    [nEvent setTitle:@"dsgkk"];
+    [nEvent setVille:@"dsgkk"];
+    [nEvent setYear:@"dsgkk"];
+    [nEvent setThumbnailEvent:@"http://www.joneshamiltonag.com/jh/wp-content/uploads/2011/10/Poultry-processing-1-500x248.jpg"];
+    [nEvent setPhoneNumber:@"dsgkk"];
+    [nEvent setName:@"dsgkk"];
+    [nEvent setMonth:@"dsgkk"];
+    [nEvent setLongitude:10];
+    [nEvent setLatitude:20];
+    [nEvent setEventDay:@"dskhgvoisdn"];
+    [nEvent setEventDay:@"dsgkk"];
+    [nEvent setCodePostal:@"dsgkk"];
+    [nEvent setAdresse:@"dsgkfdsew\nb ewbewbo iug\newuivb weui  bfdm sdkjb jsdhuivb eowo pobjsdlk  bvb iuewv iuywey8 k"];
+    [agendaDetail setEvent:nEvent];
+    [self.view addSubview:agendaDetail];
     return self;
 }
 
@@ -62,11 +83,6 @@
 }
 
 - (void)dealloc {
-//    [agendaButton release];
-//    [arroundMeButton release];
-//    [slidLabel release];
-//    [nibScrollView release];
-//    [super dealloc];
 }
 
 #pragma mark-

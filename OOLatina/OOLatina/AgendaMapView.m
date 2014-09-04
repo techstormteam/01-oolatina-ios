@@ -38,7 +38,7 @@
 //    locationManager.delegate = self;
 }
 
-- (void)addAnnotations:eventArray{
+- (void)addAnnotations:(NSMutableArray*)eventArray{
     if([SCUtils isNetworkAvailable])
     {
         [self hideEventNotFound];

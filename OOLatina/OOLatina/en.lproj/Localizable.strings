@@ -41,3 +41,5 @@
 "map" = "Map";
 "photo_downloaded" = "Photo Downloaded";
 "share_photo_via" = "SHARE PHOTO VIA";
+"description" = "Description";
+"address"= "Address";

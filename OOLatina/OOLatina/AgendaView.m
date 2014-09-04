@@ -79,6 +79,7 @@
         [nEvent setMonth:@"dsgkk"];
         [nEvent setLongitude:10];
         [nEvent setLatitude:20];
+        [nEvent setEventDay:@"dskhgvoisdn"];
         [nEvent setEventDay:@"dsgkk"];
         [nEvent setCodePostal:@"dsgkk"];
         [nEvent setAdresse:@"dsgkk"];
@@ -88,6 +89,7 @@
         [nEvent setTitle:@"dsgkk"];
         [nEvent setVille:@"dsgkk"];
         [nEvent setYear:@"dsvdsgkk"];
+        [nEvent setEventDay:@"dskhgvdswoisdn"];
         [nEvent setThumbnailEvent:@"http://www.joneshamiltonag.com/jh/wp-content/uploads/2011/10/Poultry-processing-1-500x248.jpg"];
         [nEvent setPhoneNumber:@"dsgkk"];
         [nEvent setName:@"dsgkk"];

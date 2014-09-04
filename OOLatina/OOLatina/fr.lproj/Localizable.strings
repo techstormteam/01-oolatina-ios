@@ -40,3 +40,5 @@
 "map" = "Carte";
 "photo_downloaded" = "Les photos téléchargées";
 "share_photo_via" = "PARTAGER PHOTO VIA";
+"description" = "Description";
+"address"= "Adresse";

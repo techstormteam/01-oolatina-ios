@@ -188,6 +188,9 @@
 		D06096F2199518C000153348 /* GMGridViewLayoutStrategies.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096EB199518C000153348 /* GMGridViewLayoutStrategies.m */; };
 		D06096F3199518C000153348 /* UIGestureRecognizer+GMGridViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096ED199518C000153348 /* UIGestureRecognizer+GMGridViewAdditions.m */; };
 		D06096F4199518C000153348 /* UIView+GMGridViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096EF199518C000153348 /* UIView+GMGridViewAdditions.m */; };
+		D06C366819B879790056A4B3 /* AgendaDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = D06C366719B879790056A4B3 /* AgendaDetail.m */; };
+		D06C366B19B886570056A4B3 /* AgendaDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06C366A19B886570056A4B3 /* AgendaDescription.xib */; };
+		D06C366E19B889D40056A4B3 /* AgendaDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D06C366D19B889D40056A4B3 /* AgendaDescription.m */; };
 		D0926296198CD4550055D7A6 /* PhotoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926295198CD4550055D7A6 /* PhotoEvent.m */; };
 		D0926299198CDF5C0055D7A6 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = D0926298198CDF5C0055D7A6 /* Photo.m */; };
 		D093784E198C5E4400626197 /* FirstGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D093784D198C5E4400626197 /* FirstGuideView.xib */; };
@@ -525,6 +528,11 @@
 		D06096ED199518C000153348 /* UIGestureRecognizer+GMGridViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GMGridViewAdditions.m"; sourceTree = "<group>"; };
 		D06096EE199518C000153348 /* UIView+GMGridViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GMGridViewAdditions.h"; sourceTree = "<group>"; };
 		D06096EF199518C000153348 /* UIView+GMGridViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GMGridViewAdditions.m"; sourceTree = "<group>"; };
+		D06C366619B879790056A4B3 /* AgendaDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaDetail.h; sourceTree = "<group>"; };
+		D06C366719B879790056A4B3 /* AgendaDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaDetail.m; sourceTree = "<group>"; };
+		D06C366A19B886570056A4B3 /* AgendaDescription.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgendaDescription.xib; sourceTree = "<group>"; };
+		D06C366C19B889D40056A4B3 /* AgendaDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaDescription.h; sourceTree = "<group>"; };
+		D06C366D19B889D40056A4B3 /* AgendaDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaDescription.m; sourceTree = "<group>"; };
 		D0926294198CD4550055D7A6 /* PhotoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoEvent.h; sourceTree = "<group>"; };
 		D0926295198CD4550055D7A6 /* PhotoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEvent.m; sourceTree = "<group>"; };
 		D0926297198CDF5C0055D7A6 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
@@ -917,6 +925,11 @@
 				D0D8AE0E19AF021200B0E9A8 /* NewsScroller.m */,
 				D00A116D19B0A265003DA63F /* News.h */,
 				D00A116E19B0A265003DA63F /* News.m */,
+				D06C366619B879790056A4B3 /* AgendaDetail.h */,
+				D06C366719B879790056A4B3 /* AgendaDetail.m */,
+				D06C366A19B886570056A4B3 /* AgendaDescription.xib */,
+				D06C366C19B889D40056A4B3 /* AgendaDescription.h */,
+				D06C366D19B889D40056A4B3 /* AgendaDescription.m */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -1425,6 +1438,7 @@
 				51FD5F9518CFD22E0040369B /* gallery_icon.png in Resources */,
 				514D098E18DC3E9E00872793 /* default-portrait.png in Resources */,
 				D09C7B44199CBC6900BEB735 /* SocialChooser.xib in Resources */,
+				D06C366B19B886570056A4B3 /* AgendaDescription.xib in Resources */,
 				D016CDFD19A4A3220073D981 /* Main.strings in Resources */,
 				51A63B2618D5DD20005DCD55 /* zumba.jpg in Resources */,
 				514D098018DB8E0700872793 /* check_mark@2x.png in Resources */,
@@ -1532,6 +1546,7 @@
 				514D096118DA67B100872793 /* CellAgenda.m in Sources */,
 				51A63AFC18D4BD14005DCD55 /* AFURLSessionManager.m in Sources */,
 				51FD5FBB18D1EB090040369B /* VideoView.m in Sources */,
+				D06C366E19B889D40056A4B3 /* AgendaDescription.m in Sources */,
 				51A63AF818D4BD14005DCD55 /* AFSecurityPolicy.m in Sources */,
 				51A63AFB18D4BD14005DCD55 /* AFURLResponseSerialization.m in Sources */,
 				51FD5FEE18D3AAAC0040369B /* LBYouTubePlayerViewController.m in Sources */,
@@ -1598,6 +1613,7 @@
 				51FD5FE618D3A7E30040369B /* VideoCategoryView.m in Sources */,
 				51C73F1B18D8BE2400EECBA5 /* WebView.m in Sources */,
 				51A63B3A18D65C3A005DCD55 /* ImageElement.m in Sources */,
+				D06C366819B879790056A4B3 /* AgendaDetail.m in Sources */,
 				51FD5F8918CFCC6B0040369B /* NavigationBar.m in Sources */,
 				D09C7B17199C96F700BEB735 /* GTMNSString+HTML.m in Sources */,
 				D00A116F19B0A265003DA63F /* News.m in Sources */,
@@ -1785,8 +1801,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C1B3DFBF-E1DE-43BF-9A84-41325FB5375C";
-				"PROVISIONING_PROFILE[sdk=*]" = "C1B3DFBF-E1DE-43BF-9A84-41325FB5375C";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1804,7 +1820,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C1B3DFBF-E1DE-43BF-9A84-41325FB5375C";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

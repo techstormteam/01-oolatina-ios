@@ -10,6 +10,7 @@
 #import "AgendaView.h"
 #import "AgendaMapView.h"
 #import "SCUtils.h"
+#import "AgendaDetail.h"
 
 @interface AgendaWholeView : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, CKCalendarDelegate, kDropDownListViewDelegate>
 {
@@ -17,6 +18,7 @@
     AgendaView *agendaView;
     AgendaView *arroundMeView;
     AgendaMapView *agendaMapView;
+    AgendaDetail *agendaDetail;
     
     
 	UIPageControl *pageControl;

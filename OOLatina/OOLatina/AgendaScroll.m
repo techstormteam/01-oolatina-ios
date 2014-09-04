@@ -110,8 +110,6 @@
                     [mEventCell addObject:mAgendaDayCell];
                     [mScrollView addSubview:mAgendaDayCell];
                     
-                    CGRect s = mScrollView.bounds;
-                    
                     yPos = yPos + mAgendaDayCell.frame.size.height + 1;
                     mScrollView.contentSize = CGSizeMake(mScrollView.frame.size.width,yPos);
                 }

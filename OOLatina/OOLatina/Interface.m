@@ -281,10 +281,8 @@
         else
         {
             searchButton.hidden = NO;
-            mAgendaWholeView = [[AgendaWholeView alloc] initWithNibName:@"AgendaWholeView" bundle:nil];
-//            mAgendaView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
-//            mAgendaView.backgroundColor = [UIColor blueColor];
-//            [pageView addSubview:mAgendaView];
+//            mAgendaWholeView = [[AgendaWholeView alloc] initWithNibName:@"AgendaWholeView" bundle:nil];
+            mAgendaWholeView = [[AgendaWholeView alloc] initWithCoder:nil];
             [pageView addSubview:mAgendaWholeView.view];
         }
     }

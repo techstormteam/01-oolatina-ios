@@ -15,16 +15,28 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        
+        
         self.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.7];
         
         thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        thumbnail.userInteractionEnabled = YES;
         [self addSubview:thumbnail];
+        UITapGestureRecognizer *singleFingerTap_Image =
+        [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(cellAgendaTapped:)];
+        [thumbnail addGestureRecognizer:singleFingerTap_Image];
         
         int widthOfTitleBackground = 220;
         int heightOfTitleBackground = 30;
         titleBackground = [[UIView alloc] initWithFrame:CGRectMake(frame.size.width - widthOfTitleBackground, frame.size.height - heightOfTitleBackground, widthOfTitleBackground, heightOfTitleBackground)];
         titleBackground.backgroundColor = [UIColor colorWithRed:221.0/255.0 green:39.0/255.0 blue:116.0/255.0 alpha:0.90];
+        titleBackground.userInteractionEnabled = YES;
         [self addSubview:titleBackground];
+        UITapGestureRecognizer *singleFingerTap_Title =
+        [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(cellAgendaTapped:)];
+        [titleBackground addGestureRecognizer:singleFingerTap_Title];
         
         titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleBackground.frame.size.width, titleBackground.frame.size.height)];
         titleLabel.textColor = [UIColor whiteColor];
@@ -48,6 +60,7 @@
 //        [self addSubview:lieuLabel];
         
         UIView *ViewRed = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width-50, 0, 50, 35)];
+        ViewRed.userInteractionEnabled = YES;
         ViewRed.backgroundColor = [UIColor redColor];
         [self addSubview:ViewRed];
         
@@ -58,8 +71,13 @@
         titleDay.text = @"Jeu\nMAR";
         titleDay.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0];
         [ViewRed addSubview:titleDay];
+        UITapGestureRecognizer *singleFingerTap_ViewRed =
+        [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(cellAgendaTapped:)];
+        [ViewRed addGestureRecognizer:singleFingerTap_ViewRed];
         
         UIView *ViewWhite = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width-50, 35, 50, 35)];
+        ViewWhite.userInteractionEnabled = YES;
         ViewWhite.backgroundColor = [UIColor whiteColor];
         [self addSubview:ViewWhite];
         
@@ -70,9 +88,22 @@
         titleDayLetter.text = @"20";
         titleDayLetter.font = [UIFont fontWithName:@"Helvetica-Bold" size:21.0];
         [ViewWhite addSubview:titleDayLetter];
+        UITapGestureRecognizer *singleFingerTap_ViewWhite =
+        [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(cellAgendaTapped:)];
+        [ViewWhite addGestureRecognizer:singleFingerTap_ViewWhite];
+        
     }
     return self;
 }
+
+//The event handling method
+- (void)cellAgendaTapped:(UITapGestureRecognizer *)recognizer {
+    CGPoint location = [recognizer locationInView:[recognizer.view superview]];
+    
+    //Do stuff here...
+}
+
 
 - (void)addEvent:(Event *)_event
 {
