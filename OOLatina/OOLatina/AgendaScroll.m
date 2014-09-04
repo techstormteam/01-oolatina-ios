@@ -23,7 +23,7 @@
         mScrollView.delegate = self;
         [self addSubview:mScrollView];
         
-        yPos = 10;
+        yPos = 1;
     }
     return self;
 }
@@ -40,7 +40,7 @@
     [mEventCell removeAllObjects];
     [mEventArray removeAllObjects];
     
-    yPos = 10;
+    yPos = 1;
 }
 
 - (void)addEvent:(Event *)_event
@@ -103,14 +103,16 @@
 //                }
                 for (int x=0; x<mEventArray.count; x++)
                 {
-                    AgendaDayCell *mAgendaDayCell = [[AgendaDayCell alloc] initWithFrame:CGRectMake(5, yPos, mScrollView.frame.size.width-10, 300)];
+                    AgendaDayCell *mAgendaDayCell = [[AgendaDayCell alloc] initWithFrame:CGRectMake(0, yPos, mScrollView.frame.size.width, 300)];
                     mAgendaDayCell.layer.cornerRadius = 5.0;
                     [mAgendaDayCell.layer setMasksToBounds:YES];
                     [mAgendaDayCell addMutableEvent:[mEventArray objectAtIndex:x]];
                     [mEventCell addObject:mAgendaDayCell];
                     [mScrollView addSubview:mAgendaDayCell];
                     
-                    yPos = yPos + mAgendaDayCell.frame.size.height + 10;
+                    CGRect s = mScrollView.bounds;
+                    
+                    yPos = yPos + mAgendaDayCell.frame.size.height + 1;
                     mScrollView.contentSize = CGSizeMake(mScrollView.frame.size.width,yPos);
                 }
 //                inProgress = false;
