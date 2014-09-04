@@ -103,7 +103,7 @@
 //                }
                 for (int x=0; x<mEventArray.count; x++)
                 {
-                    AgendaDayCell *mAgendaDayCell = [[AgendaDayCell alloc] initWithFrame:CGRectMake(5, yPos, mScrollView.frame.size.width-10, 100)];
+                    AgendaDayCell *mAgendaDayCell = [[AgendaDayCell alloc] initWithFrame:CGRectMake(5, yPos, mScrollView.frame.size.width-10, 300)];
                     mAgendaDayCell.layer.cornerRadius = 5.0;
                     [mAgendaDayCell.layer setMasksToBounds:YES];
                     [mAgendaDayCell addMutableEvent:[mEventArray objectAtIndex:x]];

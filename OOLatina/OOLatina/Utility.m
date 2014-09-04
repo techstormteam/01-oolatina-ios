@@ -31,7 +31,10 @@ static NSMutableDictionary *cachedImages;
     {
         NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
         result = [UIImage imageWithData:data];
-        cachedImages[fileURL] = result;
+        if (result != nil)
+        {
+            cachedImages[fileURL] = result;
+        }
     } else {
         result = image;
     }

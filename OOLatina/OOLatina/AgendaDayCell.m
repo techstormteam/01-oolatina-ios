@@ -45,14 +45,16 @@
     
     titleLabel.text = [NSString stringWithFormat:@"%@ %@ %@",[mEvent getDayLetter],dateEventString,[mEvent getYear]];
     
+    int heightOfEvent = 150;
+    
     for (int x=0; x<eventMutable.count; x++)
     {
         Event *uEvent = (Event *)[eventMutable objectAtIndex:x];
-        CellAgenda *mAgenda = [[CellAgenda alloc] initWithFrame:CGRectMake(0, yPos, self.frame.size.width, 95)];
+        CellAgenda *mAgenda = [[CellAgenda alloc] initWithFrame:CGRectMake(0, yPos, self.frame.size.width, heightOfEvent)];
         [mAgenda addEvent:uEvent];
         [self addSubview:mAgenda];
         
-        yPos = yPos + 95;
+        yPos = yPos + heightOfEvent;
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, yPos);
     }
 }

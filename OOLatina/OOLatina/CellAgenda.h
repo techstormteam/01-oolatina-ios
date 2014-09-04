@@ -14,11 +14,12 @@
 {
     UILabel *titleLabel;
     UIView *separator;
-    UILabel *lieuLabel;
+//    UILabel *lieuLabel;
     UILabel *titleDayLetter;
     UILabel *titleDay;
     UIImageView *thumbnail;
     UIActivityIndicatorView *mLoading;
+    UIView *titleBackground;
 }
 
 - (void)addEvent:(Event *)_event;

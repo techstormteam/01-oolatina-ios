@@ -17,16 +17,23 @@
     {
         self.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.7];
         
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 5, frame.size.width-140, 50)];
-        titleLabel.textColor = [UIColor blackColor];
-        titleLabel.numberOfLines = 3;
-        titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0];
-        [self addSubview:titleLabel];
-        
-        thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(0, 5, 80, 80)];
+        thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         [self addSubview:thumbnail];
         
-        mLoading = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake((80-30)/2, (80-30)/2, 30, 30)];
+        int widthOfTitleBackground = 220;
+        int heightOfTitleBackground = 30;
+        titleBackground = [[UIView alloc] initWithFrame:CGRectMake(frame.size.width - widthOfTitleBackground, frame.size.height - heightOfTitleBackground, widthOfTitleBackground, heightOfTitleBackground)];
+        titleBackground.backgroundColor = [UIColor colorWithRed:221.0/255.0 green:39.0/255.0 blue:116.0/255.0 alpha:0.90];
+        [self addSubview:titleBackground];
+        
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleBackground.frame.size.width, titleBackground.frame.size.height)];
+        titleLabel.textColor = [UIColor whiteColor];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.numberOfLines = 3;
+        titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20.0];
+        [titleBackground addSubview:titleLabel];
+        
+        mLoading = [[UIActivityIndicatorView alloc] initWithFrame:thumbnail.bounds];
         mLoading.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
         [mLoading startAnimating];
         [self addSubview:mLoading];
@@ -35,10 +42,10 @@
         separator.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
         [self addSubview:separator];
         
-        lieuLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 55, frame.size.width-140, 20)];
-        lieuLabel.textColor = [UIColor grayColor];
-        lieuLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
-        [self addSubview:lieuLabel];
+//        lieuLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 55, frame.size.width-140, 20)];
+//        lieuLabel.textColor = [UIColor grayColor];
+//        lieuLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
+//        [self addSubview:lieuLabel];
         
         UIView *ViewRed = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width-50, 0, 50, 35)];
         ViewRed.backgroundColor = [UIColor redColor];
@@ -70,7 +77,7 @@
 - (void)addEvent:(Event *)_event
 {
     titleLabel.text = [_event getTitle];
-    lieuLabel.text = [NSString stringWithFormat:@"%@",[_event getVille]];
+//    lieuLabel.text = [NSString stringWithFormat:@"%@",[_event getVille]];
     titleDayLetter.text = [_event getDayLetter];
     
     // Dating
