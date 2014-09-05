@@ -7,13 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellAgenda.h"
 
-@interface AgendaDayCell : UIView
+@class AgendaDayCell;
+
+@protocol AgendaDayCellDelegate <NSObject>
+
+- (void)tappedCellAgenda:(Event*) event;
+
+@end
+
+@interface AgendaDayCell : UIView<CellAgendaDelegate>
 {
     UILabel *titleLabel;
     int yPos;
 }
 
+@property (nonatomic, weak) id<AgendaDayCellDelegate> delegate;
 - (void)addMutableEvent:(NSMutableArray *)eventMutable;
 
 @end

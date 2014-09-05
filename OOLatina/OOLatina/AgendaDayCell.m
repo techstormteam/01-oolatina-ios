@@ -53,10 +53,15 @@
         CellAgenda *mAgenda = [[CellAgenda alloc] initWithFrame:CGRectMake(0, yPos, self.frame.size.width, heightOfEvent)];
         [mAgenda addEvent:uEvent];
         [self addSubview:mAgenda];
-        
+        mAgenda.delegate = self;
         yPos = yPos + heightOfEvent;
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, yPos);
     }
+}
+
+- (void)tappedCellAgenda:(Event*) event
+{
+    [self.delegate tappedCellAgenda:event];
 }
 
 @end

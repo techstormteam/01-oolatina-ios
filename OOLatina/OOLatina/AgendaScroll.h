@@ -10,7 +10,15 @@
 #import "Event.h"
 #import "AgendaDayCell.h"
 
-@interface AgendaScroll : UIView<UIScrollViewDelegate>
+@class AgendaScroll;
+
+@protocol AgendaScrollDelegate <NSObject>
+
+- (void)tappedCellAgenda:(Event*) event;
+
+@end
+
+@interface AgendaScroll : UIView<UIScrollViewDelegate, AgendaDayCellDelegate>
 {
     UIScrollView *mScrollView;
     NSMutableArray *mEventArray;
@@ -22,6 +30,7 @@
     int currentEventCount;
 }
 
+@property (nonatomic, weak) id<AgendaDayCellDelegate> delegate;
 - (void)setCurrentEventCount:(int)currentCount;
 - (void)addEvent:(Event *)_event;
 - (void)loadEventPart:(int)nextAmount;

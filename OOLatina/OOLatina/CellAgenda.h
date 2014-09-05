@@ -10,8 +10,17 @@
 #import "Event.h"
 #import "Utility.h"
 
+@class CellAgenda;
+
+@protocol CellAgendaDelegate <NSObject>
+
+- (void)tappedCellAgenda:(Event*) event;
+
+@end
+
 @interface CellAgenda : UIView
 {
+    Event *mEvent;
     UILabel *titleLabel;
     UIView *separator;
 //    UILabel *lieuLabel;
@@ -22,6 +31,7 @@
     UIView *titleBackground;
 }
 
+@property (nonatomic, weak) id<CellAgendaDelegate> delegate;
 - (void)addEvent:(Event *)_event;
 
 @end

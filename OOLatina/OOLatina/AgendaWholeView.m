@@ -25,28 +25,10 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    // just for test GUI
-    agendaDetail = [[AgendaDetail alloc] initWithFrame:CGRectMake(0, 0, 320, 658)];
-    Event *nEvent = [[Event alloc] init];
-    [nEvent setTitle:@"dsgkk"];
-    [nEvent setVille:@"dsgkk"];
-    [nEvent setYear:@"dsgkk"];
-    [nEvent setThumbnailEvent:@"http://www.joneshamiltonag.com/jh/wp-content/uploads/2011/10/Poultry-processing-1-500x248.jpg"];
-    [nEvent setPhoneNumber:@"dsgkk"];
-    [nEvent setName:@"dsgkk"];
-    [nEvent setMonth:@"dsgkk"];
-    [nEvent setLongitude:10];
-    [nEvent setLatitude:20];
-    [nEvent setEventDay:@"dskhgvoisdn"];
-    [nEvent setEventDay:@"dsgkk"];
-    [nEvent setCodePostal:@"dsgkk"];
-    [nEvent setAdresse:@"dsgkfdsew\nb ewbewbo iug\newuivb weui  bfdm sdkjb jsdhuivb eowo pobjsdlk  bvb iuewv iuywey8 k"];
-    [agendaDetail setEvent:nEvent];
-    [self.view addSubview:agendaDetail];
-    return self;
-}
+//- (id)initWithCoder:(NSCoder *)aDecoder
+//{
+//    return self;
+//}
 
 - (void)viewDidLoad
 {
@@ -75,6 +57,18 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)tappedCellAgenda:(Event*) event
+{
+    [self showEventDetail:event];
+}
+
+- (void)showEventDetail:(Event*) nEvent
+{
+    agendaDetail = [[AgendaDetail alloc] initWithFrame:CGRectMake(0, 0, 320, 658)];
+    [agendaDetail setEvent:nEvent];
+    [self.view addSubview:agendaDetail];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -227,10 +221,13 @@
 - (void)createAllEmptyPagesForScrollView {
     
     agendaView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
-    agendaView.frame = CGRectMake(nibScrollView.frame.size.width*0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
+    agendaView.frame = CGRectMake(nibScrollView.frame.size.width*0, 0, nibScrollView.frame.size.width, nibScrollView.frame.
+                                  size.height);
+    agendaView.delegate = self;
     arroundMeView = [[AgendaView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
     arroundMeView.frame = CGRectMake(nibScrollView.frame.size.width*1, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
     [arroundMeView gettingLocation];
+    arroundMeView.delegate = self;
     agendaMapView = [[AgendaMapView alloc]init ];
     agendaMapView.view.frame = CGRectMake(nibScrollView.frame.size.width*2, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
     

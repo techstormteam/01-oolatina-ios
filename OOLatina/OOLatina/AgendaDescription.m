@@ -19,6 +19,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        
         UIView *mySelf = [[[NSBundle mainBundle] loadNibNamed:@"AgendaDescription" owner:self options:nil] lastObject];
 //        self = mySelf;
         [self addSubview:mySelf];
@@ -71,7 +73,16 @@
 
 - (void)createAllEmptyPagesForScrollView {
     
+    background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
+    background.image = [UIImage imageNamed:@"background.png"];
+    [nibScrollView addSubview:background];
+    
+    backgroundPlayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height)];
+    backgroundPlayer.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
+    [nibScrollView addSubview:backgroundPlayer];
+    
     mDescriptionLabel = [[UILabel alloc] init];
+    mDescriptionLabel.textColor = [UIColor whiteColor];
     mDescriptionLabel.numberOfLines = 0;
     mDescriptionLabel.frame = CGRectMake(nibScrollView.frame.size.width*0 + 5, 0, nibScrollView.frame.size.width, 300);
     

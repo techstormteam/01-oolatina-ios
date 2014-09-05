@@ -281,8 +281,8 @@
         else
         {
             searchButton.hidden = NO;
-//            mAgendaWholeView = [[AgendaWholeView alloc] initWithNibName:@"AgendaWholeView" bundle:nil];
-            mAgendaWholeView = [[AgendaWholeView alloc] initWithCoder:nil];
+            mAgendaWholeView = [[AgendaWholeView alloc] initWithNibName:@"AgendaWholeView" bundle:nil];
+//            mAgendaWholeView = [[AgendaWholeView alloc] initWithCoder:nil];
             [pageView addSubview:mAgendaWholeView.view];
         }
     }

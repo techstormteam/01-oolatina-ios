@@ -97,16 +97,14 @@
     return self;
 }
 
-//The event handling method
 - (void)cellAgendaTapped:(UITapGestureRecognizer *)recognizer {
-    CGPoint location = [recognizer locationInView:[recognizer.view superview]];
-    
-    //Do stuff here...
+    [self.delegate tappedCellAgenda:mEvent];
 }
 
 
 - (void)addEvent:(Event *)_event
 {
+    mEvent = _event;
     titleLabel.text = [_event getTitle];
 //    lieuLabel.text = [NSString stringWithFormat:@"%@",[_event getVille]];
     titleDayLetter.text = [_event getDayLetter];

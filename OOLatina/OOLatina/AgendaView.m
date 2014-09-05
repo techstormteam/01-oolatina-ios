@@ -40,7 +40,7 @@
         {
             mAgendaScroll = [[AgendaScroll alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height-60)];
         }
-        
+        mAgendaScroll.delegate = self;
         [self addSubview:mAgendaScroll];
     }
     return self;
@@ -209,6 +209,11 @@
 -(void)hideHud
 {
     [_theHud hide:YES];
+}
+
+- (void)tappedCellAgenda:(Event*) event
+{
+    [self.delegate tappedCellAgenda:event];
 }
 
 @end

@@ -22,6 +22,9 @@
     
     UILabel *mDescriptionLabel;
     AgendaMapView *agendaMapView;
+    
+    UIImageView *background;
+    UIView *backgroundPlayer;
 }
 @property (strong, nonatomic) IBOutlet UIButton *mapButton;
 @property (strong, nonatomic) IBOutlet UIButton *descriptionButton;

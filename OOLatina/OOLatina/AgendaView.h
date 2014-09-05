@@ -17,7 +17,15 @@
 #import "iToast.h"
 #import "MBProgressHUD.h"
 
-@interface AgendaView : UIView <CLLocationManagerDelegate>
+@class AgendaView;
+
+@protocol AgendaViewDelegate <NSObject>
+
+- (void)tappedCellAgenda:(Event*) event;
+
+@end
+
+@interface AgendaView : UIView <CLLocationManagerDelegate, AgendaScrollDelegate>
 {
     UIImageView *background;
     AgendaScroll *mAgendaScroll;
@@ -29,6 +37,8 @@
     
 }
 
+
+@property (nonatomic, weak) id<AgendaViewDelegate> delegate;
 @property (nonatomic, strong) MBProgressHUD   * theHud;
 - (void)gettingLocation;
 - (bool)isInside:(Event *)ev radius:(CGFloat)rad;

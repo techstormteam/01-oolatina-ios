@@ -109,6 +109,7 @@
                     [mAgendaDayCell addMutableEvent:[mEventArray objectAtIndex:x]];
                     [mEventCell addObject:mAgendaDayCell];
                     [mScrollView addSubview:mAgendaDayCell];
+                    mAgendaDayCell.delegate = self;
                     
                     yPos = yPos + mAgendaDayCell.frame.size.height + 1;
                     mScrollView.contentSize = CGSizeMake(mScrollView.frame.size.width,yPos);
@@ -122,6 +123,11 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
 //    [self loadEventPart:10];
+}
+
+- (void)tappedCellAgenda:(Event*) event
+{
+    [self.delegate tappedCellAgenda:event];
 }
 
 @end

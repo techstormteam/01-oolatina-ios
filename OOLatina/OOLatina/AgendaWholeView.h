@@ -12,7 +12,7 @@
 #import "SCUtils.h"
 #import "AgendaDetail.h"
 
-@interface AgendaWholeView : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, CKCalendarDelegate, kDropDownListViewDelegate>
+@interface AgendaWholeView : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, CKCalendarDelegate, kDropDownListViewDelegate, AgendaViewDelegate>
 {
 
     AgendaView *agendaView;
