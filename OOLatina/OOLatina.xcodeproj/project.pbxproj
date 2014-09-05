@@ -180,6 +180,8 @@
 		D03DD0D5198F532500603ACC /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D03DD0D4198F532500603ACC /* Utility.m */; };
 		D0478134198A3785004ACEE5 /* photo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478132198A3785004ACEE5 /* photo_icon.png */; };
 		D0478135198A3785004ACEE5 /* photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0478133198A3785004ACEE5 /* photo_icon@2x.png */; };
+		D04EF01D19B96742005524CC /* NewsDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04EF01C19B96742005524CC /* NewsDetail.xib */; };
+		D04EF02119B96753005524CC /* NewsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = D04EF02019B96753005524CC /* NewsDetail.m */; };
 		D05B76D4199881060066DEEA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05B76D3199881060066DEEA /* MapKit.framework */; };
 		D05B76D619992E000066DEEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05B76D519992E000066DEEA /* CoreLocation.framework */; };
 		D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = D06096DD1994B9E900153348 /* UIImage+Resize.m */; };
@@ -511,6 +513,9 @@
 		D03DD0D4198F532500603ACC /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		D0478132198A3785004ACEE5 /* photo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon.png; sourceTree = "<group>"; };
 		D0478133198A3785004ACEE5 /* photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_icon@2x.png"; sourceTree = "<group>"; };
+		D04EF01C19B96742005524CC /* NewsDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetail.xib; sourceTree = "<group>"; };
+		D04EF01F19B96753005524CC /* NewsDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetail.h; sourceTree = "<group>"; };
+		D04EF02019B96753005524CC /* NewsDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetail.m; sourceTree = "<group>"; };
 		D05B76D3199881060066DEEA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D05B76D519992E000066DEEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D06096DC1994B9E900153348 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -930,6 +935,9 @@
 				D06C366A19B886570056A4B3 /* AgendaDescription.xib */,
 				D06C366C19B889D40056A4B3 /* AgendaDescription.h */,
 				D06C366D19B889D40056A4B3 /* AgendaDescription.m */,
+				D04EF01C19B96742005524CC /* NewsDetail.xib */,
+				D04EF01F19B96753005524CC /* NewsDetail.h */,
+				D04EF02019B96753005524CC /* NewsDetail.m */,
 			);
 			path = OOLatina;
 			sourceTree = "<group>";
@@ -1469,6 +1477,7 @@
 				51A63B1F18D5DD20005DCD55 /* cubaine.jpg in Resources */,
 				51FD5FD018D33E610040369B /* button_play@2x.png in Resources */,
 				51A63A4418D48FA9005DCD55 /* buttonplayradio@2x.png in Resources */,
+				D04EF01D19B96742005524CC /* NewsDetail.xib in Resources */,
 				514D097718DB897A00872793 /* search_button@2x.png in Resources */,
 				515FB72C18DF31E200089750 /* Interface_iPhone5.xib in Resources */,
 				51A63B4618D65E51005DCD55 /* dance-party.jpg in Resources */,
@@ -1573,6 +1582,7 @@
 				D06096DE1994B9E900153348 /* UIImage+Resize.m in Sources */,
 				51FD5FF418D3B98C0040369B /* VideoTableViewCell.m in Sources */,
 				D03CD84D199B597C00CF3203 /* AgendaMapView.m in Sources */,
+				D04EF02119B96753005524CC /* NewsDetail.m in Sources */,
 				D011233B198E2A600099D124 /* FSBasicImage.m in Sources */,
 				51FD5FAC18D1E86C0040369B /* NewsView.m in Sources */,
 				51A63AF518D4BD14005DCD55 /* AFHTTPRequestOperationManager.m in Sources */,

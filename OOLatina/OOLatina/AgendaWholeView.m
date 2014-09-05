@@ -66,9 +66,15 @@
 
 - (void)showEventDetail:(Event*) nEvent
 {
-    agendaDetail = [[AgendaDetail alloc] initWithFrame:CGRectMake(0, 0, 320, 658)];
-    [agendaDetail setEvent:nEvent];
-    [self.view addSubview:agendaDetail];
+    if (agendaDetail == nil) {
+        agendaDetail = [[AgendaDetail alloc] initWithFrame:CGRectMake(0, 0, 320, 658)];
+        [agendaDetail setEvent:nEvent];
+        [self.view addSubview:agendaDetail];
+    } else {
+        [agendaDetail setEvent:nEvent];
+        [self.view bringSubviewToFront:agendaDetail];
+    }
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

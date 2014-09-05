@@ -64,47 +64,20 @@
 }
 
 
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
-	//NSLog(@"found this element: %@", elementName);
-	currentElement = [elementName copy];
+- (void)showNewsDetail:(News*) nNews
+{
+    if (newsDetail == nil) {
+        newsDetail = [[NewsDetail alloc] initWithFrame:CGRectMake(0, 0, 320, 658)];
+        [newsDetail setNews:nNews];
+        [self addSubview:newsDetail];
+    } else {
+        [newsDetail setNews:nNews];
+        [self bringSubviewToFront:newsDetail];
+    }
     
-	if ([elementName isEqualToString:@"item"]) {
-		// clear out our story item caches...
-		item = [[NSMutableDictionary alloc] init];
-		currentTitle = [[NSMutableString alloc] init];
-		currentSummary = [[NSMutableString alloc] init];
-		currentImageLink = [[NSMutableString alloc] init];
-        currentDescription = [[NSMutableString alloc] init];
-	}
 }
 
-//- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
-//    
-//	if ([elementName isEqualToString:@"item"]) {
-//		// save values to an item, then store that item into the array...
-//		[item setObject:currentTitle forKey:@"title"];
-//		[item setObject:currentImageLink forKey:@"link"];
-//		
-//        // Hack pour ajouter l'image du feed du flux rss;
-//        NSArray *array = [currentSummary componentsSeparatedByString:@"\""];
-//        currentSummary = [array objectAtIndex:5];
-//        
-//        [item setObject:currentSummary forKey:@"summary"];
-////        [mNewsScroller addElement:currentSummary andTitle:currentTitle andId:currentImageLink];
-//	}
-//}
-//
-//- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
-//	//NSLog(@"found characters: %@", string);
-//	// save the characters for the current item...
-//	if ([currentElement isEqualToString:@"title"]) {
-//		[currentTitle appendString:string];
-//	} else if ([currentElement isEqualToString:@"link"]) {
-//		[currentImageLink appendString:string];
-//	} else if ([currentElement isEqualToString:@"description"]) {
-//		[currentSummary appendString:string];
-//	}
-//}
+
 
 #pragma mark - Table view data source
 
@@ -148,18 +121,10 @@
         cell.frame = fr;
         cell.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
         News *news = [newsObjects objectAtIndex:newsCount];
-        if ([news getTitle] == nil) {
-            cell.mTitle.text = NSLocalizedString(@"no_title", nil);
-        } else {
-            cell.mTitle.text = [news getTitle];
-        }
-        if ([news getDescription] == nil) {
-            cell.mDescription.text = NSLocalizedString(@"no_description", nil);
-        } else {
-            cell.mDescription.text = [news getDescription];
-        }
-        UIImage *image = [Utility getImageFromURL:[news getImage]];
-        cell.mImage.image = [Utility imageWithImage:image scaledToSize:fr.size];
+        [cell setNews:news imageScaleSize:fr.size];
+        cell.delegate = self;
+
+        
         newsCount++;
     }
     
@@ -167,7 +132,10 @@
     
 }
 
-
+- (void)tappedNewsCell:(News*) news
+{
+    [self showNewsDetail:news];
+}
 
  #pragma mark - Table view delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -11,12 +11,13 @@
 #import "NewsCell.h"
 #import "News.h"
 #import "Utility.h"
+#import "NewsDetail.h"
 
 @protocol NewsViewDelegate <NSObject>
 - (void)showPageFeed:(NSString *)url;
 @end
 
-@interface NewsView : UIView<UITableViewDataSource, UITableViewDelegate>
+@interface NewsView : UIView<UITableViewDataSource, UITableViewDelegate, NewsCellDelegate>
 {
     int newsCount;
     int heightOfCell;
@@ -24,6 +25,8 @@
     NewsScroller *mNewsScroller;
     UIImageView *background;
     dispatch_queue_t myQueue;
+    
+    NewsDetail *newsDetail;
     
     NSMutableDictionary *item;
     NSString *currentElement;

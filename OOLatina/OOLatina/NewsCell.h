@@ -7,10 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "News.h"
+#import "Utility.h"
 
-@interface NewsCell : UITableViewCell
+@class NewsCell;
+
+@protocol NewsCellDelegate <NSObject>
+
+- (void)tappedNewsCell:(News*) news;
+
+@end
+
+@interface NewsCell : UITableViewCell {
+    News *mNews;
+}
+@property (nonatomic, weak) id<NewsCellDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UILabel *mTitle;
-@property (strong, nonatomic) IBOutlet UILabel *mDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *mImage;
+
+- (void)setNews:(News*)nNews imageScaleSize:(CGSize)size;
 
 @end
