@@ -227,7 +227,7 @@
 		D09C7B4C199D8F7100BEB735 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C7B4B199D8F7100BEB735 /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D0B54BD9198FE845005F65FE /* PhotoShareConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */; };
 		D0B54BDA198FE845005F65FE /* PhotoShareConfirm.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */; };
-		D0D8AE0A19AE139800B0E9A8 /* oolatina.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D8AE0919AE139800B0E9A8 /* oolatina.png */; };
+		D0D19D1719C888FB00683CC4 /* oolatina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0D19D1619C888FB00683CC4 /* oolatina.jpg */; };
 		D0D8AE0C19AEB2FC00B0E9A8 /* logo_oolatina.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D8AE0B19AEB2FC00B0E9A8 /* logo_oolatina.png */; };
 		D0D8AE0F19AF021200B0E9A8 /* NewsScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8AE0E19AF021200B0E9A8 /* NewsScroller.m */; };
 		D0DB8E1019A1FA5F00B5CCC1 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB8E0F19A1FA5F00B5CCC1 /* MyAnnotation.m */; };
@@ -592,7 +592,7 @@
 		D0B54BD6198FE845005F65FE /* PhotoShareConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoShareConfirm.h; sourceTree = "<group>"; };
 		D0B54BD7198FE845005F65FE /* PhotoShareConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShareConfirm.m; sourceTree = "<group>"; };
 		D0B54BD8198FE845005F65FE /* PhotoShareConfirm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoShareConfirm.xib; sourceTree = "<group>"; };
-		D0D8AE0919AE139800B0E9A8 /* oolatina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oolatina.png; sourceTree = "<group>"; };
+		D0D19D1619C888FB00683CC4 /* oolatina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oolatina.jpg; sourceTree = "<group>"; };
 		D0D8AE0B19AEB2FC00B0E9A8 /* logo_oolatina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_oolatina.png; sourceTree = "<group>"; };
 		D0D8AE0D19AF021200B0E9A8 /* NewsScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsScroller.h; sourceTree = "<group>"; };
 		D0D8AE0E19AF021200B0E9A8 /* NewsScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsScroller.m; sourceTree = "<group>"; };
@@ -993,8 +993,8 @@
 		51FD5F8A18CFD1F70040369B /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				D0D19D1619C888FB00683CC4 /* oolatina.jpg */,
 				D0D8AE0B19AEB2FC00B0E9A8 /* logo_oolatina.png */,
-				D0D8AE0919AE139800B0E9A8 /* oolatina.png */,
 				D09C7B47199CC82900BEB735 /* twitter_icon.png */,
 				D09C7B45199CC10000BEB735 /* facebook_icon.png */,
 				D0937866198C806A00626197 /* guide_image.png */,
@@ -1372,6 +1372,7 @@
 			files = (
 				51FD5FE018D37F620040369B /* background@2x.png in Resources */,
 				51A63A6618D4B8A4005DCD55 /* iTunesArtwork in Resources */,
+				D0D19D1719C888FB00683CC4 /* oolatina.jpg in Resources */,
 				51A63B0C18D5C87A005DCD55 /* ituneslink@2x.png in Resources */,
 				514D096C18DB5BC000872793 /* right_arrow.png in Resources */,
 				51A63B4818D65E51005DCD55 /* dance-workshops.jpg in Resources */,
@@ -1416,7 +1417,6 @@
 				51FD5F5C18CFCC250040369B /* InfoPlist.strings in Resources */,
 				51A63A4118D48FA9005DCD55 /* buttonpauseradio.png in Resources */,
 				51A63B2F18D5F549005DCD55 /* agenda_icon@2x.png in Resources */,
-				D0D8AE0A19AE139800B0E9A8 /* oolatina.png in Resources */,
 				51A63B3018D5F549005DCD55 /* audio_icon@2x.png in Resources */,
 				51A63A4318D48FA9005DCD55 /* buttonplayradio.png in Resources */,
 				D0937863198C803600626197 /* button_download@2x.png in Resources */,
