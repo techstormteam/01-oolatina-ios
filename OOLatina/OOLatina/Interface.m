@@ -39,20 +39,20 @@
     arrayMenu = [[NSMutableArray alloc] init];
     [arrayMenu addObject:NSLocalizedString(@"news", nil)];
     [arrayMenu addObject:NSLocalizedString(@"agenda", nil)];
-    //[arrayMenu addObject:@"Gallery"];
+    [arrayMenu addObject:NSLocalizedString(@"photo", nil)];
     [arrayMenu addObject:NSLocalizedString(@"audio", nil)];
     [arrayMenu addObject:NSLocalizedString(@"video", nil)];
     [arrayMenu addObject:NSLocalizedString(@"radio", nil)];
-    [arrayMenu addObject:NSLocalizedString(@"photo", nil)];
+    
     
     arrayImageNames = [[NSMutableArray alloc] init];
     [arrayImageNames addObject:@"news"];
     [arrayImageNames addObject:@"agenda"];
-    //[arrayImageNames addObject:@"Gallery"];
+    [arrayImageNames addObject:@"photo"];
     [arrayImageNames addObject:@"audio"];
     [arrayImageNames addObject:@"video"];
     [arrayImageNames addObject:@"radio"];
-    [arrayImageNames addObject:@"photo"];
+    
     
     
     mWebView = nil;
@@ -287,21 +287,22 @@
         }
     }
     
-    /*if(rownumber == 2)
-     {
-     if(mGalleryView != nil)
-     {
-     [pageView bringSubviewToFront:mGalleryView];
-     }
-     else
-     {
-     mGalleryView = [[GalleryView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
-     mGalleryView.backgroundColor = [UIColor greenColor];
-     [pageView addSubview:mGalleryView];
-     }
-     }*/
+    if(rownumber == 2) {
+        //        if(mPhotoView != nil)
+        //        {
+        //            searchButton.hidden = YES;
+        //            [pageView bringSubviewToFront:mPhotoView];
+        //        }
+        //        else
+        //        {
+        searchButton.hidden = YES;
+        mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
+        
+        [pageView addSubview:mPhotoView];
+        //        }
+    }
     
-    if(rownumber == 2)
+    if(rownumber == 3)
     {
         if(mAudioView != nil)
         {
@@ -317,7 +318,7 @@
         //}
     }
     
-    if(rownumber == 3)
+    if(rownumber == 4)
     {
         if(mVideoView != nil)
         {
@@ -334,7 +335,7 @@
         }
     }
     
-    if(rownumber == 4)
+    if(rownumber == 5)
     {
         if(mRadioView != nil)
         {
@@ -350,20 +351,7 @@
         }
     }
     
-    if(rownumber == 5) {
-//        if(mPhotoView != nil)
-//        {
-//            searchButton.hidden = YES;
-//            [pageView bringSubviewToFront:mPhotoView];
-//        }
-//        else
-//        {
-            searchButton.hidden = YES;
-            mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
-        
-            [pageView addSubview:mPhotoView];
-//        }
-    }
+    
     
     [self showMenu];
     currentRowCloseMenu = rownumber;

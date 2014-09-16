@@ -69,39 +69,39 @@
         }
         
         
-        Event *nEvent = [[Event alloc] init];
-        [nEvent setTitle:@"dsgkk"];
-        [nEvent setVille:@"dsgkk"];
-        [nEvent setYear:@"dsgkk"];
-        [nEvent setThumbnailEvent:@"http://www.joneshamiltonag.com/jh/wp-content/uploads/2011/10/Poultry-processing-1-500x248.jpg"];
-        [nEvent setPhoneNumber:@"dsgkk"];
-        [nEvent setName:@"dsgkk"];
-        [nEvent setMonth:@"dsgkk"];
-        [nEvent setLongitude:10];
-        [nEvent setLatitude:20];
-        [nEvent setEventDay:@"dskhgvoisdn"];
-        [nEvent setEventDay:@"dsgkk"];
-        [nEvent setCodePostal:@"dsgkk"];
-        [nEvent setAdresse:@"dsgkk"];
-        [mAgendaScroll addEvent:nEvent];
-        
-        nEvent = [[Event alloc] init];
-        [nEvent setTitle:@"dsgkk"];
-        [nEvent setVille:@"dsgkk"];
-        [nEvent setYear:@"dsvdsgkk"];
-        [nEvent setEventDay:@"dskhgvdswoisdn"];
-        [nEvent setThumbnailEvent:@"http://www.joneshamiltonag.com/jh/wp-content/uploads/2011/10/Poultry-processing-1-500x248.jpg"];
-        [nEvent setPhoneNumber:@"dsgkk"];
-        [nEvent setName:@"dsgkk"];
-        [nEvent setMonth:@"dswfqgkk"];
-        [nEvent setLongitude:10];
-        [nEvent setLatitude:20];
-        [nEvent setEventDay:@"dsgkk"];
-        [nEvent setCodePostal:@"dsgkk"];
-        [nEvent setAdresse:@"dsgkk"];
-        [mAgendaScroll addEvent:nEvent];
-        
-        count++;
+//        Event *nEvent = [[Event alloc] init];
+//        [nEvent setTitle:@"dsgkk"];
+//        [nEvent setVille:@"dsgkk"];
+//        [nEvent setYear:@"dsgkk"];
+//        [nEvent setThumbnailEvent:@"http://www.joneshamiltonag.com/jh/wp-content/uploads/2011/10/Poultry-processing-1-500x248.jpg"];
+//        [nEvent setPhoneNumber:@"dsgkk"];
+//        [nEvent setName:@"dsgkk"];
+//        [nEvent setMonth:@"dsgkk"];
+//        [nEvent setLongitude:10];
+//        [nEvent setLatitude:20];
+//        [nEvent setEventDay:@"dskhgvoisdn"];
+//        [nEvent setEventDay:@"dsgkk"];
+//        [nEvent setCodePostal:@"dsgkk"];
+//        [nEvent setAdresse:@"dsgkk"];
+//        [mAgendaScroll addEvent:nEvent];
+//        
+//        nEvent = [[Event alloc] init];
+//        [nEvent setTitle:@"dsgkk"];
+//        [nEvent setVille:@"dsgkk"];
+//        [nEvent setYear:@"dsvdsgkk"];
+//        [nEvent setEventDay:@"dskhgvdswoisdn"];
+//        [nEvent setThumbnailEvent:@"http://www.joneshamiltonag.com/jh/wp-content/uploads/2011/10/Poultry-processing-1-500x248.jpg"];
+//        [nEvent setPhoneNumber:@"dsgkk"];
+//        [nEvent setName:@"dsgkk"];
+//        [nEvent setMonth:@"dswfqgkk"];
+//        [nEvent setLongitude:10];
+//        [nEvent setLatitude:20];
+//        [nEvent setEventDay:@"dsgkk"];
+//        [nEvent setCodePostal:@"dsgkk"];
+//        [nEvent setAdresse:@"dsgkk"];
+//        [mAgendaScroll addEvent:nEvent];
+//        
+//        count++;
         
         
         [mAgendaScroll setCurrentEventCount:0];
