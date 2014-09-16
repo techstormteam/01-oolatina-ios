@@ -130,30 +130,22 @@
 
 - (AQGridViewCell *) gridView: (AQGridView *) aGridView cellForItemAtIndex: (NSUInteger) index
 {
-//    static NSString * PlainCellIdentifier = @"PlainCellIdentifier";
-//    static NSString * FilledCellIdentifier = @"FilledCellIdentifier";
-      static NSString * OffsetCellIdentifier = @"OffsetCellIdentifier";
+    static NSString * OffsetCellIdentifier = @"OffsetCellIdentifier";
     
     AQGridViewCell * cell = (AQGridViewCell *)[aGridView dequeueReusableCellWithIdentifier: OffsetCellIdentifier];
     
-//    switch ( _cellType )
-//    {
-//        case ImageDemoCellTypePlain:
-//        {
-    
-            if ( cell == nil )
-            {
-                cell = [[AQGridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, _photoSize.width, _photoSize.height)
-                                                         reuseIdentifier: OffsetCellIdentifier];
-                cell.selectionGlowColor = [UIColor blueColor];
-            }
+    if ( cell == nil )
+    {
+        cell = [[AQGridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, _photoSize.width, _photoSize.height)
+                                                 reuseIdentifier: OffsetCellIdentifier];
+        cell.selectionGlowColor = [UIColor blueColor];
+    }
     
     if (_photoIndex < [mPhotos count]) {
         
         // init image
         Photo *photo = [mPhotos objectAtIndex:_photoIndex];
         NSString *url = [photo getUrl];
-        CGRect h = cell.contentView.bounds;
         
         PhotoImageView *imageView = [[PhotoImageView alloc] initWithFrame:cell.contentView.bounds];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -180,37 +172,14 @@
         
         _photoIndex++;
     }
-//            break;
-//        }
-//            
-//        case ImageDemoCellTypeFill:
-//        {
-//            ImageDemoFilledCell * filledCell = (ImageDemoFilledCell *)[aGridView dequeueReusableCellWithIdentifier: FilledCellIdentifier];
-//            if ( filledCell == nil )
-//            {
-//                filledCell = [[ImageDemoFilledCell alloc] initWithFrame: CGRectMake(0.0, 0.0, 200.0, 150.0)
-//                                                        reuseIdentifier: FilledCellIdentifier];
-//                filledCell.selectionStyle = AQGridViewCellSelectionStyleBlueGray;
-//            }
-//            
-//            filledCell.image = [UIImage imageNamed: [_imageNames objectAtIndex: index]];
-//            filledCell.title = [[_imageNames objectAtIndex: index] stringByDeletingPathExtension];
-//            
-//            cell = filledCell;
-//            break;
-//        }
-//            
-//        default:
-//            break;
-//    }
     
     return ( cell );
 }
 
 - (CGSize) portraitGridCellSizeForGridView: (AQGridView *) aGridView
 {
-//    return ( _photoSize );
-    return CGSizeMake(75, 75);
+    return ( _photoSize );
+//    return CGSizeMake(106.5, 106.5);
 }
 
 
