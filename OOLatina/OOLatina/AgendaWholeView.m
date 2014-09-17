@@ -590,22 +590,45 @@
 {
     if([SCUtils isNetworkAvailable])
     {
-        //        [mAgendaScroll removeAllEvent];
+        NSString *urlString = [NSString stringWithFormat:@"http://www.oolatina.com/webservice/oolatina_api.php?command=GET_EVENT"];
+
+        if (![searchField.text isEqualToString:@""]) {
+            urlString = [NSString stringWithFormat:@"%@&search=%@",urlString,[self urlEncodeUsingEncoding:searchField.text]];
+        }
+        if (![villeField.text isEqualToString:@""]) {
+            urlString = [NSString stringWithFormat:@"%@&ville=%@",urlString,villeField.text];
+        }
+        if (![day isEqualToString:@""]) {
+            urlString = [NSString stringWithFormat:@"%@&day=%@",urlString,day];
+        }
+        if (![month isEqualToString:@""]) {
+            urlString = [NSString stringWithFormat:@"%@&month=%@",urlString,month];
+        }
+        if (![year isEqualToString:@""]) {
+            urlString = [NSString stringWithFormat:@"%@&year=%@",urlString,year];
+        }
+        if (![musicArrayid isEqualToString:@""]) {
+            urlString = [NSString stringWithFormat:@"%@&music=%@",urlString,musicArrayid];
+        }
+        if (![genreArrayid isEqualToString:@""]) {
+            urlString = [NSString stringWithFormat:@"%@&genre=%@",urlString,genreArrayid];
+        }
         
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.oolatina.com/webservice/oolatina_api.php?command=GET_EVENT&year=2014&search=%@&ville=%@&day=%@&month=%@&year=%@&music=%@&genre=%@",[self urlEncodeUsingEncoding:searchField.text],villeField.text,day,month,year,musicArrayid,genreArrayid]];
+        NSURL *url = [NSURL URLWithString:urlString];
         NSLog(@"URL : %@",url);
         NSData *data = [[NSData alloc] initWithContentsOfURL:url];
         id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSMutableArray *results = object;
         NSMutableArray *eventList = [[NSMutableArray alloc] init];
         for (int x=0; x<results.count; x++)
+//        for (int x=30; x<31; x++)
         {
             NSDictionary *mDico = [results objectAtIndex:x];
             NSDictionary *mEvent = [mDico objectForKey:@"event"];
             
             Event *nEvent = [[Event alloc] init];
             [nEvent setTitle:[mEvent objectForKey:@"title"]];
-            [nEvent setThumbnailEvent:[mEvent objectForKey:@"thumbnail"]];
+            [nEvent setThumbnailEvent:[NSString stringWithFormat:@"http://www.oolatina.com/images/event/%@.png",[mEvent objectForKey:@"thumbnail"]]];
             [nEvent setVille:[mEvent objectForKey:@"ville"]];
             [nEvent setYear:[mEvent objectForKey:@"year"]];
             [nEvent setMonth:[mEvent objectForKey:@"month"]];
@@ -613,9 +636,12 @@
             [nEvent setCodePostal:[mEvent objectForKey:@"codepostal"]];
             [nEvent setAdresse:[mEvent objectForKey:@"adresse"]];
             [nEvent setName:[mEvent objectForKey:@"lieu"]];
-            [nEvent setLongitude:[[mEvent objectForKey:@"longitude"] floatValue]];
-            [nEvent setLatitude:[[mEvent objectForKey:@"latitude"] floatValue]];
-            
+            if (![[mEvent objectForKey:@"longitude"] isEqual:[NSNull null]]) {
+                [nEvent setLongitude:[[mEvent objectForKey:@"longitude"] floatValue]];
+            }
+            if (![[mEvent objectForKey:@"latitude"] isEqual:[NSNull null]]) {
+                [nEvent setLatitude:[[mEvent objectForKey:@"latitude"] floatValue]];
+            }
             [eventList addObject:nEvent];
         }
         
