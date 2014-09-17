@@ -351,7 +351,7 @@
         }
         mDropDown = [[DropDownListView alloc] initWithTitle:@"" options:array xy:CGPointMake(16, 58) size:CGSizeMake(287, 330) isMultiple:YES];
         mDropDown.delegate = self;
-        [mDropDown showInView:self animated:YES];
+        [mDropDown showInView:self.view animated:YES];
         
         /*----------------Set DropDown backGroundColor-----------------*/
         [mDropDown SetBackGroundDropDwon_R:226.0 G:95.0 B:117.0 alpha:0.70];
@@ -367,7 +367,7 @@
         
         mDropDown = [[DropDownListView alloc] initWithTitle:@"" options:array xy:CGPointMake(16, 58) size:CGSizeMake(287, 330) isMultiple:YES];
         mDropDown.delegate = self;
-        [mDropDown showInView:self animated:YES];
+        [mDropDown showInView:self.view animated:YES];
         
         /*----------------Set DropDown backGroundColor-----------------*/
         [mDropDown SetBackGroundDropDwon_R:226.0 G:95.0 B:117.0 alpha:0.70];
@@ -382,7 +382,7 @@
         }
         mDropDown = [[DropDownListView alloc] initWithTitle:@"" options:array xy:CGPointMake(16, 58) size:CGSizeMake(287, 330) isMultiple:NO];
         mDropDown.delegate = self;
-        [mDropDown showInView:self animated:YES];
+        [mDropDown showInView:self.view animated:YES];
         
         /*----------------Set DropDown backGroundColor-----------------*/
         [mDropDown SetBackGroundDropDwon_R:226.0 G:95.0 B:117.0 alpha:0.70];
