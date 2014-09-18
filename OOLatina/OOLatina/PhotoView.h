@@ -25,6 +25,7 @@
     __gm_weak GMGridView *_gmGridView2;
 }
 
+- (void)showPhotoList;
 
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) CGSize imgSize;

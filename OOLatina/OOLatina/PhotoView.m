@@ -48,11 +48,17 @@
     return self;
 }
 
+- (void)showPhotoList {
+    [self bringSubviewToFront:background];
+    [self bringSubviewToFront:backgroundPlayer];
+    [self addSubview:scrollView];
+}
+
 - (void) createScrollView
 {
     scrollView =[[UIScrollView alloc] initWithFrame:self.bounds];
     scrollView.delaysContentTouches = NO;
-    CGSize a = self.frame.size;
+
     [self addSubview:scrollView];
     
     int currHeight = 0;

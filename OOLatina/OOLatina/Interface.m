@@ -288,18 +288,19 @@
     }
     
     if(rownumber == 2) {
-        //        if(mPhotoView != nil)
-        //        {
-        //            searchButton.hidden = YES;
-        //            [pageView bringSubviewToFront:mPhotoView];
-        //        }
-        //        else
-        //        {
+        if(mPhotoView != nil)
+        {
+            searchButton.hidden = YES;
+            [mPhotoView showPhotoList];
+            [pageView bringSubviewToFront:mPhotoView];
+        }
+        else
+        {
         searchButton.hidden = YES;
         mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
         
         [pageView addSubview:mPhotoView];
-        //        }
+        }
     }
     
     if(rownumber == 3)
