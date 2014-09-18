@@ -59,6 +59,12 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)showAgendaWholeView {
+    if (agendaDetail != nil) {
+        [self.view sendSubviewToBack:agendaDetail];
+    }
+}
+
 - (void)tappedCellAgenda:(Event*) event
 {
     [self showEventDetail:event];

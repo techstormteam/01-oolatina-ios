@@ -67,6 +67,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *slidLabel;
 @property (retain, nonatomic) IBOutlet UIScrollView *nibScrollView;
 
+- (void) showAgendaWholeView;
 - (void) showSearch;
 - (void) loadEvent;
 - (void) hideSearch;

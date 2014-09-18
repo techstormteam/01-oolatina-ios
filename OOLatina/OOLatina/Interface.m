@@ -276,6 +276,7 @@
         {
             searchButton.hidden = NO;
             [mAgendaWholeView loadEvent];
+            [mAgendaWholeView showAgendaWholeView];
             [pageView bringSubviewToFront:mAgendaWholeView.view];
         }
         else
@@ -296,10 +297,10 @@
         }
         else
         {
-        searchButton.hidden = YES;
-        mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
-        
-        [pageView addSubview:mPhotoView];
+            searchButton.hidden = YES;
+            mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
+            
+            [pageView addSubview:mPhotoView];
         }
     }
     
