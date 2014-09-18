@@ -276,7 +276,7 @@
         {
             searchButton.hidden = NO;
             [mAgendaWholeView loadEvent];
-            [pageView bringSubviewToFront:mAgendaWholeView];
+            [pageView bringSubviewToFront:mAgendaWholeView.view];
         }
         else
         {
