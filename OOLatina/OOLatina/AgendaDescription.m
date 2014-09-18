@@ -105,7 +105,7 @@
     pageControl.currentPage = page;
     currentPage = page;
     pageControlUsed = NO;
-//    [self btnActionShow];
+    [self btnActionShow];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -183,5 +183,6 @@
     
     [UIView commitAnimations];
 }
+
 
 @end
