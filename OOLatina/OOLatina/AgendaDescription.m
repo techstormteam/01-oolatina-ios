@@ -45,7 +45,8 @@
 
 - (void)setDescription
 {
-    mDescriptionLabel.text = [NSString stringWithFormat:@"%@: %@\n\n%@: %@", NSLocalizedString(@"address", @""),[mEvent getAdresse], NSLocalizedString(@"city", @""), [mEvent getVille]];
+    mDescriptionLabel.text = [NSString stringWithFormat:@"%@: %@\n%@: %@", NSLocalizedString(@"address", @""),[mEvent getAdresse], NSLocalizedString(@"city", @""), [mEvent getVille]];
+    [mDescriptionLabel sizeToFit];
 }
 
 #pragma mark -
@@ -81,10 +82,11 @@
     backgroundPlayer.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
     [nibScrollView addSubview:backgroundPlayer];
     
+    CGRect labelFrame = CGRectMake(nibScrollView.frame.size.width*0 + 10, 10, nibScrollView.frame.size.width - 20, 50);
     mDescriptionLabel = [[UILabel alloc] init];
     mDescriptionLabel.textColor = [UIColor whiteColor];
     mDescriptionLabel.numberOfLines = 0;
-    mDescriptionLabel.frame = CGRectMake(nibScrollView.frame.size.width*0 + 5, 0, nibScrollView.frame.size.width, 300);
+    mDescriptionLabel.frame = labelFrame;
     
     agendaMapView = [[AgendaMapView alloc]init ];
     agendaMapView.view.frame = CGRectMake(nibScrollView.frame.size.width*1, 0, nibScrollView.frame.size.width, nibScrollView.frame.size.height);
