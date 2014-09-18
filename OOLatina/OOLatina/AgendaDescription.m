@@ -22,7 +22,7 @@
         
         
         UIView *mySelf = [[[NSBundle mainBundle] loadNibNamed:@"AgendaDescription" owner:self options:nil] lastObject];
-//        self = mySelf;
+
         [self addSubview:mySelf];
         
         [self addBasicView];
@@ -34,6 +34,7 @@
         [descriptionButton setTitle:NSLocalizedString(@"description", @"") forState:UIControlStateNormal];
         [mapButton setTitle:NSLocalizedString(@"map", @"") forState:UIControlStateNormal];
 
+        needLoadingMap = YES;
     }
     return self;
 }
@@ -150,10 +151,6 @@
 
 - (void) descriptionButtonAction
 {
-    if (needLoadingDescription) {
-        [self setDescription];
-        needLoadingDescription = NO;
-    }
     [descriptionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [mapButton setTitleColor:[UIColor colorWithRed:(220/255.0) green:(220/255.0) blue:(220/255.0) alpha:1] forState:UIControlStateNormal];
     
