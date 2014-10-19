@@ -12,6 +12,7 @@
 #import "PhotoEvent.h"
 #import "GMGridView.h"
 #import "GMGridViewLayoutStrategies.h"
+#import "Utility.h"
 
 @interface PhotoView : UIView <GMGridViewDataSource, PhotoCustomCellDelegate> {
     NSMutableArray *photoEvents;

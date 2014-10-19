@@ -32,6 +32,7 @@
     AQGridView * _gridView;
     __gm_weak GMGridView *_gmGridView;
     UILabel *lblTitle;
+    UILabel *lblCity;
     PhotoPreviewView *viePhotoPreview;
     dispatch_queue_t myQueue;
 }
@@ -44,6 +45,7 @@
 
 - (void)setup;
 - (void)setTitle:(NSString *)title;
+- (void)setCity:(NSString *)city;
 - (void)passPhotoSize:(CGSize)pSize;
 - (void)passData:(NSMutableArray *)photos;
 

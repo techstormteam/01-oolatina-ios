@@ -37,6 +37,56 @@
     return titleEvent;
 }
 
+- (void)setCity:(NSString *)_city
+{
+    if(_city == nil)
+    {
+        cityEvent = @"";
+    }
+    else
+    {
+        cityEvent = _city;
+    }
+}
+
+- (NSString *)getCity
+{
+    return cityEvent;
+}
+
+- (void)setDescription:(NSString *)_description
+{
+    if(_description == nil)
+    {
+        description = @"";
+    }
+    else
+    {
+        description = _description;
+    }
+}
+
+- (NSString *)getDescription
+{
+    return description;
+}
+
+- (void)setDate:(NSDate *)_date
+{
+    if(_date == nil)
+    {
+        date = nil;
+    }
+    else
+    {
+        date = _date;
+    }
+}
+
+- (NSDate *)getDate
+{
+    return date;
+}
 
 - (void)setId:(NSString *)_id
 {

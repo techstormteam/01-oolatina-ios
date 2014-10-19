@@ -69,6 +69,10 @@
     lblTitle.text = title;
 }
 
+- (void)setCity:(NSString *)city
+{
+    lblCity.text = city;
+}
 
 -(void)imageTapped:(UITapGestureRecognizer *)recognizer{
     [self.delegate photoTapped:recognizer];

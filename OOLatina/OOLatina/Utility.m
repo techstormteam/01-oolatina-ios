@@ -42,6 +42,27 @@ static NSMutableDictionary *cachedImages;
     return result;
 }
 
++ (NSDate *) toNSDate:(NSString *)dateString /// here this is your date with format yyyy-MM-dd HH:mm:ss
+{
+    NSString *str = dateString;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; //// here set format of date which is in your output date (means above str with format)
+    
+    NSDate *date = [dateFormatter dateFromString: str]; // here you can fetch date from string with define format
+    return date;
+}
+
++ (NSString *) toDateString:(NSDate *)date // return dd/MM/yyyy
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy"];// here set format which you want...
+    
+    NSString *convertedString = [dateFormatter stringFromDate:date];
+    NSLog(@"Converted String : %@",convertedString);
+    return convertedString;
+}
+
 + (void) downloadImage:(NSString *)url
 {
     //Get Image From URL

@@ -634,7 +634,7 @@
             
             Event *nEvent = [[Event alloc] init];
             [nEvent setTitle:[mEvent objectForKey:@"title"]];
-            [nEvent setThumbnailEvent:[NSString stringWithFormat:@"http://www.oolatina.com/images/event/%@.png",[mEvent objectForKey:@"thumbnail"]]];
+            [nEvent setThumbnailEvent:[mEvent objectForKey:@"photos"]];
             [nEvent setVille:[mEvent objectForKey:@"ville"]];
             [nEvent setYear:[mEvent objectForKey:@"year"]];
             [nEvent setMonth:[mEvent objectForKey:@"month"]];

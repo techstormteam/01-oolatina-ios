@@ -83,6 +83,12 @@
             if ([photoEvent getTitle] != (id)[NSNull null] && [photoEvent getTitle].length != 0) {
                 [groupPhotos setTitle:[photoEvent getTitle]];
             }
+            
+            [groupPhotos setCity:NSLocalizedString(@"no_city", nil)];
+            if ([photoEvent getCity] != (id)[NSNull null] && [photoEvent getCity].length != 0) {
+                [groupPhotos setCity:[photoEvent getCity]];
+            }
+            
             [mView addSubview:groupPhotos];
             _count++;
         }
@@ -111,10 +117,13 @@
         for (int x=0; x<results.count; x++)
         {
             NSDictionary *mDico = [results objectAtIndex:x];
-            NSMutableArray *mPhotos = [mDico objectForKey:@"photo"];
+            NSMutableArray *mPhotos = [mDico objectForKey:@"photos"];
             
             PhotoEvent *nPhotoEvent = [[PhotoEvent alloc] init];
             [nPhotoEvent setTitle:[mDico objectForKey:@"eventTitle"]];
+            [nPhotoEvent setCity:[mDico objectForKey:@"city"]];
+            [nPhotoEvent setDescription:[mDico objectForKey:@"description"]];
+            [nPhotoEvent setDate:[Utility toNSDate:[mDico objectForKey:@"date"]]];
             [nPhotoEvent setId:[mDico objectForKey:@"eventId"]];
             
             
@@ -124,26 +133,18 @@
                 
                 Photo *nPhoto = [[Photo alloc] init];
                 [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
                 [nPhotos addObject:nPhoto];
                 
 //                nPhoto = [[Photo alloc] init];
 //                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
 //                [nPhotos addObject:nPhoto];
 //                
 //                nPhoto = [[Photo alloc] init];
 //                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
 //                [nPhotos addObject:nPhoto];
 //                
 //                nPhoto = [[Photo alloc] init];
 //                [nPhoto setUrl:[mPhotoDico objectForKey:@"url"]];
-//                [nPhoto setName:[mPhotoDico objectForKey:@"name"]];
-//                [nPhoto setDescription:[mPhotoDico objectForKey:@"description"]];
 //                [nPhotos addObject:nPhoto];
                 
 

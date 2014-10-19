@@ -11,12 +11,21 @@
 
 @interface PhotoEvent : NSObject {
     NSString *titleEvent;
+    NSString *cityEvent;
+    NSString *description;
+    NSDate *date;
     NSString *eventId;
     NSMutableArray *photo;
 }
 
 - (void)setTitle:(NSString *)_title;
 - (NSString *)getTitle;
+- (void)setCity:(NSString *)_city;
+- (NSString *)getCity;
+- (void)setDescription:(NSString *)_description;
+- (NSString *)getDescription;
+- (void)setDate:(NSDate *)_date;
+- (NSDate *)getDate;
 - (void)setId:(NSString *)_id;
 - (NSString *)getId;
 - (void)setPhoto:(NSMutableArray *)_photo;
