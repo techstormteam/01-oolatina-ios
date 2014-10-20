@@ -20,6 +20,9 @@
     NSString *ville;
     NSString *adresse;
     NSString *codePostal;
+    NSString *lieu;
+    NSString *description;
+    NSString *country;
     float longitude;
     float latitude;
 }
@@ -34,16 +37,25 @@
 - (void)setAdresse:(NSString *)_address;
 - (void)setVille:(NSString *)_ville;
 - (void)setCodePostal:(NSString *)_code;
+- (void)setLieu:(NSString *)_lieu;
+- (void)setDescription:(NSString *)_description;
+- (void)setCountry:(NSString *)_country;
+
 - (void)setLatitude:(CGFloat)_lat;
 - (float)getLatitude;
 - (void)setLongitude:(CGFloat)_long;
 - (float)getLongitude;
+
+
 
 - (NSString *)getMonth;
 - (NSString *)getYear;
 - (NSString *)getAdresse;
 - (NSString *)getVille;
 - (NSString *)getCodePostal;
+- (NSString *)getLieu;
+- (NSString *)getDescription;
+- (NSString *)getCountry;
 - (void)setName:(NSString *)_name;
 - (NSString *)getName;
 

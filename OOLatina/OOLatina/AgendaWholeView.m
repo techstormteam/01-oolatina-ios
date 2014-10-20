@@ -634,7 +634,14 @@
             
             Event *nEvent = [[Event alloc] init];
             [nEvent setTitle:[mEvent objectForKey:@"title"]];
-            [nEvent setThumbnailEvent:[mEvent objectForKey:@"photos"]];
+            
+            NSMutableArray *mPhotos = [mDico objectForKey:@"photos"];
+            if (mPhotos.count > 0) {
+                NSDictionary *mPhotoDico = [mPhotos objectAtIndex:0];
+                [nEvent setThumbnailEvent:[mPhotoDico objectForKey:@"url"]];
+            }
+            
+            [nEvent setThumbnailEvent:[NSString stringWithFormat:@"http://www.oolatina.com/%@", [mEvent objectForKey:@"photos"]]];
             [nEvent setVille:[mEvent objectForKey:@"ville"]];
             [nEvent setYear:[mEvent objectForKey:@"year"]];
             [nEvent setMonth:[mEvent objectForKey:@"month"]];

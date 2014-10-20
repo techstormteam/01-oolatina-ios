@@ -46,7 +46,7 @@
 
 - (void)setDescription
 {
-    mDescriptionLabel.text = [NSString stringWithFormat:@"%@: %@\n%@: %@", NSLocalizedString(@"address", @""),[mEvent getAdresse], NSLocalizedString(@"city", @""), [mEvent getVille]];
+    mDescriptionLabel.text = [NSString stringWithFormat:@"%@: %@\n%@: %@\n%@: %@\n%@: %@\n%@: %@\n%@: %@", NSLocalizedString(@"address", @""),[mEvent getAdresse], NSLocalizedString(@"place", @""), [mEvent getLieu], NSLocalizedString(@"city", @""), [mEvent getVille], NSLocalizedString(@"country", @""), [mEvent getCountry], NSLocalizedString(@"code_postal", @""), [mEvent getCodePostal], NSLocalizedString(@"description", @""), [mEvent getDescription]];
     [mDescriptionLabel sizeToFit];
 }
 

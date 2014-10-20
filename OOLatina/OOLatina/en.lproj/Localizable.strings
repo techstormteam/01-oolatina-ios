@@ -44,3 +44,6 @@
 "share_photo_via" = "SHARE PHOTO VIA";
 "description" = "Description";
 "address"= "Address";
+"place"= "Place";
+"country"= "Country";
+"code_postal"= "Code Postal";

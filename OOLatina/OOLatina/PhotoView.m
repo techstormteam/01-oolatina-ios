@@ -151,9 +151,10 @@
             }
             [nPhotoEvent setPhoto:nPhotos];
             NSInteger heightOfTitle = 50;
+            NSInteger heightOfCity = 50;
             NSInteger numberOfImageRows = ((nPhotos.count - 1) / _numberOfImageInRow) + 1;
             NSInteger heightOfAlbum = (numberOfImageRows * _imgSize.width);
-            NSInteger heightOfSection = heightOfTitle + heightOfAlbum;
+            NSInteger heightOfSection = heightOfCity + heightOfAlbum + heightOfTitle;
             [sectionSizes addObject:[NSNumber numberWithInteger:heightOfSection]];
             [photoEvents addObject:nPhotoEvent];
             

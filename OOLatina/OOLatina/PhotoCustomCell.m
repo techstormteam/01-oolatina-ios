@@ -28,9 +28,13 @@
     // Initialization code
     _photoIndex = 0;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, self.frame.size.width, 20)];
+    lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, _photoSize.height - 50, self.frame.size.width, 20)];
     lblTitle.textColor = [UIColor whiteColor];
     [self addSubview:lblTitle];
+    
+    lblCity = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, self.frame.size.width, 20)];
+    lblCity.textColor = [UIColor whiteColor];
+    [self addSubview:lblCity];
     
     _gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, self.frame.size.height)];
     _gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;

@@ -140,6 +140,57 @@
     return codePostal;
 }
 
+- (void)setLieu:(NSString *)_lieu;
+{
+    if([_lieu isKindOfClass:[NSNull class]])
+    {
+        lieu = @"";
+    }
+    else
+    {
+        lieu = _lieu;
+    }
+}
+
+- (NSString *)getLieu;
+{
+    return lieu;
+}
+
+- (void)setDescription:(NSString *)_description;
+{
+    if([_description isKindOfClass:[NSNull class]])
+    {
+        description = @"";
+    }
+    else
+    {
+        description = _description;
+    }
+}
+
+- (NSString *)getDescription;
+{
+    return description;
+}
+
+- (void)setCountry:(NSString *)_country;
+{
+    if([_country isKindOfClass:[NSNull class]])
+    {
+        country = @"";
+    }
+    else
+    {
+        country = _country;
+    }
+}
+
+- (NSString *)getCountry;
+{
+    return country;
+}
+
 - (void)setLatitude:(CGFloat)_lat
 {
     latitude = _lat;
