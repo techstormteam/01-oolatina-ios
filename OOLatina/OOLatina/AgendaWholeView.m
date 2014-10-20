@@ -648,6 +648,9 @@
             [nEvent setEventDay:[mEvent objectForKey:@"day"]];
             [nEvent setCodePostal:[mEvent objectForKey:@"codepostal"]];
             [nEvent setAdresse:[mEvent objectForKey:@"adresse"]];
+            [nEvent setDescription:[mEvent objectForKey:@"description"]];
+            [nEvent setCountry:[mEvent objectForKey:@"country"]];
+            [nEvent setLieu:[mEvent objectForKey:@"lieu"]];
             [nEvent setName:[mEvent objectForKey:@"lieu"]];
             if (![[mEvent objectForKey:@"longitude"] isEqual:[NSNull null]]) {
                 [nEvent setLongitude:[[mEvent objectForKey:@"longitude"] floatValue]];
