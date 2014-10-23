@@ -140,7 +140,11 @@
 
 - (void)showSearch
 {
-    [mAgendaWholeView showSearch];
+    if (menuSelectedNumber == 1) {
+        [mAgendaWholeView showSearch];
+    } else if (menuSelectedNumber == 2) {
+        [mPhotoView showSearch];
+    }
 }
 
 - (void)showPageFeed:(NSString *)url
@@ -250,6 +254,7 @@
 
 - (void)selectedRow:(int)rownumber
 {
+    menuSelectedNumber = rownumber;
     if(rownumber == 0)
     {
         if(mNewsView != nil)

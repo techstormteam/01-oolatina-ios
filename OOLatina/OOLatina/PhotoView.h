@@ -13,8 +13,12 @@
 #import "GMGridView.h"
 #import "GMGridViewLayoutStrategies.h"
 #import "Utility.h"
+#import "ArrayDropDown.h"
+#import "DropDownListView.h"
+#import "CKCalendarView.h"
 
-@interface PhotoView : UIView <GMGridViewDataSource, PhotoCustomCellDelegate> {
+@interface PhotoView : UIView <GMGridViewDataSource, PhotoCustomCellDelegate, UITextFieldDelegate, kDropDownListViewDelegate, CKCalendarDelegate> {
+    
     NSMutableArray *photoEvents;
     NSMutableArray *photos;
     NSMutableArray *sectionSizes;
@@ -24,9 +28,41 @@
     
     UIScrollView *scrollView;
     __gm_weak GMGridView *_gmGridView2;
+    
+    
+    NSString *villeSelected;
+    NSString *day;
+    NSString *month;
+    NSString *year;
+    NSString *musicArrayid;
+    NSString *genreArrayid;
+    
+    UIView *popupView;
+    UITextField *calendarField;
+    UITextField *searchField;
+    UITextField *villeField;
+    UIButton *dropdownGenre;
+    UIButton *dropdownMusic;
+    UITextField *dropdownVille;
+    UITextField *genreField;
+    UITextField *musicField;
+    UIView *mbackPopup;
+    UIButton *closeButton;
+    
+    NSMutableArray *eventArray;
+    NSMutableArray *genreArray;
+    NSMutableArray *musicArray;
+    NSMutableArray *villeArray;
+    
+    DropDownListView *mDropDown;
+    CKCalendarView *mCalendarView;
+    UIActivityIndicatorView *mLoading;
+    int dropSelected;
+
 }
 
 - (void)showPhotoList;
+- (void)showSearch;
 
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) CGSize imgSize;
