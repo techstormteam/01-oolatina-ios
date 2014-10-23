@@ -272,16 +272,15 @@
     
     if(rownumber == 1)
     {
+        searchButton.hidden = NO;
         if(mAgendaWholeView != nil)
         {
-            searchButton.hidden = NO;
             [mAgendaWholeView loadEvent];
             [mAgendaWholeView showAgendaWholeView];
             [pageView bringSubviewToFront:mAgendaWholeView.view];
         }
         else
         {
-            searchButton.hidden = NO;
             mAgendaWholeView = [[AgendaWholeView alloc] initWithNibName:@"AgendaWholeView" bundle:nil];
 //            mAgendaWholeView = [[AgendaWholeView alloc] initWithCoder:nil];
             [pageView addSubview:mAgendaWholeView.view];
@@ -289,15 +288,14 @@
     }
     
     if(rownumber == 2) {
+        searchButton.hidden = NO;
         if(mPhotoView != nil)
         {
-            searchButton.hidden = YES;
             [mPhotoView showPhotoList];
             [pageView bringSubviewToFront:mPhotoView];
         }
         else
         {
-            searchButton.hidden = YES;
             mPhotoView = [[PhotoView alloc] initWithFrame:CGRectMake(0, 0, pageView.frame.size.width, pageView.frame.size.height)];
             
             [pageView addSubview:mPhotoView];

@@ -105,7 +105,7 @@
         [scrollView addSubview:mView];
         currHeight += [height intValue];
     }
-    scrollView.contentSize = CGSizeMake(self.frame.size.width, currHeight);
+    scrollView.contentSize = CGSizeMake(self.frame.size.width, currHeight + 60);
 }
 
 - (void)loadPhotoEvent {
@@ -322,6 +322,7 @@
     if(viePhotoPreview != nil)
     {
         [self bringSubviewToFront:viePhotoPreview.view];
+        [self setPhotoPreviewData:photo];
     }
     else
     {
@@ -331,16 +332,19 @@
         
         viePhotoPreview.view.frame = bounds;
         
-        [viePhotoPreview setImageUrl:[photo getUrl]];
-        viePhotoPreview.lblName.text = [photo getName];
-        viePhotoPreview.lblDescription.text = [photo getDescription];
-        viePhotoPreview.lblDescription.numberOfLines = 3;
+        [self setPhotoPreviewData:photo];
         
         [self addSubview:viePhotoPreview.view];
         
     }
 }
 
+-(void)setPhotoPreviewData:(Photo *)photo {
+    [viePhotoPreview setImageUrl:[photo getUrl]];
+    viePhotoPreview.lblName.text = [photo getName];
+    viePhotoPreview.lblDescription.text = [photo getDescription];
+    viePhotoPreview.lblDescription.numberOfLines = 3;
+}
 
 //////////////////////////////////////////////////////////////
 #pragma mark GMGridViewDataSource

@@ -39,6 +39,7 @@
     CAShapeLayer *shapeLayer;
     PhotoPreviewView *viePhotoPreview;
     dispatch_queue_t myQueue;
+    UIActivityIndicatorView *mLoading;
 }
 
 @property (nonatomic, weak) id<PhotoCustomCellDelegate> delegate;

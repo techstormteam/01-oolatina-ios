@@ -54,7 +54,7 @@ static NSMutableDictionary *cachedImages;
     return date;
 }
 
-+ (NSString *) toDateString:(NSDate *)date // return dd/MM/yyyy
++ (NSString *) toDateString:(NSDate *)date // return dd/MM/yyyy - 20/08/2014
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy"];// here set format which you want...
@@ -64,10 +64,10 @@ static NSMutableDictionary *cachedImages;
     return convertedString;
 }
 
-+ (NSString *) toDayOfWeekString:(NSDate *)date // return dddd
++ (NSString *) toDayOfWeekString:(NSDate *)date // return EEEE - Monday
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dddd"];// here set format which you want...
+    [dateFormatter setDateFormat:@"EEEE"];// here set format which you want...
     
     NSString *convertedString = [dateFormatter stringFromDate:date];
     NSLog(@"Converted String : %@",convertedString);

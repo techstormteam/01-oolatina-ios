@@ -47,8 +47,11 @@
     [lblDate setFont:[UIFont fontWithName:@"Arial" size:16]];
     [self addSubview:lblDate];
     
-    _gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 55, self.frame.size.width, self.frame.size.height)];
+    _gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 55, self.frame.size.width, self.frame.size.height + 50)];
+//    _gridView.contentSize = self.frame.size;
     _gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+//    UIEdgeInsets contentInsets = UIEdgeInsetsMake(5.0, 0.0, 5.0, 0.0);
+//    _gridView.contentInset = contentInsets;
 	_gridView.autoresizesSubviews = YES;
 	_gridView.delegate = self;
 	_gridView.dataSource = self;
@@ -165,6 +168,7 @@
         _theHud = [[MBProgressHUD alloc] init];
     }
     
+    [view setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:17.0/255.0 blue:17.0/255.0 alpha:1]];
     _theHud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     _theHud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0];
     _theHud.labelText = text;
