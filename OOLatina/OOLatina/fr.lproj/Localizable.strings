@@ -8,6 +8,8 @@
 
 "no_title" = "[Pas de titre]";
 "no_city" = "[Aucune ville]";
+"no_date" = "[Aucune date]";
+"see_album" = "Voir tout l'album";
 "no_description" = "[Pas de description]";
 "posted_on" = "Message posté sur";
 "downloading" = "Téléchargement";

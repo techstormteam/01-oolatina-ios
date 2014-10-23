@@ -32,7 +32,11 @@
     AQGridView * _gridView;
     __gm_weak GMGridView *_gmGridView;
     UILabel *lblTitle;
+    UILabel *lblDate;
+    UILabel *lblDayOfWeek;
     UILabel *lblCity;
+    UILabel *lblSeeAlbum;
+    CAShapeLayer *shapeLayer;
     PhotoPreviewView *viePhotoPreview;
     dispatch_queue_t myQueue;
 }
@@ -46,6 +50,8 @@
 - (void)setup;
 - (void)setTitle:(NSString *)title;
 - (void)setCity:(NSString *)city;
+- (void)setDate:(NSString *)date dayOfWeek:day;
+- (void)setSeeAlbum:(NSString *)seeAlbum;
 - (void)passPhotoSize:(CGSize)pSize;
 - (void)passData:(NSMutableArray *)photos;
 

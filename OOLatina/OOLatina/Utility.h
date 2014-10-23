@@ -11,11 +11,13 @@
 
 @interface Utility : NSObject
 
+
 + (void) saveImage:(UIImage *)image;
 + (UIImage *) getImageFromURL:(NSString *)fileURL;
 + (void) downloadImage:(NSString *)url;
 + (NSDate *) toNSDate:(NSString *)dateString;
 + (NSString *) toDateString:(NSDate *)date;
++ (NSString *) toDayOfWeekString:(NSDate *)date;
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 + (UIImage *)imageWithImage:(UIImage *)image scaledToMaxWidth:(CGFloat)width maxHeight:(CGFloat)height;
 

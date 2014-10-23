@@ -29,6 +29,7 @@ static NSMutableDictionary *cachedImages;
     UIImage *image = [cachedImages objectForKey:fileURL];
     if (image == nil)
     {
+        
         NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
         result = [UIImage imageWithData:data];
         if (result != nil)
@@ -63,8 +64,19 @@ static NSMutableDictionary *cachedImages;
     return convertedString;
 }
 
++ (NSString *) toDayOfWeekString:(NSDate *)date // return dddd
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dddd"];// here set format which you want...
+    
+    NSString *convertedString = [dateFormatter stringFromDate:date];
+    NSLog(@"Converted String : %@",convertedString);
+    return convertedString;
+}
+
 + (void) downloadImage:(NSString *)url
 {
+    
     //Get Image From URL
     UIImage * imageFromURL = [Utility getImageFromURL:url];
     

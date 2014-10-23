@@ -8,6 +8,8 @@
 
 "no_title" = "[No title]";
 "no_city" = "[No city]";
+"no_date" = "[No date]";
+"see_album" = "See all album";
 "no_description" = "[No description]";
 "posted_on" = "Posted on";
 "downloading" = "Downloading";

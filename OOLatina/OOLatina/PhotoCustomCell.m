@@ -28,20 +28,55 @@
     // Initialization code
     _photoIndex = 0;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, _photoSize.height - 50, self.frame.size.width, 20)];
-    lblTitle.textColor = [UIColor whiteColor];
-    [self addSubview:lblTitle];
     
-    lblCity = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, self.frame.size.width, 20)];
-    lblCity.textColor = [UIColor whiteColor];
+    
+    lblCity = [[UILabel alloc] initWithFrame:CGRectMake(5, 20, self.frame.size.width, 20)];
+    lblCity.textColor = [UIColor colorWithRed:0.0/255.0 green:154.0/255.0 blue:210/255.0 alpha:1];
+    [lblCity setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
     [self addSubview:lblCity];
     
-    _gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, self.frame.size.height)];
+    lblDayOfWeek = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, self.frame.size.width - 5, 20)];
+    lblDayOfWeek.textColor = [UIColor blackColor];
+    lblDayOfWeek.textAlignment = NSTextAlignmentRight;
+    [lblDayOfWeek setFont:[UIFont fontWithName:@"Arial" size:16]];
+    [self addSubview:lblDayOfWeek];
+    
+    lblDate = [[UILabel alloc] initWithFrame:CGRectMake(0, 24, self.frame.size.width - 5, 20)];
+    lblDate.textColor = [UIColor blackColor];
+    lblDate.textAlignment = NSTextAlignmentRight;
+    [lblDate setFont:[UIFont fontWithName:@"Arial" size:16]];
+    [self addSubview:lblDate];
+    
+    _gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 55, self.frame.size.width, self.frame.size.height)];
     _gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 	_gridView.autoresizesSubviews = YES;
 	_gridView.delegate = self;
 	_gridView.dataSource = self;
     [self addSubview:_gridView];
+    
+    float heightThird = 65 + (ceil([mPhotos count] / 3.0) * _photoSize.height);
+    lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, heightThird, self.frame.size.width, 20)];
+    lblTitle.textColor = [UIColor colorWithRed:0.0/255.0 green:154.0/255.0 blue:210/255.0 alpha:1];
+    [lblTitle setFont:[UIFont fontWithName:@"Arial" size:16]];
+    [self addSubview:lblTitle];
+    
+    lblSeeAlbum = [[UILabel alloc] initWithFrame:CGRectMake(0, heightThird, self.frame.size.width - 5, 20)];
+    lblSeeAlbum.textColor = [UIColor colorWithRed:0.0/255.0 green:154.0/255.0 blue:210/255.0 alpha:1];
+    lblSeeAlbum.textAlignment = NSTextAlignmentRight;
+    [lblSeeAlbum setFont:[UIFont fontWithName:@"Arial" size:14]];
+    [self addSubview:lblSeeAlbum];
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, heightThird + 30)];
+    [path addLineToPoint:CGPointMake(self.frame.size.width, heightThird + 30)];
+    
+    shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [path CGPath];
+    shapeLayer.strokeColor = [[UIColor colorWithRed:225.0/255.0 green:225.0/255.0 blue:225.0/255.0 alpha:1] CGColor];
+    shapeLayer.lineWidth = 1.0;
+    shapeLayer.fillColor = [[UIColor clearColor] CGColor];
+    
+    [self.layer addSublayer:shapeLayer];
     
     [_gridView reloadData];
 //    GMGridView *gmGridView = [[GMGridView alloc] initWithFrame:CGRectMake(0, 25, self.frame.size.width, 40)];
@@ -76,6 +111,18 @@
 - (void)setCity:(NSString *)city
 {
     lblCity.text = city;
+}
+
+- (void)setDate:(NSString *)date dayOfWeek:day
+{
+    lblDate.text = date;
+    lblDayOfWeek.text = day;
+}
+
+- (void)setSeeAlbum:(NSString *)seeAlbum;
+{
+    lblSeeAlbum.text = seeAlbum;
+    
 }
 
 -(void)imageTapped:(UITapGestureRecognizer *)recognizer{
@@ -161,12 +208,13 @@
         //        imageView.tintColor = [UIColor blackColor];
         
         [self showHud:@"" superView:cell.contentView];
+
         dispatch_async(myQueue, ^{
             // Perform long running process
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 UIImage *img = [Utility getImageFromURL:url];
-                imageView.image = img;
+                imageView.image = [Utility imageWithImage: img scaledToSize:imageView.frame.size];
                 [self hideHud];
             });
         });

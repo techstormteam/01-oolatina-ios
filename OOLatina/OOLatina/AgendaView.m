@@ -58,7 +58,7 @@
     if([SCUtils isNetworkAvailable])
     {
         [self hideEventNotFound];
-        eventArray =eventList;
+        eventArray = eventList;
         [mAgendaScroll removeAllEvent];
         int count = 0;
         for (int x=0; x<eventArray.count; x++)

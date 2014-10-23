@@ -20,12 +20,13 @@
 
         background = [[UIImageView alloc] initWithFrame:self.bounds];
         background.contentMode = UIViewContentModeScaleToFill;
-        background.image = [UIImage imageNamed:@"background.png"];
+        background.backgroundColor = [UIColor whiteColor];
+//        background.image = [UIImage imageNamed:@"background.png"];
         [self addSubview:background];
         
-        backgroundPlayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        backgroundPlayer.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:26.0/255.0 blue:26.0/255.0 alpha:0.75];
-        [self addSubview:backgroundPlayer];
+//        backgroundPlayer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+//        backgroundPlayer.backgroundColor = photo;
+//        [self addSubview:backgroundPlayer];
         
         GMGridView *gmGridView2 = [[GMGridView alloc] initWithFrame:self.bounds];
         gmGridView2.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -83,6 +84,13 @@
             if ([photoEvent getTitle] != (id)[NSNull null] && [photoEvent getTitle].length != 0) {
                 [groupPhotos setTitle:[photoEvent getTitle]];
             }
+            
+            [groupPhotos setDate:NSLocalizedString(@"no_date", nil) dayOfWeek:@""];
+            if ([photoEvent getDate] != (id)[NSNull null]) {
+                [groupPhotos setDate:[Utility toDateString:[photoEvent getDate]] dayOfWeek:[Utility toDayOfWeekString:[photoEvent getDate]]];
+            }
+            
+            [groupPhotos setSeeAlbum:NSLocalizedString(@"see_album", nil)];
             
             [groupPhotos setCity:NSLocalizedString(@"no_city", nil)];
             if ([photoEvent getCity] != (id)[NSNull null] && [photoEvent getCity].length != 0) {
